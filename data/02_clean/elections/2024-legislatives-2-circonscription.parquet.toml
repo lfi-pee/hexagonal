@@ -33,6 +33,16 @@ type = "str"
 description = ""
 nullable = false
 
+[colonnes.coalition]
+type = "str"
+description = ""
+nullable = true
+
+[colonnes.parti]
+type = "str"
+description = ""
+nullable = false
+
 [colonnes.nom]
 type = "str"
 description = ""
