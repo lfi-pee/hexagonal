@@ -1,0 +1,12 @@
+md5: 35abb2aeaad4726cb577b17f68b1b375
+frozen: true
+deps:
+- checksum: '24099323103090915303472353032744297949'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/8268843/base-ic-activite-residents-2021_csv.zip
+outs:
+- md5: cf0ea3b2543cf81be2f79ed4960385cc
+  size: 39471277
+  hash: md5
+  path: rp-iris-activite-2021.zip

@@ -1,0 +1,12 @@
+md5: 67383d87647faf93cfa514f931abf757
+frozen: true
+deps:
+- checksum: '267728103895790677474307148164451743790'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/8268806/base-ic-evol-struct-pop-2021_csv.zip
+outs:
+- md5: 459fb447f2809d906166aa32cfef58a5
+  size: 25688606
+  hash: md5
+  path: rp-iris-population-2021.zip

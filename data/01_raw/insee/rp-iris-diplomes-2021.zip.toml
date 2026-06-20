@@ -1,0 +1,8 @@
+nom = "Recensement 2021 (IRIS) — Diplômes – Formation"
+description = """
+Base infracommunale (IRIS) du recensement de la population 2021. Couvre tout le
+territoire : une ligne par IRIS pour les communes découpées, une ligne par commune
+pour les autres.
+"""
+mimetype = "application/zip"
+editeur = "INSEE"

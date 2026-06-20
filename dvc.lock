@@ -2679,3 +2679,36 @@ stages:
       hash: md5
       md5: 7b26fcfc26f8e4544ae5de3b409d24d0
       size: 37476392
+  extraire_recensement_iris:
+    cmd: PYTHONPATH=src python -m hexagonal.recensement.extraire_iris 
+      data/01_raw/insee/rp-iris-population-2021.zip 
+      data/01_raw/insee/rp-iris-activite-2021.zip 
+      data/01_raw/insee/rp-iris-diplomes-2021.zip 
+      data/01_raw/insee/rp-iris-logement-2021.zip 
+      data/02_clean/recensement/iris.csv
+    deps:
+    - path: data/01_raw/insee/rp-iris-activite-2021.zip
+      hash: md5
+      md5: cf0ea3b2543cf81be2f79ed4960385cc
+      size: 39471277
+    - path: data/01_raw/insee/rp-iris-diplomes-2021.zip
+      hash: md5
+      md5: 37795595b8cbfa421dbd50a700d4f615
+      size: 14493599
+    - path: data/01_raw/insee/rp-iris-logement-2021.zip
+      hash: md5
+      md5: a16ec359752026cf7419f12383f42ed2
+      size: 28259364
+    - path: data/01_raw/insee/rp-iris-population-2021.zip
+      hash: md5
+      md5: 459fb447f2809d906166aa32cfef58a5
+      size: 25688606
+    - path: src/hexagonal/recensement/extraire_iris.py
+      hash: md5
+      md5: 2648850e93abe0d103906935b3d0c30f
+      size: 2969
+    outs:
+    - path: data/02_clean/recensement/iris.csv
+      hash: md5
+      md5: 3555a3d326dd3dabf6c3847fc2a90da9
+      size: 7575293

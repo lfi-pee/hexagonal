@@ -1,0 +1,12 @@
+md5: 476176bf8bbdffca3be8a37fb433f9ce
+frozen: true
+deps:
+- checksum: '247302354814962024603270314302225218211'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/8268838/base-ic-logement-2021_csv.zip
+outs:
+- md5: a16ec359752026cf7419f12383f42ed2
+  size: 28259364
+  hash: md5
+  path: rp-iris-logement-2021.zip
