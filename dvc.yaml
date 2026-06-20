@@ -730,6 +730,23 @@ stages:
       ${raw}/insee/filosofi-disponible.zip
       ${clean}/filosofi/disponible.csv
 
+  extraire_recensement_iris:
+    deps:
+      - ${raw}/insee/rp-iris-population-2021.zip
+      - ${raw}/insee/rp-iris-activite-2021.zip
+      - ${raw}/insee/rp-iris-diplomes-2021.zip
+      - ${raw}/insee/rp-iris-logement-2021.zip
+      - ${src}/hexagonal/recensement/extraire_iris.py
+    outs:
+      - ${clean}/recensement/iris.csv
+    cmd: >-
+      ${python} hexagonal.recensement.extraire_iris
+      ${raw}/insee/rp-iris-population-2021.zip
+      ${raw}/insee/rp-iris-activite-2021.zip
+      ${raw}/insee/rp-iris-diplomes-2021.zip
+      ${raw}/insee/rp-iris-logement-2021.zip
+      ${clean}/recensement/iris.csv
+
   nb-conseillers-municipaux:
     deps:
       - ${clean}/population_municipale.csv

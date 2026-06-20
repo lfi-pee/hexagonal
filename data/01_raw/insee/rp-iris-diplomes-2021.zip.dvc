@@ -1,0 +1,12 @@
+md5: 9d226c1b90fbc366cec16b3bcff1963b
+frozen: true
+deps:
+- checksum: '103656134863785874980686920408342325688'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/8268840/base-ic-diplomes-formation-2021_csv.zip
+outs:
+- md5: 37795595b8cbfa421dbd50a700d4f615
+  size: 14493599
+  hash: md5
+  path: rp-iris-diplomes-2021.zip

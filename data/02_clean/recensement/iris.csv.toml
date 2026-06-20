@@ -1,0 +1,17 @@
+nom = "Recensement 2021 — profil social par IRIS"
+description = """
+Comptages pondérés du recensement 2021 par IRIS (âge, CSP de la population 15 ans et
+plus, activité/chômage, diplômes, logement), fusionnés depuis les bases infracommunales
+INSEE. Les parts (%) se calculent en aval. Couvre tout le territoire (IRIS, ou commune
+pour les communes non découpées).
+"""
+mimetype = "text/csv"
+section = "Données socio-économiques"
+
+[colonnes.code_iris]
+type = "code_iris"
+nullable = false
+
+[colonnes.code_commune]
+type = "code_commune"
+nullable = false
