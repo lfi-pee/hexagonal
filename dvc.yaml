@@ -730,6 +730,17 @@ stages:
       ${raw}/insee/filosofi-disponible.zip
       ${clean}/filosofi/disponible.csv
 
+  extraire_filosofi_communes:
+    deps:
+      - ${raw}/insee/filosofi-communes.zip
+      - ${src}/hexagonal/filosofi/extraire_commune.py
+    outs:
+      - ${clean}/filosofi/commune.csv
+    cmd: >-
+      ${python} hexagonal.filosofi.extraire_commune
+      ${raw}/insee/filosofi-communes.zip
+      ${clean}/filosofi/commune.csv
+
   nb-conseillers-municipaux:
     deps:
       - ${clean}/population_municipale.csv

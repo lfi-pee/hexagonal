@@ -2679,3 +2679,20 @@ stages:
       hash: md5
       md5: 7b26fcfc26f8e4544ae5de3b409d24d0
       size: 37476392
+  extraire_filosofi_communes:
+    cmd: PYTHONPATH=src python -m hexagonal.filosofi.extraire_commune 
+      data/01_raw/insee/filosofi-communes.zip data/02_clean/filosofi/commune.csv
+    deps:
+    - path: data/01_raw/insee/filosofi-communes.zip
+      hash: md5
+      md5: 284a647793d14035f15c75b1da1d832c
+      size: 5063469
+    - path: src/hexagonal/filosofi/extraire_commune.py
+      hash: md5
+      md5: a02e738590db3d94a02888273f7096f5
+      size: 1789
+    outs:
+    - path: data/02_clean/filosofi/commune.csv
+      hash: md5
+      md5: 70b6e31ac7ee8d1820926e5de1add2ad
+      size: 667901

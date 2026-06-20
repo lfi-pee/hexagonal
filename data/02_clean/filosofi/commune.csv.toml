@@ -1,0 +1,37 @@
+nom = "FILOSOFI — Revenu disponible par commune 2021"
+description = """
+Niveau de vie (revenu disponible par unité de consommation) et pauvreté par commune,
+extrait de la base communale FILOSOFI 2021. Une ligne par commune ; valeurs manquantes
+là où l'INSEE ne diffuse pas (secret statistique).
+"""
+mimetype = "text/csv"
+section = "Données socio-économiques"
+
+[colonnes.code_commune]
+type = "code_commune"
+nullable = false
+
+[colonnes.revenu_median]
+type = "flottant"
+description = "Médiane du niveau de vie (revenu disponible par unité de consommation, en euros)"
+nullable = true
+
+[colonnes.taux_pauvrete]
+type = "flottant"
+description = "Taux de pauvreté au seuil de 60 % du niveau de vie médian (%)"
+nullable = true
+
+[colonnes.decile1]
+type = "flottant"
+description = "1ᵉʳ décile du niveau de vie (en euros)"
+nullable = true
+
+[colonnes.decile9]
+type = "flottant"
+description = "9ᵉ décile du niveau de vie (en euros)"
+nullable = true
+
+[colonnes.rapport_interdecile_9_1]
+type = "flottant"
+description = "Rapport interdécile (D9/D1) du niveau de vie"
+nullable = true

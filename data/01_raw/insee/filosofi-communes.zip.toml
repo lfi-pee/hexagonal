@@ -1,0 +1,9 @@
+nom = "FILOSOFI 2021 — Revenu disponible par commune"
+description = """
+Base communale FILOSOFI 2021 (revenu disponible / niveau de vie), géographie 2025.
+Couvre l'ensemble des communes, au contraire du fichier IRIS limité aux communes
+d'au moins 5000 habitants. Les indicateurs des plus petites communes sont parfois
+non diffusés (secret statistique).
+"""
+mimetype = "application/zip"
+editeur = "INSEE"
