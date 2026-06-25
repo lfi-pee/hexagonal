@@ -1,0 +1,23 @@
+nom = "Répartition des circonscriptions entre les différentes composantes de la NUPES (élections législatives 2022)"
+description = """
+Ce fichier indique la répartition des circonscriptions entre les 5 composantes principales de la NUPES :
+- FI, la France insoumise,
+- PE, pôle écologiste (sauf Génération·s, compté à part)
+- PS, le parti socialiste
+- PCF, le parti communiste
+- Gs, Génération·s
+
+À noter trois cas particuliers :
+- dans la 07-01, le candidat du Parti socialiste, Hervé SAULIGNAC, bien qu'investi conformément à l'accord, ne s'en
+  réclame pas et reçoit la nuance DVG du ministère de l'Intérieur. Il est comptabilisé dans ce fichier.
+- dans la 31-08, Joël AVIRAGNET, socialiste, est d'abord investi, puis désinvesti du fait de sa proximité avec Carole
+  Delga. La candidate soutenue par la NUPES pour le 1er tour des élections est donc Annabelle FAUVERNIE pour le PE et
+  c'est elle qui est indiquée dans ce fichier.
+  Celle-ci n'atteignant pas le second tour, c'est Joël AVIRAGNET qui sera par la suite soutenu par la NUPES au second
+  tour.
+- dans la 54-05, le candidat du Parti socialiste Dominique POTIER accepte d'abord l'investiture de la NUPES avant de
+  déclarer y renoncer le lendemain et est classé en conséquence comme DVG par le ministère. Il est comptabilisé dans ce
+  fichier.
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

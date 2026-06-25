@@ -1,0 +1,5 @@
+outs:
+- md5: c9f24341b66c1843e1fec4ed6b630fec
+  size: 17086
+  hash: md5
+  path: 2022-legislatives-nupes-sensibilites.csv
