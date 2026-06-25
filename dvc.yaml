@@ -577,12 +577,12 @@ stages:
         - ${clean}/cog/communes.csv
         - ${src}/hexagonal/population/nettoyer_population_reference.py
       outs:
-        - ${clean}/population/${item}-population-reference.csv
+        - ${clean}/population/${item}-population-reference.parquet
       cmd:
         ${python} hexagonal.population.nettoyer_population_reference
         --archive ${raw}/insee/census/${item}/population-reference.zip
         --cog-communes ${clean}/cog/communes.csv
-        --output ${clean}/population/${item}-population-reference.csv
+        --output ${clean}/population/${item}-population-reference.parquet
 
   nettoyer_historique_population:
     deps:
@@ -598,7 +598,7 @@ stages:
   qualifier_communes:
     deps:
       - ${clean}/cog/communes.csv
-      - ${clean}/population/2023-population-reference.csv
+      - ${clean}/population/2023-population-reference.parquet
       - ${clean}/epci.csv
       - ${clean}/communes_epci.csv
       - ${src}/hexagonal/cog/qualifier_communes.py
@@ -607,7 +607,7 @@ stages:
     cmd: >-
       ${python} hexagonal.cog.qualifier_communes
       ${clean}/cog/communes.csv
-      ${clean}/population/2023-population-reference.csv
+      ${clean}/population/2023-population-reference.parquet
       ${clean}/epci.csv
       ${clean}/communes_epci.csv
       ${main}/cog/communes.csv

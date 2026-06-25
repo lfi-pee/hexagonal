@@ -2,11 +2,11 @@ nom = "Population de référence 2023"
 description = """
 
 """
-mimetype = "text/csv"
+mimetype = "application/vnd.apache.parquet"
 section = "Démographie"
 
 [colonnes.code_commune]
-type = "code_commune"
+type = "str"
 nullable = false
 
 [colonnes.nom_commune]
@@ -26,7 +26,7 @@ type = "entier"
 nullable = true
 
 [colonnes.code_commune_parent]
-type = "code_commune"
+type = "str"
 nullable = true
 
 [colonnes.type_commune]

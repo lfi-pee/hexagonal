@@ -1844,8 +1844,8 @@ stages:
       size: 1099107
     - path: data/03_main/cog/communes.csv
       hash: md5
-      md5: 37851737f34a8727a18e4a9b678c6940
-      size: 3612266
+      md5: 2753b1614ed9bf123feccc3c21e4b1ce
+      size: 3724507
     - path: src/hexagonal/codes_postaux/qualifier.py
       hash: md5
       md5: 8d887aeaa41023c511376aae80719331
@@ -1853,8 +1853,8 @@ stages:
     outs:
     - path: data/03_main/codes_postaux.csv
       hash: md5
-      md5: 67bac9adc0350b81198658e0debc4ac6
-      size: 587613
+      md5: 11242c4953260e83086e206c090d27bd
+      size: 716046
   extraire_contours_iris:
     cmd: 7z e data/01_raw/ign/iris-metropole.7z -so -r "iris.gpkg" > 
       "data/01_raw/ign/iris-metropole.gpkg"
@@ -1889,7 +1889,7 @@ stages:
   qualifier_communes:
     cmd: PYTHONPATH=src python -m hexagonal.cog.qualifier_communes 
       data/02_clean/cog/communes.csv 
-      data/02_clean/population/2023-population-reference.csv 
+      data/02_clean/population/2023-population-reference.parquet 
       data/02_clean/epci.csv data/02_clean/communes_epci.csv 
       data/03_main/cog/communes.csv
     deps:
@@ -1905,10 +1905,10 @@ stages:
       hash: md5
       md5: 938e91264654279008c17238ba9d4c64
       size: 82523
-    - path: data/02_clean/population/2023-population-reference.csv
+    - path: data/02_clean/population/2023-population-reference.parquet
       hash: md5
-      md5: 1c0b94913e1feb8ea36c4710f589f093
-      size: 1227811
+      md5: 54face8f9e9e34c4b861b1b7179f5689
+      size: 474099
     - path: src/hexagonal/cog/qualifier_communes.py
       hash: md5
       md5: a4e816368ffdf07fa1e0c9706ce922b8
@@ -1916,8 +1916,8 @@ stages:
     outs:
     - path: data/03_main/cog/communes.csv
       hash: md5
-      md5: 37851737f34a8727a18e4a9b678c6940
-      size: 3612266
+      md5: 2753b1614ed9bf123feccc3c21e4b1ce
+      size: 3724507
   normaliser-format-elections@2026-municipales-1-bureau_de_vote:
     cmd: PYTHONPATH=src python -m hexagonal.elections.resultats.format_2017 
       --source 
@@ -2612,8 +2612,8 @@ stages:
       size: 34201759
     - path: data/03_main/cog/communes.csv
       hash: md5
-      md5: 37851737f34a8727a18e4a9b678c6940
-      size: 3612266
+      md5: 2753b1614ed9bf123feccc3c21e4b1ce
+      size: 3724507
     - path: data/03_main/elections/2022-presidentielle-parrainages.csv
       hash: md5
       md5: f8754d354e377cb47d3f01aa43f81c14
@@ -2721,7 +2721,7 @@ stages:
       hexagonal.population.nettoyer_population_reference --archive 
       data/01_raw/insee/census/2023/population-reference.zip --cog-communes 
       data/02_clean/cog/communes.csv --output 
-      data/02_clean/population/2023-population-reference.csv
+      data/02_clean/population/2023-population-reference.parquet
     deps:
     - path: data/01_raw/insee/census/2023/population-reference.zip
       hash: md5
@@ -2733,10 +2733,10 @@ stages:
       size: 1702444
     - path: src/hexagonal/population/nettoyer_population_reference.py
       hash: md5
-      md5: ab832f7db17401a5b80713c155abe7d8
-      size: 2748
+      md5: eedbdbb14980523c2bb103237c715425
+      size: 2913
     outs:
-    - path: data/02_clean/population/2023-population-reference.csv
+    - path: data/02_clean/population/2023-population-reference.parquet
       hash: md5
-      md5: 1c0b94913e1feb8ea36c4710f589f093
-      size: 1227811
+      md5: 54face8f9e9e34c4b861b1b7179f5689
+      size: 474099

@@ -88,6 +88,7 @@
   - [Recensement de la population 2017 — Diplômes et formation (IRIS)](#data/01_raw/insee/census/2017/base-ic-diplomes-formation-2017.csv)
   - [Recensement de la population 2017 — Évolution et structure de la population (IRIS)](#data/01_raw/insee/census/2017/base-ic-evol-struct-pop-2017.csv)
   - [Recensement de la population 2017 — Logement (IRIS)](#data/01_raw/insee/census/2017/base-ic-logement-2017.csv)
+  - [Recensement de 2017 à Mayotte](#data/01_raw/insee/census/2017/mayotte-population_reference.xlsx)
   - [Documentation recensement 2017 — activité des résidents — par iris](#data/01_raw/insee/census/2017/meta_base-ic-activite-residents-2017.csv)
   - [Documentation recensement 2017 — couples, familles et ménages — par iris](#data/01_raw/insee/census/2017/meta_base-ic-couples-familles-menages-2017.csv)
   - [Documentation recensement 2017 — diplômes et formation — par iris](#data/01_raw/insee/census/2017/meta_base-ic-diplomes-formation-2017.csv)
@@ -183,7 +184,10 @@
   - [Documentation recensement 2022 — diplômes et formation — par iris](#data/01_raw/insee/census/2022/meta_base-ic-diplomes-formation-2022.csv)
   - [Documentation recensement 2022 — évolution et structure de la population — par iris](#data/01_raw/insee/census/2022/meta_base-ic-evol-struct-pop-2022.csv)
   - [Documentation recensement 2022 — logement — par iris](#data/01_raw/insee/census/2022/meta_base-ic-logement-2022.csv)
+  - [Recensement de 2022 en Polynésie française](#data/01_raw/insee/census/2022/polynesie-francaise-population-reference.xlsx)
   - [Population de référence issue du recensement 2023](#data/01_raw/insee/census/2023/population-reference.zip)
+  - [wallis-et-futuna-population_reference](#data/01_raw/insee/census/2023/wallis-et-futuna-population_reference.xlsx)
+  - [Recensement de 2025 en Nouvelle-Calédonie](#data/01_raw/insee/census/2025/nouvelle-caledonie-population-reference.xlsx)
   - [Code Officiel Géographique 2024](#data/01_raw/insee/cog.zip)
   - [Liste des EPCI à fiscalité propre](#data/01_raw/insee/epci_fp.zip)
   - [FILOSOFI 2021 — Revenu disponible par IRIS](#data/01_raw/insee/filosofi-disponible.zip)
@@ -192,20 +196,27 @@
 - [LEGIS-2022](#legis-2022)
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
 - [La France insoumise](#la-france-insoumise)
-  - [Nombre de conseillers municipaux par commune — de 1996 à 2008](#data/01_raw/lafranceinsoumise/1996-nb-conseillers-municipaux.csv)
-  - [Nombre de sénateurs par département](#data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv)
-  - [Nombre de conseillers municipaux par commune — depuis 2014](#data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv)
-  - [Nombre de candidats aux élections régionales par section départementale](#data/01_raw/lafranceinsoumise/2021-nombre-candidats-conseils-regionaux.csv)
-  - [Nombre de conseillers régionaux par région](#data/01_raw/lafranceinsoumise/2021-nombre-conseillers-regionaux.csv)
-  - [Listes déposées pour l&#39;élection européenne 2024 en France](#data/01_raw/lafranceinsoumise/2024-europeenne-listes.csv)
-  - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv)
-  - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv)
-  - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv)
-  - [Nombre de membres des conseils de secteurs de Paris, Lyon et Marseille pour l&#39;élection 2026](#data/01_raw/lafranceinsoumise/2026-conseillers-arrondissement-plm.csv)
-  - [Nombre de membres du Conseil de Paris et des conseils municipaux de Lyon et de Marseille pour l&#39;élection 2026](#data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv)
-  - [Liste des listes soutenues par la France insoumise aux municipales de 2026](#data/01_raw/lafranceinsoumise/2026-municipales-1-listes-lfi.parquet)
-  - [Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026](#data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv)
-  - [Paramètres électoraux des différents scrutins de listes](#data/01_raw/lafranceinsoumise/scrutins_listes.csv)
+  - [Nombre de conseillers municipaux par commune — de 1996 à 2008](#data/01_raw/lafranceinsoumise/code_electoral/1996-nb-conseillers-municipaux.csv)
+  - [Nombre de sénateurs par département](#data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv)
+  - [Nombre de conseillers municipaux par commune — depuis 2014](#data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv)
+  - [Nombre de candidats aux élections régionales par section départementale](#data/01_raw/lafranceinsoumise/code_electoral/2021-nombre-candidats-conseils-regionaux.csv)
+  - [Nombre de conseillers régionaux par région](#data/01_raw/lafranceinsoumise/code_electoral/2021-nombre-conseillers-regionaux.csv)
+  - [Nombre de membres des conseils de secteurs de Paris, Lyon et Marseille pour l&#39;élection 2026](#data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-arrondissement-plm.csv)
+  - [Nombre de membres du Conseil de Paris et des conseils municipaux de Lyon et de Marseille pour l&#39;élection 2026](#data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv)
+  - [Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026](#data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv)
+  - [Paramètres électoraux des différents scrutins de listes](#data/01_raw/lafranceinsoumise/code_electoral/scrutins_listes.csv)
+  - [Résultats des élections consulaires de mai 2021](#data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-circonscription_consulaire.parquet)
+  - [Résultats des élections consulaires partielles de novembre 2021](#data/01_raw/lafranceinsoumise/elections/2021-11-consulaires-par_circonscription_consulaire.parquet)
+  - [Répartition des circonscriptions entre les différentes composantes de la NUPES (élections législatives 2022)](#data/01_raw/lafranceinsoumise/elections/2022-legislatives-nupes-sensibilites.csv)
+  - [Listes déposées pour l&#39;élection européenne 2024 en France](#data/01_raw/lafranceinsoumise/elections/2024-europeenne-listes.csv)
+  - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv)
+  - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv)
+  - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv)
+  - [Résultats des élections consulaires 2026 par circonscription consulaire](#data/01_raw/lafranceinsoumise/elections/2026-consulaires-par_circonscription_consulaire.parquet)
+  - [Liste des listes soutenues par la France insoumise aux municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet)
+  - [Populations de référence des communes de Mayotte issue du recensement de 2017](#data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet)
+  - [Populations de référence des communes de Polynésie française issue du recensement de 2022](#data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet)
+  - [Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025](#data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet)
 - [La Poste](#la-poste)
   - [Base officielle des codes postaux](#data/01_raw/la_poste/base_officielle_codes_postaux.csv)
 - [Le Monde](#le-monde)
@@ -299,6 +310,11 @@
   - [Répertoire national des élus — député·es — mai 2026](#data/01_raw/rne/2026-05/deputes.csv)
   - [Répertoire national des élus — député·es européen·nes — mai 2026](#data/01_raw/rne/2026-05/deputes_europeens.csv)
   - [Répertoire national des élus — sénateur·rices — mai 2026](#data/01_raw/rne/2026-05/senateurs.csv)
+- [Ministère des Affaires étrangères](#ministere-des-affaires-etrangeres)
+  - [Résultats des élections consulaires par circonscription consulaire](#data/01_raw/ministere_affaires_etrangeres/2021-05-consulaires-circonscription_consulaire.xlsx)
+  - [Résultats des élections consulaires de 2026](#data/01_raw/ministere_affaires_etrangeres/2026-consulaires-circonscription_consulaire.pdf)
+- [Ministère des affaires étrangères](#ministere-des-affaires-etrangeres)
+  - [2021-11-consulaires-circonscription_consulaire](#data/01_raw/ministere_affaires_etrangeres/2021-11-consulaires-circonscription_consulaire.xlsx)
 - [Natural Earth](#natural-earth)
   - [Admin 0 — Pays](#data/01_raw/natural_earth/ne_10m_admin_0_countries.zip)
   - [Populated Places](#data/01_raw/natural_earth/ne_10m_populated_places.zip)
@@ -1406,6 +1422,20 @@ Données sur l&#39;évolution et la structure de la population issues du recense
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/27/0176070c2e901661e5041b88900b0f |
 
 Données sur le logement issues du recensement de la population au niveau infracommunal (IRIS).
+
+### Recensement de 2017 à Mayotte
+<a name="data/01_raw/insee/census/2017/mayotte-population_reference.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/census/2017/mayotte-population_reference.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/2120838 |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/5392668/mayotte-RP2017-tableaux_pop_legale.xlsx |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f2/493a50ee7e50bbca19bd98c27f7d3f |
+
+
 
 ### Documentation recensement 2017 — activité des résidents — par iris
 <a name="data/01_raw/insee/census/2017/meta_base-ic-activite-residents-2017.csv"></a>
@@ -2552,6 +2582,20 @@ Données sur le logement issues du recensement de la population au niveau infrac
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/3a/feb682778bb69bfdbb6bd5d000cd5e |
 
 
+### Recensement de 2022 en Polynésie française
+<a name="data/01_raw/insee/census/2022/polynesie-francaise-population-reference.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/census/2022/polynesie-francaise-population-reference.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/2122700 |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/6690039/tableau%20resultats%20pop%20legale2022xlsx.xlsx |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/dc/0fb35506aa6c16018479f3e2421784 |
+
+
+
 ### Population de référence issue du recensement 2023
 <a name="data/01_raw/insee/census/2023/population-reference.zip"></a>
 
@@ -2562,6 +2606,34 @@ Données sur le logement issues du recensement de la population au niveau infrac
 | Éditeur | INSEE |
 | URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.zip |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/7e/b81f00338234d34de9bed2ec594e6c |
+
+
+
+### wallis-et-futuna-population_reference
+<a name="data/01_raw/insee/census/2023/wallis-et-futuna-population_reference.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/census/2023/wallis-et-futuna-population_reference.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/2121453 |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/7756942/wetf-RP2023-tableaux_pop_legale.xlsx |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/0f/a7c892fb402d34134e2a9582cc0280 |
+
+
+
+### Recensement de 2025 en Nouvelle-Calédonie
+<a name="data/01_raw/insee/census/2025/nouvelle-caledonie-population-reference.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/census/2025/nouvelle-caledonie-population-reference.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/2122859 |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/8658741/NC2025_Annexe_TableauxDecret_pour%20Insee.fr.xlsx |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/62fdee566babecab12106060aa7cfc |
 
 
 
@@ -2676,11 +2748,11 @@ Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique s
 <a name="la-france-insoumise"></a>
 
 ### Nombre de conseillers municipaux par commune — de 1996 à 2008
-<a name="data/01_raw/lafranceinsoumise/1996-nb-conseillers-municipaux.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/1996-nb-conseillers-municipaux.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/1996-nb-conseillers-municipaux.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/1996-nb-conseillers-municipaux.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/5d/b4979d71c81390425a82ccc926d14f |
@@ -2689,11 +2761,11 @@ Simple tabulation du nombre de conseillers municipaux selon la population de la 
 fixé par l&#39;article L2121-2 du Code électoral.
 
 ### Nombre de sénateurs par département
-<a name="data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/8c/895fe131736d7a64f979d157271977 |
@@ -2702,11 +2774,11 @@ Ce tableau est la transcription du tableau en annexe n°6 du code électoral qui
 par département.
 
 ### Nombre de conseillers municipaux par commune — depuis 2014
-<a name="data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b8/9885f27aca03b75606427c3a2a99a6 |
@@ -2715,11 +2787,11 @@ Simple tabulation du nombre de conseillers municipaux selon la population de la 
 fixé par l&#39;article L2121-2 du Code électoral.
 
 ### Nombre de candidats aux élections régionales par section départementale
-<a name="data/01_raw/lafranceinsoumise/2021-nombre-candidats-conseils-regionaux.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/2021-nombre-candidats-conseils-regionaux.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2021-nombre-candidats-conseils-regionaux.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/2021-nombre-candidats-conseils-regionaux.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b0/2aacbee24f89262555ea1d105124ac |
@@ -2728,79 +2800,23 @@ Ce tableau transcrit le nombre de candidats à présenter par section départeme
 donné par le tableau en annexe n°7 du code électoral.
 
 ### Nombre de conseillers régionaux par région
-<a name="data/01_raw/lafranceinsoumise/2021-nombre-conseillers-regionaux.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/2021-nombre-conseillers-regionaux.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2021-nombre-conseillers-regionaux.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/2021-nombre-conseillers-regionaux.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/36/8745aab9869cba8e3ecc0d995d19d5 |
 
 Ce tableau transcrit le nombre de conseillers régionaux par région tel que donné par le tableau en annexe n°7 du code électoral.
 
-### Listes déposées pour l&#39;élection européenne 2024 en France
-<a name="data/01_raw/lafranceinsoumise/2024-europeenne-listes.csv"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2024-europeenne-listes.csv |
-| Format de fichier | text/csv |
-| Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/43/ed80687cfd4f4ffcf34063217380fa |
-
-Ce site agrège des informations utiles pour caractériser les listes déposées pour les
-élections européennes 2024.
-
-### Nuançage précis des candidats aux législatives 2024
-<a name="data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv |
-| Format de fichier | text/csv |
-| Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/09/1a6058b5ec9245608c7e81c41f8310 |
-
-Un nuançage précis à deux niveaux (alliance et parti) réalisé par Elia Stebach pour
-la France insoumise en 2025.
-
-### Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
-<a name="data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv |
-| Format de fichier | text/csv |
-| Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073 |
-
-L&#39;accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
-répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
-le périmètre de l&#39;accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
-
-Ce fichier n&#39;indique pas la présence d&#39;éventuelles dissidences, investies ou non par une des quatre sensibilités de
-l&#39;accord.
-
-### Nuançage LFI des candidatures aux législatives 2024
-<a name="data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv |
-| Format de fichier | text/csv |
-| Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6 |
-
-Ce fichier propose un nuançage réalisé par les équipes de la France insoumise pendant la
-campagne des législatives 2024 à des fins d&#39;analyse électorale.
-
 ### Nombre de membres des conseils de secteurs de Paris, Lyon et Marseille pour l&#39;élection 2026
-<a name="data/01_raw/lafranceinsoumise/2026-conseillers-arrondissement-plm.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-arrondissement-plm.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2026-conseillers-arrondissement-plm.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-arrondissement-plm.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/69/924418026b9da0727db982666cba28 |
@@ -2811,11 +2827,11 @@ tableaux qui énumèrent le nombre de conseillers composant les conseils de sect
 Marseille.
 
 ### Nombre de membres du Conseil de Paris et des conseils municipaux de Lyon et de Marseille pour l&#39;élection 2026
-<a name="data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f1/9f112b76794a931762598332814dbf |
@@ -2826,24 +2842,12 @@ municipaux de Lyon et de Marseille, ce fichier recense :
 - le nombre de conseillers municipaux de Lyon (CGCT L2513-1)
 - le nombre de conseillers municipaux de Marseille(CGCT L2513-1)
 
-### Liste des listes soutenues par la France insoumise aux municipales de 2026
-<a name="data/01_raw/lafranceinsoumise/2026-municipales-1-listes-lfi.parquet"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/2026-municipales-1-listes-lfi.parquet |
-| Format de fichier | application/vnd.apache.parquet |
-| Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/40/59dd9f17166dab7c55fc9697370d03 |
-
-
-
 ### Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026
-<a name="data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/b5e042f2ffb2685719cabab7516c47 |
@@ -2858,15 +2862,199 @@ collectivités territoriales au double du nombre de conseillers municipaux élus
 inférieur à 10 ni supérieur à 40.
 
 ### Paramètres électoraux des différents scrutins de listes
-<a name="data/01_raw/lafranceinsoumise/scrutins_listes.csv"></a>
+<a name="data/01_raw/lafranceinsoumise/code_electoral/scrutins_listes.csv"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/01_raw/lafranceinsoumise/scrutins_listes.csv |
+| Chemin interne | data/01_raw/lafranceinsoumise/code_electoral/scrutins_listes.csv |
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/92/98d6138602e9e7d687e196d13f162d |
 
+
+### Résultats des élections consulaires de mai 2021
+<a name="data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-circonscription_consulaire.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-circonscription_consulaire.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/4a/327d0a8d045c8594720b73dc5f6e44 |
+
+Résultats des élections consulaires 2021 extraites et mises en forme depuis le
+[fichier excel mis en ligne par le ministère des Affaires étrangères](#data/01_raw/ministere_affaires_etrangeres/2021-05-consulaires-bureau_de_vote-participation.xlsx).
+
+Vu l&#39;absence de régularité dans le format de ces fichiers, et le fait que le ministère des Affaires étrangères ne publie
+plus les résultats que sous forme de tableau PDF, il est plus simple de les nettoyer à la main et de les intégrer ainsi
+dans hexagonal.
+
+### Résultats des élections consulaires partielles de novembre 2021
+<a name="data/01_raw/lafranceinsoumise/elections/2021-11-consulaires-par_circonscription_consulaire.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2021-11-consulaires-par_circonscription_consulaire.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/da/a9ba845462f72051fcd4380e9dd051 |
+
+Résultats des élections consulaires partielles de novembre 2021 extraites et mises en forme depuis le
+[fichier excel mis en ligne par le ministère des Affaires étrangères](#data/01_raw/ministere_affaires_etrangeres/2021-11-consulaires-bureau_de_vote-participation.xlsx).
+
+Vu l&#39;absence de régularité dans le format de ces fichiers, et le fait que le ministère des Affaires étrangères ne publie
+plus les résultats que sous forme de tableau PDF, il est plus simple de les nettoyer à la main et de les intégrer ainsi
+dans hexagonal.
+
+### Répartition des circonscriptions entre les différentes composantes de la NUPES (élections législatives 2022)
+<a name="data/01_raw/lafranceinsoumise/elections/2022-legislatives-nupes-sensibilites.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2022-legislatives-nupes-sensibilites.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/f24341b66c1843e1fec4ed6b630fec |
+
+Ce fichier indique la répartition des circonscriptions entre les 5 composantes principales de la NUPES :
+- FI, la France insoumise,
+- PE, pôle écologiste (sauf Génération·s, compté à part)
+- PS, le parti socialiste
+- PCF, le parti communiste
+- Gs, Génération·s
+
+À noter trois cas particuliers :
+- dans la 07-01, le candidat du Parti socialiste, Hervé SAULIGNAC, bien qu&#39;investi conformément à l&#39;accord, ne s&#39;en
+  réclame pas et reçoit la nuance DVG du ministère de l&#39;Intérieur. Il est comptabilisé dans ce fichier.
+- dans la 31-08, Joël AVIRAGNET, socialiste, est d&#39;abord investi, puis désinvesti du fait de sa proximité avec Carole
+  Delga. La candidate soutenue par la NUPES pour le 1er tour des élections est donc Annabelle FAUVERNIE pour le PE et
+  c&#39;est elle qui est indiquée dans ce fichier.
+  Celle-ci n&#39;atteignant pas le second tour, c&#39;est Joël AVIRAGNET qui sera par la suite soutenu par la NUPES au second
+  tour.
+- dans la 54-05, le candidat du Parti socialiste Dominique POTIER accepte d&#39;abord l&#39;investiture de la NUPES avant de
+  déclarer y renoncer le lendemain et est classé en conséquence comme DVG par le ministère. Il est comptabilisé dans ce
+  fichier.
+
+### Listes déposées pour l&#39;élection européenne 2024 en France
+<a name="data/01_raw/lafranceinsoumise/elections/2024-europeenne-listes.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2024-europeenne-listes.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/43/ed80687cfd4f4ffcf34063217380fa |
+
+Ce site agrège des informations utiles pour caractériser les listes déposées pour les
+élections européennes 2024.
+
+### Nuançage précis des candidats aux législatives 2024
+<a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/09/1a6058b5ec9245608c7e81c41f8310 |
+
+Un nuançage précis à deux niveaux (alliance et parti) réalisé par Elia Stebach pour
+la France insoumise en 2025.
+
+### Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
+<a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/51/564d56f7bea8c6fc1abf14f540a073 |
+
+L&#39;accord signé entre la France insoumise, les Verts, le Parti communiste français et le Parti socialiste prévoyait une
+répartition des circonscriptions entre les 4 sensibilités. Ce fichier indique, pour chaque circonscription incluse dans
+le périmètre de l&#39;accord, la sensibilité à laquelle elle a été attribuée et le candidat que cette dernière y a investi.
+
+Ce fichier n&#39;indique pas la présence d&#39;éventuelles dissidences, investies ou non par une des quatre sensibilités de
+l&#39;accord.
+
+### Nuançage LFI des candidatures aux législatives 2024
+<a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/24/a9e931e2d43373ecddd42a2434eba6 |
+
+Ce fichier propose un nuançage réalisé par les équipes de la France insoumise pendant la
+campagne des législatives 2024 à des fins d&#39;analyse électorale.
+
+### Résultats des élections consulaires 2026 par circonscription consulaire
+<a name="data/01_raw/lafranceinsoumise/elections/2026-consulaires-par_circonscription_consulaire.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2026-consulaires-par_circonscription_consulaire.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e2/c86fbd5002cf5750ca0ee73f21087d |
+
+Ces résultats ont été extraits du
+[PDF publié par le ministère des affaires étrangères](#data/01_raw/ministere_affaires_etrangeres/2026-consulaires-circonscription_consulaire.pdf)
+à l&#39;aide de l&#39;outil d&#39;extraction de tableaux PDF camelot, puis nettoyés à la main.
+
+### Liste des listes soutenues par la France insoumise aux municipales de 2026
+<a name="data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/40/59dd9f17166dab7c55fc9697370d03 |
+
+
+
+### Populations de référence des communes de Mayotte issue du recensement de 2017
+<a name="data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b4/c1f8f4321e7f201022b4935837b198 |
+
+Correspond au traitement à la main du
+[fichier de l&#39;INSEE](#data/01_raw_insee/census/2017/mayotte-population_reference.xlsx).
+
+### Populations de référence des communes de Polynésie française issue du recensement de 2022
+<a name="data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f2/c58242782861bbb31921d1517b28c1 |
+
+Correspond au traitement à la main du
+[fichier de l&#39;INSEE](#data/01_raw_insee/census/2022/polynesie-francaise-population_reference.xlsx).
+
+### Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025
+<a name="data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e7/f2dd4ca76ce2b24a1d7c3550f522cc |
+
+Correspond au traitement à la main du
+[fichier de l&#39;INSEE](#data/01_raw_insee/census/2025/nouvelle-caledonie-population_reference.xlsx).
 
 
 
@@ -4056,6 +4244,67 @@ Ce fichier comporte la liste des conseillers municipaux.
 | Éditeur | Ministère de l&#39;Intérieur |
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/b78f8945-509f-4609-a4a7-3048b8370479 |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/84/385bc30ca1d17d8eb47140fdd2a7e3 |
+
+
+
+
+
+## Ministère des Affaires étrangères
+<a name="ministere-des-affaires-etrangeres"></a>
+
+### Résultats des élections consulaires par circonscription consulaire
+<a name="data/01_raw/ministere_affaires_etrangeres/2021-05-consulaires-circonscription_consulaire.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_affaires_etrangeres/2021-05-consulaires-circonscription_consulaire.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| Éditeur | Ministère des Affaires étrangères |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/d0d89fc0-2f83-45dc-a669-4c61951c7114 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/85/4ee39bc1b6414f599dcdcdd0b89947 |
+
+Vu le faible volume de données et le format irrégulier des fichiers de résultats pour cette élection,
+[ce fichier a été traité à la main](#data/01_raw/lafranceinsoumise/2021-05-consulaires-circonscription_consulaire.parquet).
+
+Il est toutefois inclus ici à titre documentaire.
+
+### Résultats des élections consulaires de 2026
+<a name="data/01_raw/ministere_affaires_etrangeres/2026-consulaires-circonscription_consulaire.pdf"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_affaires_etrangeres/2026-consulaires-circonscription_consulaire.pdf |
+| Format de fichier | application/pdf |
+| Éditeur | Ministère des Affaires étrangères |
+| URL d&#39;origine | https://www.diplomatie.gouv.fr/files/files/pdf/resultats-et-elus-danae-01-06-2026.pdf |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/61/003068c8b106b6864d723679b8b5ec |
+
+Ce fichier PDF est le seul format sous lequel les résultats des élections consulaires 2026 ont
+été publiés par le ministère des Affaires étrangères. Il a été
+[traité à la main](#data/01_raw/lafranceinsoumise/2026-consulaires-circonscription_consulaire.parquet)
+et n&#39;est intégré ici qu&#39;à titre documentaire.
+
+
+
+
+## Ministère des affaires étrangères
+<a name="ministere-des-affaires-etrangeres"></a>
+
+### 2021-11-consulaires-circonscription_consulaire
+<a name="data/01_raw/ministere_affaires_etrangeres/2021-11-consulaires-circonscription_consulaire.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_affaires_etrangeres/2021-11-consulaires-circonscription_consulaire.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| Éditeur | Ministère des affaires étrangères |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/a477fc55-cfc9-4fdc-9973-007cc286a242 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/39/f7f9405dd2ab3de85e32ff2e5f259e |
+
+Vu le faible volume de données et le format irrégulier des fichiers de résultats pour cette élection,
+[ce fichier a été traité à la main](#data/01_raw/lafranceinsoumise/2021-11-consulaires-circonscription_consulaire.parquet).
+
+Il est toutefois inclus ici à titre documentaire.
 
 
 

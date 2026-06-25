@@ -1,6 +1,8 @@
-import polars as pl
 import zipfile
+
 import click
+import polars as pl
+import polars.selectors as cs
 
 from hexagonal.files.spec import get_polars_dataframe
 
@@ -71,10 +73,16 @@ def main(archive, cog_communes, output):
             population_totale="PTOT",
             code_commune_parent="COMP",
         )
-        .join(cog_communes, on=["code_commune", "code_commune_parent"], how="left")
+        .join(
+            cog_communes,
+            on=["code_commune", "code_commune_parent"],
+            how="left",
+            nulls_equal=True,
+        )
+        .with_columns(cs.integer().cast(pl.Int32()))
     )
 
-    pop.write_csv(output)
+    pop.write_parquet(output)
 
 
 if __name__ == "__main__":

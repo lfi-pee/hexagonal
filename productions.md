@@ -55,8 +55,9 @@
   - [Liste des codes postaux](#data/03_main/codes_postaux.csv)
   - [Liste des communes](#data/03_main/cog/communes.csv)
 - [Démographie](#demographie)
-  - [Population de référence 2023](#data/02_clean/population/2023-population-reference.csv)
+  - [Population de référence 2023](#data/02_clean/population/2023-population-reference.parquet)
   - [Population par commune de 1876 à 2023](#data/02_clean/population/historique.csv)
+  - [Populations de référence 2026 incluant Mayotte, Nouvelle-Calédonie et Polynésie française](#data/03_main/population/2026-population_reference.parquet)
 - [Parrainages](#parrainages)
   - [Maires ayant parrainé un candidat à la présidentielle de 2022 encore en poste en 2026](#data/03_main/elections/2022-presidentielle-parrains-en-poste.csv)
 - [Répertoire national des élus](#repertoire-national-des-elus)
@@ -3323,7 +3324,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/codes_postaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/67/bac9adc0350b81198658e0debc4ac6 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/11/242c4953260e83086e206c090d27bd |
 
 Ce fichier comporte une ligne par code postal et indique, pour chaque code postal,
 le code INSEE et le nom de la commune la plus peuplée dans le territoire délivré par
@@ -3394,7 +3395,7 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population/2023-population-reference.csv">Population de référence 2023</a>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
         <ul>
     <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
         </li>
@@ -3433,7 +3434,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/cog/communes.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/37/851737f34a8727a18e4a9b678c6940 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/27/53b1614ed9bf123feccc3c21e4b1ce |
 
 Ce fichier liste les communes de plein droit (`type_commune == &#39;COM&#39;` dans le COG).
 
@@ -3529,7 +3530,7 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population/2023-population-reference.csv">Population de référence 2023</a>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
         <ul>
     <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
         </li>
@@ -3565,13 +3566,13 @@ Cette production dépend des sources suivantes :
 <a name="demographie"></a>
 
 ### Population de référence 2023
-<a name="data/02_clean/population/2023-population-reference.csv"></a>
+<a name="data/02_clean/population/2023-population-reference.parquet"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/02_clean/population/2023-population-reference.csv |
-| Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/cf/8c15c7c1a1ebd5a6ab85edbcbd4e1d |
+| Chemin interne | data/02_clean/population/2023-population-reference.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/54/face8f9e9e34c4b861b1b7179f5689 |
 
 
 
@@ -3589,7 +3590,7 @@ Cette production dépend des sources suivantes :
 <tbody>
 <tr>
     <td><code>code_commune</code></td>
-    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
@@ -3614,7 +3615,7 @@ Cette production dépend des sources suivantes :
   </tr>
 <tr>
     <td><code>code_commune_parent</code></td>
-    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
     <td></td>
   </tr>
 <tr>
@@ -3878,6 +3879,93 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Populations de référence 2026 incluant Mayotte, Nouvelle-Calédonie et Polynésie française
+<a name="data/03_main/population/2026-population_reference.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/population/2026-population_reference.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f8/4201852ebb406791891ff9955c3492 |
+
+Ce fichier compile les populations de référence pour toutes les communes de France. Il agrège :
+- le recensement de 2023 dans les limites des communes du 1er janvier 2025, incluant hexagone, Corse, départements et
+  régions d&#39;outremer, Saint-Barthélemy, Saint-Martin, et Saint-Pierre-et-Miquelon.
+- le recensement de 2017 de Mayotte
+- le recensement de 2022 de la Polynésie française
+- le recensement de 2025 de la Nouvelle-Calédonie
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_comptee_a_part</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
+        </li>
+    <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+        </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet">Populations de référence des communes de Mayotte issue du recensement de 2017</a>
+        </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet">Populations de référence des communes de Polynésie française issue du recensement de 2022</a>
+        </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet">Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025</a>
+        </li>
+    </ul>
+
 
 
 ## Parrainages
@@ -3987,7 +4075,7 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population/2023-population-reference.csv">Population de référence 2023</a>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
         <ul>
     <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
         </li>
@@ -5510,7 +5598,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="sources.md#data/01_raw/ministere_interieur/2020-senatoriales-departement.xlsx">Résultats des sénatoriales 2020 par département</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv">Nombre de sénateurs par département</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv">Nombre de sénateurs par département</a>
         </li>
     </ul>
 
@@ -10307,11 +10395,11 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv">Nombre de conseillers municipaux par commune — depuis 2014</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv">Nombre de conseillers municipaux par commune — depuis 2014</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv">Nombre de membres du Conseil de Paris et des conseils municipaux de Lyon et de Marseille pour l&#39;élection 2026</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv">Nombre de membres du Conseil de Paris et des conseils municipaux de Lyon et de Marseille pour l&#39;élection 2026</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv">Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv">Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026</a>
         </li>
     </ul>
 
@@ -10716,11 +10804,11 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
         </li>
     </ul>
 
@@ -10862,11 +10950,11 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
         </li>
     </ul>
 

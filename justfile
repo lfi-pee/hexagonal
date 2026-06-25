@@ -9,7 +9,7 @@ push:
   uv run src/hexagonal/files/rewrite_s3_headers.py
 
 repro:
-  uv run dvc repro
+  uv run dvc repro --all-pipelines --recursive
 
 # Crée les fichiers de documentation sources et productions
 scaffold:
