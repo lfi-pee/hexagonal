@@ -1,5 +1,5 @@
 outs:
-- md5: daa9ba845462f72051fcd4380e9dd051
-  size: 3022
+- md5: 895d81d4b57f14e97b3e4789e6217d0f
+  size: 2944
   hash: md5
   path: 2021-11-consulaires-par_circonscription_consulaire.parquet
