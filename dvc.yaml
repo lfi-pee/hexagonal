@@ -65,14 +65,14 @@ stages:
   normaliser-format-senatoriales-2020:
     deps:
       - ${raw}/ministere_interieur/2020-senatoriales-departement.xlsx
-      - ${raw}/lafranceinsoumise/2003-senateurs-par-departements.csv
+      - ${raw}/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       - ${src}/hexagonal/elections/senatoriales/nettoyer_2020.py
     outs:
       - ${clean}/elections/2020-senatoriales-departement.parquet
     cmd: >-
       ${python} hexagonal.elections.senatoriales.nettoyer_2020
       ${raw}/ministere_interieur/2020-senatoriales-departement.xlsx
-      ${raw}/lafranceinsoumise/2003-senateurs-par-departements.csv
+      ${raw}/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       ${clean}/elections/2020-senatoriales-departement.parquet
 
   candidats-nettoyer-legislatives-2022-2024:
@@ -248,15 +248,15 @@ stages:
       cmd: >-
         ${python} hexagonal.elections.candidatures.qualifier_legislatives2024
         ${clean}/elections/2024-legislatives-${item}-candidats.csv
-        ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
-        ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
-        ${raw}/lafranceinsoumise/2024-legislatives-candidats.csv
+        ${raw}/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+        ${raw}/lafranceinsoumise/elections/2024-legislatives-nuances.csv
+        ${raw}/lafranceinsoumise/elections/2024-legislatives-candidats.csv
         ${main}/elections/2024-legislatives-${item}-candidats.csv
       deps:
         - ${clean}/elections/2024-legislatives-${item}-candidats.csv
-        - ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
-        - ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
-        - ${raw}/lafranceinsoumise/2024-legislatives-candidats.csv
+        - ${raw}/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+        - ${raw}/lafranceinsoumise/elections/2024-legislatives-nuances.csv
+        - ${raw}/lafranceinsoumise/elections/2024-legislatives-candidats.csv
         - ${src}/hexagonal/elections/candidatures/qualifier_legislatives2024.py
         - ${src}/hexagonal/codes.py
       outs:
@@ -751,16 +751,16 @@ stages:
   nb-conseillers-municipaux:
     deps:
       - ${clean}/population/historique.csv
-      - ${raw}/lafranceinsoumise/2014-nb-conseillers-municipaux.csv
-      - ${raw}/lafranceinsoumise/2026-conseillers-plm.csv
-      - ${raw}/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv
+      - ${raw}/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
+      - ${raw}/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv
+      - ${raw}/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       - ${src}/hexagonal/elections/nombre_conseillers_municipaux.py
     outs:
       - ${main}/elections/nombre_conseillers_municipaux.parquet
     cmd: >-
       ${python} hexagonal.elections.nombre_conseillers_municipaux
       --population ${clean}/population/historique.csv
-      --nb-conseillers ${raw}/lafranceinsoumise/2014-nb-conseillers-municipaux.csv
-      --plm-2026 ${raw}/lafranceinsoumise/2026-conseillers-plm.csv
-      --plm-pre-2026 ${raw}/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv
+      --nb-conseillers ${raw}/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
+      --plm-2026 ${raw}/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv
+      --plm-pre-2026 ${raw}/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       --output ${main}/elections/nombre_conseillers_municipaux.parquet

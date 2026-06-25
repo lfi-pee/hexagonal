@@ -711,20 +711,23 @@ stages:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.candidatures.qualifier_legislatives2024 
       data/02_clean/elections/2024-legislatives-1-candidats.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv 
       data/03_main/elections/2024-legislatives-1-candidats.csv
     deps:
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv
       hash: md5
       md5: 091a6058b5ec9245608c7e81c41f8310
       size: 148939
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
       size: 17175
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv
       hash: md5
       md5: 24a9e931e2d43373ecddd42a2434eba6
       size: 125983
@@ -749,20 +752,23 @@ stages:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.candidatures.qualifier_legislatives2024 
       data/02_clean/elections/2024-legislatives-2-candidats.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv 
       data/03_main/elections/2024-legislatives-2-candidats.csv
     deps:
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv
       hash: md5
       md5: 091a6058b5ec9245608c7e81c41f8310
       size: 148939
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
       size: 17175
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv
       hash: md5
       md5: 24a9e931e2d43373ecddd42a2434eba6
       size: 125983
@@ -2507,22 +2513,25 @@ stages:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.nombre_conseillers_municipaux --population 
       data/02_clean/population/historique.csv --nb-conseillers 
-      data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv 
-      --plm-2026 data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv 
+      data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
+      --plm-2026 
+      data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv 
       --plm-pre-2026 
-      data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv 
+      data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       --output data/03_main/elections/nombre_conseillers_municipaux.parquet
     deps:
-    - path: data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
       hash: md5
       md5: b89885f27aca03b75606427c3a2a99a6
       size: 199
-    - path: data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv
       hash: md5
       md5: f19f112b76794a931762598332814dbf
       size: 95
     - path: 
-        data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv
+        data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       hash: md5
       md5: f3b5e042f2ffb2685719cabab7516c47
       size: 1323
@@ -2542,10 +2551,11 @@ stages:
   normaliser-format-senatoriales-2020:
     cmd: PYTHONPATH=src python -m hexagonal.elections.senatoriales.nettoyer_2020
       data/01_raw/ministere_interieur/2020-senatoriales-departement.xlsx 
-      data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv 
+      data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       data/02_clean/elections/2020-senatoriales-departement.parquet
     deps:
-    - path: data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       hash: md5
       md5: 8c895fe131736d7a64f979d157271977
       size: 577
