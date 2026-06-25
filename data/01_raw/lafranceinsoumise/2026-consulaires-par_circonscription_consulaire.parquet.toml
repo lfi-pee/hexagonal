@@ -1,0 +1,8 @@
+nom = "Résultats des élections consulaires 2026 par circonscription consulaire"
+description = """
+Ces résultats ont été extraits du
+[PDF publié par le ministère des affaires étrangères](https://www.diplomatie.gouv.fr/files/files/pdf/resultats-et-elus-danae-01-06-2026.pdf)
+à l'aide de l'outil d'extraction de tableaux PDF camelot, puis nettoyés à la main.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"
