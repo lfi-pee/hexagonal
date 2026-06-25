@@ -1,0 +1,9 @@
+nom = "Résultats des élections consulaires de 2026"
+description = """
+Ce fichier PDF est le seul format sous lequel les résultats des élections consulaires 2026 ont
+été publiés par le ministère des Affaires étrangères. Il a été
+[traité à la main](#data/01_raw/lafranceinsoumise/2026-consulaires-circonscription_consulaire.parquet)
+et n'est intégré ici qu'à titre documentaire.
+"""
+mimetype = "application/pdf"
+editeur = "Ministère des Affaires étrangères"

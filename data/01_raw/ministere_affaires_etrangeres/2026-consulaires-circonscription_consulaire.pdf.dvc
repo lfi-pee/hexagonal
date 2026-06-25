@@ -1,0 +1,13 @@
+md5: 392a0c93790ce4a6d8eea6e91d45255a
+frozen: true
+deps:
+- checksum: '"6bfd4-65354f4b59021"'
+  size: 442324
+  hash: md5
+  path: 
+    https://www.diplomatie.gouv.fr/files/files/pdf/resultats-et-elus-danae-01-06-2026.pdf
+outs:
+- md5: 61003068c8b106b6864d723679b8b5ec
+  size: 442324
+  hash: md5
+  path: 2026-consulaires-circonscription_consulaire.pdf
