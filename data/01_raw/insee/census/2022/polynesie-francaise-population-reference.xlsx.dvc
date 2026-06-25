@@ -1,0 +1,12 @@
+md5: 017f87f09ee44e2a2d3eaa3c2ae08dcc
+frozen: true
+deps:
+- checksum: '39943342220997687620356634726989421710'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/6690039/tableau%20resultats%20pop%20legale2022xlsx.xlsx
+outs:
+- md5: dc0fb35506aa6c16018479f3e2421784
+  size: 27503
+  hash: md5
+  path: polynesie-francaise-population-reference.xlsx

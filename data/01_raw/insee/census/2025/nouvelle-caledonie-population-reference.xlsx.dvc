@@ -1,0 +1,12 @@
+md5: f03adcf122de2c7dcc512a0108ef1948
+frozen: true
+deps:
+- checksum: '116959002788929559118210549258917298811'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/8658741/NC2025_Annexe_TableauxDecret_pour%20Insee.fr.xlsx
+outs:
+- md5: a162fdee566babecab12106060aa7cfc
+  size: 10264
+  hash: md5
+  path: nouvelle-caledonie-population-reference.xlsx
