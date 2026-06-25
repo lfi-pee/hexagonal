@@ -1,0 +1,13 @@
+md5: 357706f4d5b92e4db88611a3972dfcd0
+frozen: true
+deps:
+- checksum: '"60b7a906-10b86"'
+  size: 68486
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/d0d89fc0-2f83-45dc-a669-4c61951c7114
+outs:
+- md5: 854ee39bc1b6414f599dcdcdd0b89947
+  size: 68486
+  hash: md5
+  path: 2021-05-consulaires-circonscription_consulaire.xlsx
