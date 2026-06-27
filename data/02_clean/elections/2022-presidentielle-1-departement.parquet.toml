@@ -1,0 +1,49 @@
+nom = "Résultats du premier tour de l'élection présidentielle 2022 par département"
+description = ""
+mimetype = "application/vnd.apache.parquet"
+section = "Résultats électoraux"
+
+[colonnes.departement]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.exprimes]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.nom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.prenom]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.sexe]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+description = ""
+nullable = false

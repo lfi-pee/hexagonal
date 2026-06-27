@@ -1,0 +1,43 @@
+nom = "Résultats de l'élection européenne de 2019 par département"
+description = ""
+mimetype = "application/vnd.apache.parquet"
+section = "Résultats électoraux"
+
+[colonnes.departement]
+type = "str"
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.exprimes]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.numero_panneau]
+type = "entier"
+description = ""
+nullable = false
+
+[colonnes.liste_court]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.liste_long]
+type = "str"
+description = ""
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+description = ""
+nullable = false

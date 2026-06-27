@@ -1,0 +1,5 @@
+outs:
+- md5: 49f44a52c286782609d659f7c2cf7b87
+  size: 17914
+  hash: md5
+  path: 2024-europeenne-departement.parquet

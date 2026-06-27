@@ -1,0 +1,5 @@
+outs:
+- md5: f9704231116911ff3296780284af3f2a
+  size: 16845
+  hash: md5
+  path: 2019-europeenne-departement.parquet

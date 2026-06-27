@@ -1,0 +1,5 @@
+outs:
+- md5: 27d89aab104c4d1cd870e8c4f314b577
+  size: 8863
+  hash: md5
+  path: 2022-presidentielle-1-departement.parquet
