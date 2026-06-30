@@ -1,7 +1,7 @@
 nom = "Populations de référence des communes de Mayotte issue du recensement de 2017"
 description = """
 Correspond au traitement à la main du
-[fichier de l'INSEE](#data/01_raw_insee/census/2017/mayotte-population_reference.xlsx).
+[fichier de l'INSEE](#data/01_raw/insee/census/2017/mayotte-population_reference.xlsx).
 """
 mimetype = "application/vnd.apache.parquet"
 editeur = "La France insoumise"

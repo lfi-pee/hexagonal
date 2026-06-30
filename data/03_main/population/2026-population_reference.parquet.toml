@@ -22,6 +22,10 @@ nullable = false
 type = "str"
 nullable = false
 
+[colonnes.code_commune_parent]
+type = "str"
+nullable = false
+
 [colonnes.population_municipale]
 type = "entier"
 nullable = false

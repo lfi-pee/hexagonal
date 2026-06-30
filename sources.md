@@ -3043,7 +3043,7 @@ tour.
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b4/c1f8f4321e7f201022b4935837b198 |
 
 Correspond au traitement à la main du
-[fichier de l&#39;INSEE](#data/01_raw_insee/census/2017/mayotte-population_reference.xlsx).
+[fichier de l&#39;INSEE](#data/01_raw/insee/census/2017/mayotte-population_reference.xlsx).
 
 ### Populations de référence des communes de Polynésie française issue du recensement de 2022
 <a name="data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet"></a>
@@ -3056,7 +3056,7 @@ Correspond au traitement à la main du
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f2/c58242782861bbb31921d1517b28c1 |
 
 Correspond au traitement à la main du
-[fichier de l&#39;INSEE](#data/01_raw_insee/census/2022/polynesie-francaise-population_reference.xlsx).
+[fichier de l&#39;INSEE](#data/01_raw/insee/census/2022/polynesie-francaise-population-reference.xlsx).
 
 ### Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025
 <a name="data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet"></a>
@@ -3069,7 +3069,7 @@ Correspond au traitement à la main du
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e7/f2dd4ca76ce2b24a1d7c3550f522cc |
 
 Correspond au traitement à la main du
-[fichier de l&#39;INSEE](#data/01_raw_insee/census/2025/nouvelle-caledonie-population_reference.xlsx).
+[fichier de l&#39;INSEE](#data/01_raw/insee/census/2025/nouvelle-caledonie-population-reference.xlsx).
 
 
 
