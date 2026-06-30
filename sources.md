@@ -213,7 +213,8 @@
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv)
   - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv)
   - [Résultats des élections consulaires 2026 par circonscription consulaire](#data/01_raw/lafranceinsoumise/elections/2026-consulaires-par_circonscription_consulaire.parquet)
-  - [Liste des listes soutenues par la France insoumise aux municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet)
+  - [Liste des listes soutenues par la France insoumise au premier tour des municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet)
+  - [Liste des listes soutenues par la France insoumise au deuxième tour des municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-2-listes-lfi.parquet)
   - [Populations de référence des communes de Mayotte issue du recensement de 2017](#data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet)
   - [Populations de référence des communes de Polynésie française issue du recensement de 2022](#data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet)
   - [Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025](#data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet)
@@ -2880,7 +2881,7 @@ inférieur à 10 ni supérieur à 40.
 | Chemin interne | data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-circonscription_consulaire.parquet |
 | Format de fichier | application/vnd.apache.parquet |
 | Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/4a/327d0a8d045c8594720b73dc5f6e44 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b2/5a2e9e41bd1cbf4656a5657fba1191 |
 
 Résultats des élections consulaires 2021 extraites et mises en forme depuis le
 [fichier excel mis en ligne par le ministère des Affaires étrangères](#data/01_raw/ministere_affaires_etrangeres/2021-05-consulaires-bureau_de_vote-participation.xlsx).
@@ -2897,7 +2898,7 @@ dans hexagonal.
 | Chemin interne | data/01_raw/lafranceinsoumise/elections/2021-11-consulaires-par_circonscription_consulaire.parquet |
 | Format de fichier | application/vnd.apache.parquet |
 | Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/da/a9ba845462f72051fcd4380e9dd051 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/89/5d81d4b57f14e97b3e4789e6217d0f |
 
 Résultats des élections consulaires partielles de novembre 2021 extraites et mises en forme depuis le
 [fichier excel mis en ligne par le ministère des Affaires étrangères](#data/01_raw/ministere_affaires_etrangeres/2021-11-consulaires-bureau_de_vote-participation.xlsx).
@@ -3005,7 +3006,7 @@ Ces résultats ont été extraits du
 [PDF publié par le ministère des affaires étrangères](#data/01_raw/ministere_affaires_etrangeres/2026-consulaires-circonscription_consulaire.pdf)
 à l&#39;aide de l&#39;outil d&#39;extraction de tableaux PDF camelot, puis nettoyés à la main.
 
-### Liste des listes soutenues par la France insoumise aux municipales de 2026
+### Liste des listes soutenues par la France insoumise au premier tour des municipales de 2026
 <a name="data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet"></a>
 
 | Propriété | Valeur |
@@ -3013,9 +3014,23 @@ Ces résultats ont été extraits du
 | Chemin interne | data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet |
 | Format de fichier | application/vnd.apache.parquet |
 | Éditeur | La France insoumise |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/40/59dd9f17166dab7c55fc9697370d03 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/4c/8f9052ee7fe58170d8dcb845202f38 |
 
+Il s&#39;agit de la mise au propre d&#39;une liste utilisée en interne pour le suivi des résultats du scrutin le soir du premier
+tour.
 
+### Liste des listes soutenues par la France insoumise au deuxième tour des municipales de 2026
+<a name="data/01_raw/lafranceinsoumise/elections/2026-municipales-2-listes-lfi.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2026-municipales-2-listes-lfi.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/12/73a9b7802a9e6dae0abdb1d535ff4b |
+
+Il s&#39;agit de la mise au propre d&#39;une liste utilisée en interne pour le suivi des résultats du scrutin le soir du premier
+tour.
 
 ### Populations de référence des communes de Mayotte issue du recensement de 2017
 <a name="data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet"></a>

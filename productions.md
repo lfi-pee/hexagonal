@@ -3923,6 +3923,11 @@ Ce fichier compile les populations de référence pour toutes les communes de Fr
     <td></td>
   </tr>
 <tr>
+    <td><code>code_commune_parent</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
     <td><code>population_municipale</code></td>
     <td><code>entier</code></td>
     <td></td>
