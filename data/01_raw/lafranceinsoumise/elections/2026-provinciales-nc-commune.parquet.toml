@@ -1,0 +1,8 @@
+nom = "Résultats des élections provinciales en Nouvelle-Calédonie en 2026"
+description = """
+Traitement en partie automatisée (à l'aide de camelot-py) du
+[fichier PDF reprenant les résultats](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf) pour en extraire
+les scores enregistrés par les différentes listes, commune par commune.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"
