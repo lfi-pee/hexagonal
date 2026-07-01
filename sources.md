@@ -7,6 +7,8 @@
   - [Liste des parrainages validés par le Conseil constitutionnel pour l&#39;élection de 2022](#data/01_raw/conseil_constitutionnel/2022-presidentielle-parrainages.csv)
 - [GeoNames](#geonames)
   - [cities1000](#data/01_raw/geonames/cities1000.zip)
+- [Haut-commissariat de la République en Nouvelle-Calédonie](#haut-commissariat-de-la-republique-en-nouvelle-caledonie)
+  - [Résultats des élections provinciales 2026 en Nouvelle-Calédonie](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf)
 - [IGN](#ign)
   - [Contours IRIS 2025 — France métropolitaine](#data/01_raw/ign/iris-metropole.7z)
 - [INSEE](#insee)
@@ -215,6 +217,8 @@
   - [Résultats des élections consulaires 2026 par circonscription consulaire](#data/01_raw/lafranceinsoumise/elections/2026-consulaires-par_circonscription_consulaire.parquet)
   - [Liste des listes soutenues par la France insoumise au premier tour des municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet)
   - [Liste des listes soutenues par la France insoumise au deuxième tour des municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-2-listes-lfi.parquet)
+  - [Résultats des élections provinciales en Nouvelle-Calédonie en 2026](#data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-commune.parquet)
+  - [Liste des personnes élues dans les assemblées de province et le Congrès de Nouvelle-Calédonie en 2026](#data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-elus.parquet)
   - [Populations de référence des communes de Mayotte issue du recensement de 2017](#data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet)
   - [Populations de référence des communes de Polynésie française issue du recensement de 2022](#data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet)
   - [Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025](#data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet)
@@ -387,6 +391,25 @@ ATTENTION : l&#39;ensemble des parrainages affichés pour un candidat ne préjug
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/11/ae971aff2eb4b587435e0ac2e1a0e0 |
 
 The GeoNames geographical database covers all countries and contains over eleven million placenames that are available for download free of charge.
+
+
+
+
+## Haut-commissariat de la République en Nouvelle-Calédonie
+<a name="haut-commissariat-de-la-republique-en-nouvelle-caledonie"></a>
+
+### Résultats des élections provinciales 2026 en Nouvelle-Calédonie
+<a name="data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf |
+| Format de fichier | application/pdf |
+| Éditeur | Haut-commissariat de la République en Nouvelle-Calédonie |
+| URL d&#39;origine | https://www.nouvelle-caledonie.gouv.fr/contenu/telechargement/13500/112224/file/PROVINCIALES_2026_R%C3%A9sultats_COMPLETS.pdf |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/0a/e256b97eb0f9deb97fe678b8ca01dd |
+
+Les résultats détaillés ne sont pas disponibles sous un autre format que celui-ci. Une extraction à la main des données contenues 
 
 
 
@@ -3031,6 +3054,34 @@ tour.
 
 Il s&#39;agit de la mise au propre d&#39;une liste utilisée en interne pour le suivi des résultats du scrutin le soir du premier
 tour.
+
+### Résultats des élections provinciales en Nouvelle-Calédonie en 2026
+<a name="data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-commune.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-commune.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/73/c1385fbeef05908ceb7b924c58f7c0 |
+
+Traitement en partie automatisée (à l&#39;aide de camelot-py) du
+[fichier PDF reprenant les résultats](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf) pour en extraire
+les scores enregistrés par les différentes listes, commune par commune.
+
+### Liste des personnes élues dans les assemblées de province et le Congrès de Nouvelle-Calédonie en 2026
+<a name="data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-elus.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-elus.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/8a/c0bddf4152b8dbc715889f6c49f79a |
+
+Traitement en partie automatisée (à l&#39;aide de camelot-py) du
+[fichier PDF reprenant les résultats](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf) pour en extraire
+la liste des personnes élues.
 
 ### Populations de référence des communes de Mayotte issue du recensement de 2017
 <a name="data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet"></a>

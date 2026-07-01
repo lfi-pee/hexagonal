@@ -1,0 +1,5 @@
+outs:
+- md5: 8ac0bddf4152b8dbc715889f6c49f79a
+  size: 3681
+  hash: md5
+  path: 2026-provinciales-nc-elus.parquet
