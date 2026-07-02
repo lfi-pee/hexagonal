@@ -908,8 +908,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/mandats.py
       hash: md5
       md5: 080ce60ad199ae89e2c51cff2e0cec28
@@ -921,8 +921,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/mandats.csv
       hash: md5
-      md5: 9be3a05270199387972516388bb20ea2
-      size: 410594
+      md5: a705d19c3f608b164948708243c035d6
+      size: 415308
   assemblee_nationale_groupes:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.groupes 
       data/01_raw/assemblee-nationale.zip 
@@ -931,8 +931,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/groupes.py
       hash: md5
       md5: 5dce03318e91ffee684e96c68aad34d5
@@ -944,8 +944,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/affiliations.csv
       hash: md5
-      md5: df297e65c6c2603dbeb60aa32f56e54f
-      size: 354132
+      md5: ecc0fef595a4e095364d56e16f2c5ac5
+      size: 356315
     - path: data/02_clean/assemblee_nationale/groupes.csv
       hash: md5
       md5: 1c7e51b7ff9442a33fe8908f9c7c3ced
@@ -1731,8 +1731,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/commissions.py
       hash: md5
       md5: 1669c3a9cad9aeac440b0e43de6ea7e8
@@ -1744,8 +1744,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/commissions.csv
       hash: md5
-      md5: d55b7c14909f91da0626fa9d48ca9047
-      size: 1867210
+      md5: dd8631c8411e69af9b112b1699abfe98
+      size: 2108586
   assemblee_nationale_fiches:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.fiches 
       data/01_raw/assemblee-nationale.zip 
@@ -1755,8 +1755,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/fiches.py
       hash: md5
       md5: b69dac40710b6d7ef90d91723b76382b
@@ -1768,40 +1768,40 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/adresses_electroniques.csv
       hash: md5
-      md5: 8eb43bac15d4605d76ae979b9511c452
-      size: 424791
+      md5: b92e0e5f21edc2ee01793b2fe009376b
+      size: 427488
     - path: data/02_clean/assemblee_nationale/adresses_postales.csv
       hash: md5
-      md5: 96e7fd19220ec911e7ca95c3076473b0
-      size: 304627
+      md5: c12803627617dafbf11e61522215e8c7
+      size: 307859
     - path: data/02_clean/assemblee_nationale/fiches.csv
       hash: md5
-      md5: f8c96973b1fe1e86b6a1e754453003de
-      size: 254351
+      md5: 76ad9a8b9c4ae1640880a49bb98463d0
+      size: 256292
   assemblee_nationale_deputes:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.deputes 
       data/02_clean/assemblee_nationale data/03_main/assemblee_nationale
     deps:
     - path: data/02_clean/assemblee_nationale/adresses_electroniques.csv
       hash: md5
-      md5: 8eb43bac15d4605d76ae979b9511c452
-      size: 424791
+      md5: b92e0e5f21edc2ee01793b2fe009376b
+      size: 427488
     - path: data/02_clean/assemblee_nationale/affiliations.csv
       hash: md5
-      md5: df297e65c6c2603dbeb60aa32f56e54f
-      size: 354132
+      md5: ecc0fef595a4e095364d56e16f2c5ac5
+      size: 356315
     - path: data/02_clean/assemblee_nationale/commissions.csv
       hash: md5
-      md5: d55b7c14909f91da0626fa9d48ca9047
-      size: 1867210
+      md5: dd8631c8411e69af9b112b1699abfe98
+      size: 2108586
     - path: data/02_clean/assemblee_nationale/fiches.csv
       hash: md5
-      md5: f8c96973b1fe1e86b6a1e754453003de
-      size: 254351
+      md5: 76ad9a8b9c4ae1640880a49bb98463d0
+      size: 256292
     - path: data/02_clean/assemblee_nationale/mandats.csv
       hash: md5
-      md5: 9be3a05270199387972516388bb20ea2
-      size: 410594
+      md5: a705d19c3f608b164948708243c035d6
+      size: 415308
     - path: src/hexagonal/assemblee_nationale/deputes.py
       hash: md5
       md5: 4048586ff950126ac0622be50d1fe1e7
@@ -1809,12 +1809,12 @@ stages:
     outs:
     - path: data/03_main/assemblee_nationale/deputes.csv
       hash: md5
-      md5: 9c41067bb16e3e25ec2bd1cd5ade9d94
-      size: 160803
+      md5: ccb0f99e8118e42671d44ec56c95141a
+      size: 160972
     - path: data/03_main/assemblee_nationale/deputes_lfi.csv
       hash: md5
-      md5: 4cfcd2f3f862284ec94065389550a088
-      size: 20170
+      md5: 5470ba86539540b78a158a3a9a98d10a
+      size: 20187
   extraire_codes_postaux:
     cmd: PYTHONPATH=src python -m hexagonal.codes_postaux.extraire 
       data/01_raw/la_poste/base_officielle_codes_postaux.csv 
@@ -2565,7 +2565,7 @@ stages:
       size: 51531
     - path: src/hexagonal/elections/senatoriales/nettoyer_2020.py
       hash: md5
-      md5: a1e6d26ad4d31180a67cb9eb3da4c09f
+      md5: da36d0200ae1ce229cff108d0dec3bf0
       size: 5439
     outs:
     - path: data/02_clean/elections/2020-senatoriales-departement.parquet
