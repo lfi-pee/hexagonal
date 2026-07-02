@@ -1,9 +1,9 @@
-from hexagonal.elections.senatoriales.types import TypeElectionSenatoriale
 import click
 import polars as pl
 
 from hexagonal.codes import CORRESPONDANCE_CODE_DEPARTEMENT
 from hexagonal.elections.algorithmes_electoraux import proportionnelle_dhondt
+from hexagonal.elections.senatoriales.types import TypeElectionSenatoriale
 from hexagonal.utils.polars import polars_large_to_long
 
 PRENOM_RE = r"\p{Uppercase Letter}\p{Lowercase Letter}*"
