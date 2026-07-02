@@ -1,0 +1,5 @@
+nom = "2022-reu-adresses"
+description = """
+
+"""
+mimetype = "application/vnd.apache.parquet"
