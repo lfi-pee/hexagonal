@@ -1,4 +1,8 @@
+import marko
 from jinja2 import Environment, PackageLoader, select_autoescape
+from marko.block import Heading
+from marko.md_renderer import MarkdownRenderer
+from rich.markdown import Heading
 from slugify import slugify
 
 from hexagonal.files.dvc_files import get_dvc_files
@@ -25,6 +29,20 @@ def prepare_deps(deps, specs):
         res.update(prepare_deps(d.deps, specs))
 
     return res
+
+
+md = marko.Markdown(renderer=MarkdownRenderer)
+
+
+def fix_titles(text):
+    ds = md.parse(text)
+
+    for c in ds.children:
+        match c:
+            case Heading():
+                c.level += 3
+
+    return md.render(ds)
 
 
 def build(specs):
@@ -71,7 +89,7 @@ def build(specs):
         prod_dict = {
             "path": prod.path,
             "nom": prod.nom,
-            "description": prod.description,
+            "description": fix_titles(prod.description),
             "props": props,
             "deps": prepare_deps(file.deps, specs),
             "colonnes": prod.colonnes,

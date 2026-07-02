@@ -13,6 +13,7 @@
   - [Contours IRIS 2025 — France métropolitaine](#data/01_raw/ign/iris-metropole.7z)
 - [INSEE](#insee)
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
+  - [La table des adresses normalisées et géolocalisées du REU 2022](#data/01_raw/insee/2022-reu-adresses.parquet)
   - [Répertoire électoral unique — table des bureaux de vote](#data/01_raw/insee/2022-reu-bureaux.parquet)
   - [Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)](#data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls)
   - [Recensement de la population 2006 — Couples, familles et ménages (Commune)](#data/01_raw/insee/census/2006/base-cc-couples-familles-menages-2006.xls)
@@ -208,12 +209,14 @@
   - [Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026](#data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv)
   - [Paramètres électoraux des différents scrutins de listes](#data/01_raw/lafranceinsoumise/code_electoral/scrutins_listes.csv)
   - [Résultats des élections consulaires de mai 2021](#data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-circonscription_consulaire.parquet)
+  - [Listes candidates soutenues par LFI lors des élections consulaires de mai 2021](#data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-listes-lfi.parquet)
   - [Résultats des élections consulaires partielles de novembre 2021](#data/01_raw/lafranceinsoumise/elections/2021-11-consulaires-par_circonscription_consulaire.parquet)
   - [Répartition des circonscriptions entre les différentes composantes de la NUPES (élections législatives 2022)](#data/01_raw/lafranceinsoumise/elections/2022-legislatives-nupes-sensibilites.csv)
   - [Listes déposées pour l&#39;élection européenne 2024 en France](#data/01_raw/lafranceinsoumise/elections/2024-europeenne-listes.csv)
   - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv)
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv)
   - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv)
+  - [Listes candidates soutenues par LFI lors des élections consulaires 2026](#data/01_raw/lafranceinsoumise/elections/2026-consulaires-listes-lfi.parquet)
   - [Résultats des élections consulaires 2026 par circonscription consulaire](#data/01_raw/lafranceinsoumise/elections/2026-consulaires-par_circonscription_consulaire.parquet)
   - [Liste des listes soutenues par la France insoumise au premier tour des municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-1-listes-lfi.parquet)
   - [Liste des listes soutenues par la France insoumise au deuxième tour des municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-2-listes-lfi.parquet)
@@ -458,6 +461,71 @@ collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
 Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
 géographique publié chaque année par l’INSEE.
 
+### La table des adresses normalisées et géolocalisées du REU 2022
+<a name="data/01_raw/insee/2022-reu-adresses.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2022-reu-adresses.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/8b5c75df-24ea-43ae-9f4c-6f5c633e942b |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/6d/2a0b2d3802af60c9ad798eea7d57ec |
+
+# Informations sur la table
+
+Les données partagées sont :
+- Des adresses issues du REU, géolocalisées et toutes associées à un bureau de vote (bv)
+  - L’extraction du REU dont proviennent les données a été réalisée en septembre 2022.
+- Uniquement des adresses de rattachement aux bureaux de vote
+  - Par opposition aux adresses de contact des individus, parfois différentes
+- Des adresses dédoublonnées
+  - Deux électeurs à la même adresse et votant au même bureau de vote sont regroupés
+  - Une même adresse peut donc correspondre à un nombre quelconque d’électeurs
+- Des adresses nettoyées, normalisées et géolocalisées
+  - Plusieurs opérations de nettoyage et d’anonymisation, en utilisant les référentiels d’adresses : Base Adresse Nationale (BAN) et Base Adresse
+    Nationale Ouverte (BANO)
+
+# Dictionnaire des variables
+
+- code_commune_ref : code commune de la commune contenant l’adresse (et du bureau de vote
+  associé)
+- id_brut_bv_reu : identifiant unique du bureau de vote associé à l’adresse
+  - Construit comme suit : {code_commune_ref}_{code_du_bv_dans_la_commune}
+  - Conservé tel que stocké dans le REU
+  - Clé secondaire permettant la jointure avec la table des bureaux de vote
+- id : identifiant non signifiant d’un couple (adresse, bv) dans le fichier nettoyé des adresses du REU
+  - Clé primaire de la table
+- geo_adresse : adresse normalisée - la plus complète possible - issue de la géolocalisation par
+  référentiel
+- geo_type : échelle à laquelle l’adresse initiale a pu être associée au référentiel, renvoyée par l’API 1utilisée
+
+  Valeurs possibles :
+  - housenumber : adresse retrouvée au niveau du numéro de voie
+  - interpolation : adresse retrouvée par interpolation entre deux numéros de voie voisins
+    (+/- 2 numéros) si non retrouvée au housenumber
+  - locality : adresse retrouvée au niveau d’un lieu-dit si non retrouvée par interpolation
+  - street : adresse retrouvée au niveau de la voie, la position est alors placée
+    approximativement au centre de la voie si non retrouvée à la locality
+  - municipality : adresse retrouvée au niveau de la commune si non retrouvée à la street
+
+  Il existe des adresses non retrouvées dans les référentiels d’adresses, qui ont été retirées du
+  fichier final
+- geo_score : score allant de 0 à 1 mesurant la fiabilité de l’identification de l’adresse dans la BAN et
+  la BANO (0 = peu fiable, 1 = très fiable), renvoyé par l’API utilisée
+  - Correspond à une distance de Levenstein entre l’adresse indiquée et son association dans un
+    des deux référentiels
+- longitude : longitude de l’adresse (WGS84, EPSG 4326)
+- latitude : latitude de l’adresse (WGS84, EPSG 4326)
+- api_line : parmi les méthodes de normalisation via la BAN et la BANO, laquelle a été utilisée pour
+  géolocaliser l’adresse
+- nb_bv_commune : nombre de bureaux de vote au sein de la commune
+- nb_adresses : nombre de lignes dans le REU correspondant au couple (adresse normalisée, bv
+  associé) considéré
+  - Attention, cela ne correspond pas au nombre d’électeurs à l’adresse considérée, le fichier
+    initial des adresses du REU étant déjà partiellement dédoublonné
+
 ### Répertoire électoral unique — table des bureaux de vote
 <a name="data/01_raw/insee/2022-reu-bureaux.parquet"></a>
 
@@ -469,7 +537,65 @@ géographique publié chaque année par l’INSEE.
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/6faacf36-1897-43f5-bf39-af8b41a15d26 |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e0/b88f800ff0063873e67398d5b6d4c8 |
 
-Il s&#39;agit de la table des bureaux de vote du REU.
+# Informations sur la table
+
+Toutes les informations disponibles sur les différents bureaux de vote sont extraites de la table des
+adresses du REU.
+
+Dans la grande majorité des cas, les identifiants des bureaux de vote sont identiques dans le REU et dans
+le système d’information centralisant les résultats électoraux du ministère de l’Intérieur. Il subsiste
+toutefois quelques cas (3 000 bureaux de vote sur 69 000), où ces identifiants sont différents. Afin de
+permettre plus facilement le rapprochement de ces données, nous proposons une table de correspondance
+des identifiants des bureaux de vote avec les référentiels du site de l’Insee et du ministère de l’Intérieur.
+Ces correspondances ne revêtent aucun caractère officiel et ne sont qu’un travail expérimental conjoint
+entre l’Insee et Etalab afin d’offrir une possibilité de mise en cohérence facilitée des données. Celle-ci
+n’est donc pas fiable à 100%. En particulier, certains bureaux de vote n’ont pas pu être associés d’un
+référentiel à l’autre avec les informations à disposition. Certains identifiants (hors identifiant REU), bien
+que très rares, peuvent donc être manquants. De plus, le travail effectué n’est pertinent que pour les
+données considérées, les différents référentiels pouvant changer avec le temps.
+
+Avertissement : ces référentiels ne sont pas toujours exhaustifs pour les adresses des collectivités d’outre-
+mer. De ce fait, les adresses et bureaux de vote des communes de Saint-Martin et Saint-Barthélémy ont dû
+être retirées du fichier des adresses diffusé, car ils n’ont pas pu être normalisés et géolocalisés.
+
+# Dictionnaire des variables
+
+- id_brut_bv_reu : identifiant unique dans le REU du bureau de vote associé à l’adresse
+  - Clé primaire de la table
+  - Construit comme suit : {code_commune_ref}_{code_reu_du_bv_dans_la_commune}
+  - Conservé tel que stocké dans le REU
+  - Variable permettant la jointure avec la table des adresses
+- id_brut_insee : identifiant unique sur le site de l’Insee du bureau de vote associé à l’adresse, basé
+  sur une extraction du REU de mars 2022
+  - Construit comme suit : {code_commune_ref}_{code_insee_du_bv_dans_la_commune}
+  - Conservé tel que stocké dans le fichier présent sur le site de l’Insee
+  - Différences avec les identifiants du REU possiblement dues à des traitements intermédiaires
+  - ou bien à des modifications du fichier entre les dates d’extraction
+  - Jointure sur les identifiants faite à la main (src/2_cleaning/1_construction_table_bv_clean.py)
+  - Pour une poignée de bureaux de vote, aucun identifiant Insee n’a pu être retrouvé.
+- id_brut_miom : identifiant unique dans le système d’information centralisant les résultats électoraux
+  du ministère de l’Intérieur (SIE1) du bureau de vote associé à l’adresse
+  - Construit comme suit : {code_commune_ref}_{code_miom_du_bv_dans_la_commune}
+  - Conservé tel que stocké dans le fichier présent sur le site du ministère
+  - Jointure sur les identifiants faite à la main (src/6_finalisation_fichiers/2_matching_bv_reu_miom.ipynb)
+  - Pour une poignée de communes, aucun identifiant Miom sur les bureaux de vote de la
+    commune n’a pu être associé, notamment pour les communes de Belfort, Troyes et Dieppe.
+- code_commune_ref : code commune de la commune dans laquelle le bureau de vote se situe
+- code : code nettoyé du bureau de vote (dans le fichier du REU) au sein de sa commune
+  - Permet notamment la jointure avec d’autres référentiels de bureaux de vote selon un code de
+    bureau de vote standardisé
+  - Le code brut peut être extrait de la variable id_brut_bv_reu
+- libelle_reu : nom du bureau de vote tel qu’inscrit dans le REU
+- num_voie_reu : numéro de voie du bureau de vote tel qu’inscrit dans le REU
+- voie_reu : voie du bureau de vote telle qu’inscrite dans le REU
+- cp_reu : code postal du bureau de vote tel qu’inscrit dans le REU
+- commune_reu : libellé de la commune du bureau de vote tel qu’inscrit dans le REU
+- nb_adresses_initial : nombre d’adresses initialement présentes dans le fichier originel du REU
+  correspondant au bureau de vote
+- nb_adresses_final : nombre d’adresses présentes dans le fichier diffusé des adresses du REU
+  correspondant au bureau de vote
+  - Les adresses manquantes, en très faible proportion, correspondent à celles n’ayant pas pu être
+    normalisées et géolocalisées avec une certitude suffisante par les référentiels d’adresses
 
 ### Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)
 <a name="data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls"></a>
@@ -2913,6 +3039,18 @@ Vu l&#39;absence de régularité dans le format de ces fichiers, et le fait que 
 plus les résultats que sous forme de tableau PDF, il est plus simple de les nettoyer à la main et de les intégrer ainsi
 dans hexagonal.
 
+### Listes candidates soutenues par LFI lors des élections consulaires de mai 2021
+<a name="data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-listes-lfi.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2021-05-consulaires-listes-lfi.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/d3dd252e6479875ca9a5b20de6f316 |
+
+Cette liste indique les listes que nous soutenions lors des élections consulaires de 2021.
+
 ### Résultats des élections consulaires partielles de novembre 2021
 <a name="data/01_raw/lafranceinsoumise/elections/2021-11-consulaires-par_circonscription_consulaire.parquet"></a>
 
@@ -3014,6 +3152,18 @@ l&#39;accord.
 
 Ce fichier propose un nuançage réalisé par les équipes de la France insoumise pendant la
 campagne des législatives 2024 à des fins d&#39;analyse électorale.
+
+### Listes candidates soutenues par LFI lors des élections consulaires 2026
+<a name="data/01_raw/lafranceinsoumise/elections/2026-consulaires-listes-lfi.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2026-consulaires-listes-lfi.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/6f/d3dd252e6479875ca9a5b20de6f316 |
+
+Cette liste indique les listes que nous soutenions lors des élections consulaires de 2021.
 
 ### Résultats des élections consulaires 2026 par circonscription consulaire
 <a name="data/01_raw/lafranceinsoumise/elections/2026-consulaires-par_circonscription_consulaire.parquet"></a>

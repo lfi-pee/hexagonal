@@ -1,5 +1,56 @@
-nom = "2022-reu-adresses"
+nom = "La table des adresses normalisées et géolocalisées du REU 2022"
 description = """
+Les données partagées sont :
+- Des adresses issues du REU, géolocalisées et toutes associées à un bureau de vote (bv)
+  - L’extraction du REU dont proviennent les données a été réalisée en septembre 2022.
+- Uniquement des adresses de rattachement aux bureaux de vote
+  - Par opposition aux adresses de contact des individus, parfois différentes
+- Des adresses dédoublonnées
+  - Deux électeurs à la même adresse et votant au même bureau de vote sont regroupés
+  - Une même adresse peut donc correspondre à un nombre quelconque d’électeurs
+- Des adresses nettoyées, normalisées et géolocalisées
+  - Plusieurs opérations de nettoyage et d’anonymisation, en utilisant les référentiels d’adresses : Base Adresse Nationale (BAN) et Base Adresse
+    Nationale Ouverte (BANO)
 
+Dictionnaire des variables :
+- code_commune_ref : code commune de la commune contenant l’adresse (et du bureau de vote
+  associé)
+- id_brut_bv_reu : identifiant unique du bureau de vote associé à l’adresse
+  - Construit comme suit : {code_commune_ref}_{code_du_bv_dans_la_commune}
+  - Conservé tel que stocké dans le REU
+  - Clé secondaire permettant la jointure avec la table des bureaux de vote
+- id : identifiant non signifiant d’un couple (adresse, bv) dans le fichier nettoyé des adresses du REU
+  - Clé primaire de la table
+- geo_adresse : adresse normalisée - la plus complète possible - issue de la géolocalisation par
+  référentiel
+- geo_type : échelle à laquelle l’adresse initiale a pu être associée au référentiel, renvoyée par l’API 1utilisée
+
+  Valeurs possibles :
+  - housenumber : adresse retrouvée au niveau du numéro de voie
+  - interpolation : adresse retrouvée par interpolation entre deux numéros de voie voisins
+    (+/- 2 numéros) si non retrouvée au housenumber
+  - locality : adresse retrouvée au niveau d’un lieu-dit si non retrouvée par interpolation
+  - street : adresse retrouvée au niveau de la voie, la position est alors placée
+    approximativement au centre de la voie si non retrouvée à la locality
+  - municipality : adresse retrouvée au niveau de la commune si non retrouvée à la street
+
+  Il existe des adresses non retrouvées dans les référentiels d’adresses, qui ont été retirées du
+  fichier final
+- geo_score : score allant de 0 à 1 mesurant la fiabilité de l’identification de l’adresse dans la BAN et
+  la BANO (0 = peu fiable, 1 = très fiable), renvoyé par l’API utilisée
+  - Correspond à une distance de Levenstein entre l’adresse indiquée et son association dans un
+    des deux référentiels
+- longitude : longitude de l’adresse (WGS84, EPSG 4326)
+- latitude : latitude de l’adresse (WGS84, EPSG 4326)
+- api_line : parmi les méthodes de normalisation via la BAN et la BANO, laquelle a été utilisée pour
+  géolocaliser l’adresse
+- nb_bv_commune : nombre de bureaux de vote au sein de la commune
+- nb_adresses : nombre de lignes dans le REU correspondant au couple (adresse normalisée, bv
+  associé) considéré
+  - Attention, cela ne correspond pas au nombre d’électeurs à l’adresse considérée, le fichier
+    initial des adresses du REU étant déjà partiellement dédoublonné
 """
 mimetype = "application/vnd.apache.parquet"
+editeur = "INSEE"
+info_url = "https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs"
+

@@ -1111,7 +1111,6 @@ personnes référencées, on trouve :
 - d&#39;autres parlementaires
 
 
-
 ### Colonnes
 
 <table>
@@ -3661,8 +3660,8 @@ temps :
 municipale
 - entre 1962 et 1999, il s&#39;agit de la population sans doubles comptes
 - entre 1876 et 1954, il s&#39;agit de la population totale ; les populations d&#39;un groupe de
-  communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
-  communes.
+communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
+communes.
 
 
 ### Colonnes
@@ -3890,7 +3889,7 @@ Cette production dépend des sources suivantes :
 
 Ce fichier compile les populations de référence pour toutes les communes de France. Il agrège :
 - le recensement de 2023 dans les limites des communes du 1er janvier 2025, incluant hexagone, Corse, départements et
-  régions d&#39;outremer, Saint-Barthélemy, Saint-Martin, et Saint-Pierre-et-Miquelon.
+régions d&#39;outremer, Saint-Barthélemy, Saint-Martin, et Saint-Pierre-et-Miquelon.
 - le recensement de 2017 de Mayotte
 - le recensement de 2022 de la Polynésie française
 - le recensement de 2025 de la Nouvelle-Calédonie

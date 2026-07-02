@@ -44,6 +44,7 @@ dev = [
     "jupyterlab>=4.5.7",
     "altair[all]>=6.1.0",
     "great-tables>=0.21.0",
+    "marko>=2.2.3",
 ]
 
 [tool.hexagonal]
