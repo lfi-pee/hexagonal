@@ -1,5 +1,7 @@
 nom = "La table des adresses normalisées et géolocalisées du REU 2022"
 description = """
+# Informations sur la table
+
 Les données partagées sont :
 - Des adresses issues du REU, géolocalisées et toutes associées à un bureau de vote (bv)
   - L’extraction du REU dont proviennent les données a été réalisée en septembre 2022.
@@ -12,7 +14,8 @@ Les données partagées sont :
   - Plusieurs opérations de nettoyage et d’anonymisation, en utilisant les référentiels d’adresses : Base Adresse Nationale (BAN) et Base Adresse
     Nationale Ouverte (BANO)
 
-Dictionnaire des variables :
+# Dictionnaire des variables
+
 - code_commune_ref : code commune de la commune contenant l’adresse (et du bureau de vote
   associé)
 - id_brut_bv_reu : identifiant unique du bureau de vote associé à l’adresse
@@ -51,6 +54,5 @@ Dictionnaire des variables :
     initial des adresses du REU étant déjà partiellement dédoublonné
 """
 mimetype = "application/vnd.apache.parquet"
-editeur = "INSEE"
 info_url = "https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs"
-
+editeur = "INSEE"

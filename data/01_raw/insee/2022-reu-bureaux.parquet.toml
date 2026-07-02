@@ -1,5 +1,7 @@
 nom = "Répertoire électoral unique — table des bureaux de vote"
 description = """
+# Informations sur la table
+
 Toutes les informations disponibles sur les différents bureaux de vote sont extraites de la table des
 adresses du REU.
 
@@ -18,6 +20,8 @@ données considérées, les différents référentiels pouvant changer avec le t
 Avertissement : ces référentiels ne sont pas toujours exhaustifs pour les adresses des collectivités d’outre-
 mer. De ce fait, les adresses et bureaux de vote des communes de Saint-Martin et Saint-Barthélémy ont dû
 être retirées du fichier des adresses diffusé, car ils n’ont pas pu être normalisés et géolocalisés.
+
+# Dictionnaire des variables
 
 - id_brut_bv_reu : identifiant unique dans le REU du bureau de vote associé à l’adresse
   - Clé primaire de la table

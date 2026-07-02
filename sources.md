@@ -473,7 +473,7 @@ géographique publié chaque année par l’INSEE.
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/8b5c75df-24ea-43ae-9f4c-6f5c633e942b |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/6d/2a0b2d3802af60c9ad798eea7d57ec |
 
-# Informations sur la table
+#### Informations sur la table
 
 Les données partagées sont :
 - Des adresses issues du REU, géolocalisées et toutes associées à un bureau de vote (bv)
@@ -485,12 +485,12 @@ Les données partagées sont :
   - Une même adresse peut donc correspondre à un nombre quelconque d’électeurs
 - Des adresses nettoyées, normalisées et géolocalisées
   - Plusieurs opérations de nettoyage et d’anonymisation, en utilisant les référentiels d’adresses : Base Adresse Nationale (BAN) et Base Adresse
-    Nationale Ouverte (BANO)
+Nationale Ouverte (BANO)
 
-# Dictionnaire des variables
+#### Dictionnaire des variables
 
 - code_commune_ref : code commune de la commune contenant l’adresse (et du bureau de vote
-  associé)
+associé)
 - id_brut_bv_reu : identifiant unique du bureau de vote associé à l’adresse
   - Construit comme suit : {code_commune_ref}_{code_du_bv_dans_la_commune}
   - Conservé tel que stocké dans le REU
@@ -498,33 +498,33 @@ Les données partagées sont :
 - id : identifiant non signifiant d’un couple (adresse, bv) dans le fichier nettoyé des adresses du REU
   - Clé primaire de la table
 - geo_adresse : adresse normalisée - la plus complète possible - issue de la géolocalisation par
-  référentiel
+référentiel
 - geo_type : échelle à laquelle l’adresse initiale a pu être associée au référentiel, renvoyée par l’API 1utilisée
 
   Valeurs possibles :
   - housenumber : adresse retrouvée au niveau du numéro de voie
   - interpolation : adresse retrouvée par interpolation entre deux numéros de voie voisins
-    (+/- 2 numéros) si non retrouvée au housenumber
+(+/- 2 numéros) si non retrouvée au housenumber
   - locality : adresse retrouvée au niveau d’un lieu-dit si non retrouvée par interpolation
   - street : adresse retrouvée au niveau de la voie, la position est alors placée
-    approximativement au centre de la voie si non retrouvée à la locality
+approximativement au centre de la voie si non retrouvée à la locality
   - municipality : adresse retrouvée au niveau de la commune si non retrouvée à la street
 
   Il existe des adresses non retrouvées dans les référentiels d’adresses, qui ont été retirées du
-  fichier final
+fichier final
 - geo_score : score allant de 0 à 1 mesurant la fiabilité de l’identification de l’adresse dans la BAN et
-  la BANO (0 = peu fiable, 1 = très fiable), renvoyé par l’API utilisée
+la BANO (0 = peu fiable, 1 = très fiable), renvoyé par l’API utilisée
   - Correspond à une distance de Levenstein entre l’adresse indiquée et son association dans un
-    des deux référentiels
+des deux référentiels
 - longitude : longitude de l’adresse (WGS84, EPSG 4326)
 - latitude : latitude de l’adresse (WGS84, EPSG 4326)
 - api_line : parmi les méthodes de normalisation via la BAN et la BANO, laquelle a été utilisée pour
-  géolocaliser l’adresse
+géolocaliser l’adresse
 - nb_bv_commune : nombre de bureaux de vote au sein de la commune
 - nb_adresses : nombre de lignes dans le REU correspondant au couple (adresse normalisée, bv
-  associé) considéré
+associé) considéré
   - Attention, cela ne correspond pas au nombre d’électeurs à l’adresse considérée, le fichier
-    initial des adresses du REU étant déjà partiellement dédoublonné
+initial des adresses du REU étant déjà partiellement dédoublonné
 
 ### Répertoire électoral unique — table des bureaux de vote
 <a name="data/01_raw/insee/2022-reu-bureaux.parquet"></a>
@@ -537,7 +537,7 @@ Les données partagées sont :
 | URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/6faacf36-1897-43f5-bf39-af8b41a15d26 |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e0/b88f800ff0063873e67398d5b6d4c8 |
 
-# Informations sur la table
+#### Informations sur la table
 
 Toutes les informations disponibles sur les différents bureaux de vote sont extraites de la table des
 adresses du REU.
@@ -558,7 +558,7 @@ Avertissement : ces référentiels ne sont pas toujours exhaustifs pour les adre
 mer. De ce fait, les adresses et bureaux de vote des communes de Saint-Martin et Saint-Barthélémy ont dû
 être retirées du fichier des adresses diffusé, car ils n’ont pas pu être normalisés et géolocalisés.
 
-# Dictionnaire des variables
+#### Dictionnaire des variables
 
 - id_brut_bv_reu : identifiant unique dans le REU du bureau de vote associé à l’adresse
   - Clé primaire de la table
@@ -566,7 +566,7 @@ mer. De ce fait, les adresses et bureaux de vote des communes de Saint-Martin et
   - Conservé tel que stocké dans le REU
   - Variable permettant la jointure avec la table des adresses
 - id_brut_insee : identifiant unique sur le site de l’Insee du bureau de vote associé à l’adresse, basé
-  sur une extraction du REU de mars 2022
+sur une extraction du REU de mars 2022
   - Construit comme suit : {code_commune_ref}_{code_insee_du_bv_dans_la_commune}
   - Conservé tel que stocké dans le fichier présent sur le site de l’Insee
   - Différences avec les identifiants du REU possiblement dues à des traitements intermédiaires
@@ -574,16 +574,16 @@ mer. De ce fait, les adresses et bureaux de vote des communes de Saint-Martin et
   - Jointure sur les identifiants faite à la main (src/2_cleaning/1_construction_table_bv_clean.py)
   - Pour une poignée de bureaux de vote, aucun identifiant Insee n’a pu être retrouvé.
 - id_brut_miom : identifiant unique dans le système d’information centralisant les résultats électoraux
-  du ministère de l’Intérieur (SIE1) du bureau de vote associé à l’adresse
+du ministère de l’Intérieur (SIE1) du bureau de vote associé à l’adresse
   - Construit comme suit : {code_commune_ref}_{code_miom_du_bv_dans_la_commune}
   - Conservé tel que stocké dans le fichier présent sur le site du ministère
   - Jointure sur les identifiants faite à la main (src/6_finalisation_fichiers/2_matching_bv_reu_miom.ipynb)
   - Pour une poignée de communes, aucun identifiant Miom sur les bureaux de vote de la
-    commune n’a pu être associé, notamment pour les communes de Belfort, Troyes et Dieppe.
+commune n’a pu être associé, notamment pour les communes de Belfort, Troyes et Dieppe.
 - code_commune_ref : code commune de la commune dans laquelle le bureau de vote se situe
 - code : code nettoyé du bureau de vote (dans le fichier du REU) au sein de sa commune
   - Permet notamment la jointure avec d’autres référentiels de bureaux de vote selon un code de
-    bureau de vote standardisé
+bureau de vote standardisé
   - Le code brut peut être extrait de la variable id_brut_bv_reu
 - libelle_reu : nom du bureau de vote tel qu’inscrit dans le REU
 - num_voie_reu : numéro de voie du bureau de vote tel qu’inscrit dans le REU
@@ -591,11 +591,11 @@ mer. De ce fait, les adresses et bureaux de vote des communes de Saint-Martin et
 - cp_reu : code postal du bureau de vote tel qu’inscrit dans le REU
 - commune_reu : libellé de la commune du bureau de vote tel qu’inscrit dans le REU
 - nb_adresses_initial : nombre d’adresses initialement présentes dans le fichier originel du REU
-  correspondant au bureau de vote
+correspondant au bureau de vote
 - nb_adresses_final : nombre d’adresses présentes dans le fichier diffusé des adresses du REU
-  correspondant au bureau de vote
+correspondant au bureau de vote
   - Les adresses manquantes, en très faible proportion, correspondent à celles n’ayant pas pu être
-    normalisées et géolocalisées avec une certitude suffisante par les référentiels d’adresses
+normalisées et géolocalisées avec une certitude suffisante par les référentiels d’adresses
 
 ### Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)
 <a name="data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls"></a>
@@ -3087,15 +3087,15 @@ Ce fichier indique la répartition des circonscriptions entre les 5 composantes 
 
 À noter trois cas particuliers :
 - dans la 07-01, le candidat du Parti socialiste, Hervé SAULIGNAC, bien qu&#39;investi conformément à l&#39;accord, ne s&#39;en
-  réclame pas et reçoit la nuance DVG du ministère de l&#39;Intérieur. Il est comptabilisé dans ce fichier.
+réclame pas et reçoit la nuance DVG du ministère de l&#39;Intérieur. Il est comptabilisé dans ce fichier.
 - dans la 31-08, Joël AVIRAGNET, socialiste, est d&#39;abord investi, puis désinvesti du fait de sa proximité avec Carole
-  Delga. La candidate soutenue par la NUPES pour le 1er tour des élections est donc Annabelle FAUVERNIE pour le PE et
-  c&#39;est elle qui est indiquée dans ce fichier.
-  Celle-ci n&#39;atteignant pas le second tour, c&#39;est Joël AVIRAGNET qui sera par la suite soutenu par la NUPES au second
-  tour.
+Delga. La candidate soutenue par la NUPES pour le 1er tour des élections est donc Annabelle FAUVERNIE pour le PE et
+c&#39;est elle qui est indiquée dans ce fichier.
+Celle-ci n&#39;atteignant pas le second tour, c&#39;est Joël AVIRAGNET qui sera par la suite soutenu par la NUPES au second
+tour.
 - dans la 54-05, le candidat du Parti socialiste Dominique POTIER accepte d&#39;abord l&#39;investiture de la NUPES avant de
-  déclarer y renoncer le lendemain et est classé en conséquence comme DVG par le ministère. Il est comptabilisé dans ce
-  fichier.
+déclarer y renoncer le lendemain et est classé en conséquence comme DVG par le ministère. Il est comptabilisé dans ce
+fichier.
 
 ### Listes déposées pour l&#39;élection européenne 2024 en France
 <a name="data/01_raw/lafranceinsoumise/elections/2024-europeenne-listes.csv"></a>
@@ -3292,6 +3292,7 @@ Correspond au traitement à la main du
 La base officielle des codes postaux est un jeu de données qui fournit la correspondance
 entre les codes postaux et les codes INSEE des communes, de France (métropole et DOM),
 des COM, ainsi que de MONACO.
+
 
 
 

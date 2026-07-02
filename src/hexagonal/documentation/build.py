@@ -1,8 +1,7 @@
 import marko
+import marko.block
 from jinja2 import Environment, PackageLoader, select_autoescape
-from marko.block import Heading
 from marko.md_renderer import MarkdownRenderer
-from rich.markdown import Heading
 from slugify import slugify
 
 from hexagonal.files.dvc_files import get_dvc_files
@@ -39,7 +38,7 @@ def fix_titles(text):
 
     for c in ds.children:
         match c:
-            case Heading():
+            case marko.block.Heading():
                 c.level += 3
 
     return md.render(ds)
@@ -70,7 +69,7 @@ def build(specs):
         source_dict = {
             "path": source.path,
             "nom": source.nom,
-            "description": source.description,
+            "description": fix_titles(source.description),
             "props": props,
         }
 
