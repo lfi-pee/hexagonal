@@ -737,6 +737,19 @@ stages:
     cmd: >-
       7z e ${raw}/ign/iris-metropole.7z -so -r "iris.gpkg" > "${raw}/ign/iris-metropole.gpkg"
 
+  cle_repartition_bv_iris:
+    deps:
+      - ${raw}/insee/2022-reu-adresses.parquet
+      - ${raw}/ign/iris-metropole.gpkg
+      - ${src}/hexagonal/elections/cle_repartition_iris.py
+    outs:
+      - ${main}/elections/cle_repartition_bv_iris.parquet
+    cmd: >-
+      ${python} hexagonal.elections.cle_repartition_iris
+      ${raw}/insee/2022-reu-adresses.parquet
+      ${raw}/ign/iris-metropole.gpkg
+      ${main}/elections/cle_repartition_bv_iris.parquet
+
   extraire_filosofi_disponible:
     deps:
       - ${raw}/insee/filosofi-disponible.zip
