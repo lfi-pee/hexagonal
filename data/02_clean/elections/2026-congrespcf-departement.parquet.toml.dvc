@@ -1,0 +1,5 @@
+outs:
+- md5: 2bf0da9efa2a99fcae7ca86aa8167808
+  size: 541
+  hash: md5
+  path: 2026-congrespcf-departement.parquet.toml
