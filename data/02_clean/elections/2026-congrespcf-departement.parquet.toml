@@ -1,0 +1,30 @@
+nom = "Voix obtenues par département par les textes soumis au 40e Congrès du PCF (2026)"
+description = """
+
+"""
+mimetype = "application/vnd.apache.parquet"
+section = "Résultats électoraux"
+
+[colonnes.code_departement]
+type = "str"
+nullable = false
+
+[colonnes.inscrits]
+type = "entier"
+nullable = false
+
+[colonnes.votants]
+type = "entier"
+nullable = false
+
+[colonnes.blancsnuls]
+type = "entier"
+nullable = false
+
+[colonnes.texte]
+type = "str"
+nullable = false
+
+[colonnes.voix]
+type = "entier"
+nullable = false
