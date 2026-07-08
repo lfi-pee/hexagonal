@@ -1,0 +1,12 @@
+md5: 18c25c8663c12ead12a96a4d217ca6e4
+frozen: true
+deps:
+- checksum: '289390848350443273989958440305313798657'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/8595130/prenoms-2024.parquet
+outs:
+- md5: 86a03d6283389cc55f6f3dd0b5d6cd56
+  size: 11297847
+  hash: md5
+  path: 2024-prenoms.parquet

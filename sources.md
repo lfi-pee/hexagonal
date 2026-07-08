@@ -15,6 +15,7 @@
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
   - [La table des adresses normalisées et géolocalisées du REU 2022](#data/01_raw/insee/2022-reu-adresses.parquet)
   - [Répertoire électoral unique — table des bureaux de vote](#data/01_raw/insee/2022-reu-bureaux.parquet)
+  - [Prénoms attribués aux enfants nés en France depuis 1900](#data/01_raw/insee/2024-prenoms.parquet)
   - [Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)](#data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls)
   - [Recensement de la population 2006 — Couples, familles et ménages (Commune)](#data/01_raw/insee/census/2006/base-cc-couples-familles-menages-2006.xls)
   - [Recensement de la population 2006 — Logement (Commune)](#data/01_raw/insee/census/2006/base-cc-logement-2006.xls)
@@ -344,7 +345,7 @@
 | Éditeur | Assemblée nationale |
 | Licence d&#39;utilisation | Licence Ouverte / Open Licence |
 | URL d&#39;origine | https://data.assemblee-nationale.fr/static/openData/repository/17/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/20/a8cc3e6f177ff2bdb72eb784e81c9c |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/3a/13b9eb2ae09c588f7cc718e4daf2f2 |
 
 Tous acteurs, tous mandats, tous organes depuis la XIème législature.
 
@@ -596,6 +597,23 @@ correspondant au bureau de vote
 correspondant au bureau de vote
   - Les adresses manquantes, en très faible proportion, correspondent à celles n’ayant pas pu être
 normalisées et géolocalisées avec une certitude suffisante par les référentiels d’adresses
+
+### Prénoms attribués aux enfants nés en France depuis 1900
+<a name="data/01_raw/insee/2024-prenoms.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2024-prenoms.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/8595130?sommaire=8595113 |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/8595130/prenoms-2024.parquet |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/86/a03d6283389cc55f6f3dd0b5d6cd56 |
+
+Le fichier des prénoms fournit des données sur les prénoms attribués aux enfants nés en France depuis 1900 aux niveaux
+national, régional et départemental. Pour le millésime disponible le plus récent, le classement des 10 prénoms masculins
+et féminins les plus donnés en France ainsi que des cartes présentant les prénoms masculins et féminins les plus donnés
+dans chaque région sont également proposés.
 
 ### Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)
 <a name="data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls"></a>
