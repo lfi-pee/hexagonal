@@ -741,13 +741,13 @@ stages:
       size: 4776
     - path: src/hexagonal/elections/candidatures/qualifier_legislatives2024.py
       hash: md5
-      md5: 33c66850fb5149af476cc42825452cd0
-      size: 1051
+      md5: 8820854569d260efd7faf21059165dc8
+      size: 1215
     outs:
     - path: data/03_main/elections/2024-legislatives-1-candidats.csv
       hash: md5
-      md5: 28e06f0288f71fd922cc6b1e6b39c20e
-      size: 431894
+      md5: 181e288a431944dc4c1dffe9e3a0ca3d
+      size: 431339
   2024-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.candidatures.qualifier_legislatives2024 
@@ -782,13 +782,13 @@ stages:
       size: 4776
     - path: src/hexagonal/elections/candidatures/qualifier_legislatives2024.py
       hash: md5
-      md5: 33c66850fb5149af476cc42825452cd0
-      size: 1051
+      md5: 8820854569d260efd7faf21059165dc8
+      size: 1215
     outs:
     - path: data/03_main/elections/2024-legislatives-2-candidats.csv
       hash: md5
-      md5: 521021b4f255c5bb6d76b07ebe8ae7b0
-      size: 116243
+      md5: a1c6afcd0d9214f778a5b10905f3121f
+      size: 115807
   correspondances_bureau_de_vote_circonscription@2024:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.legislatives.correspondances_circonscription 
