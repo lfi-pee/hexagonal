@@ -12,7 +12,7 @@ def release():
     r = Repo(".")
     r.push(remote="s3")
     build_doc(spec)
-    rewrite_metadata(spec)
+    rewrite_metadata()
 
 
 if __name__ == "__main__":

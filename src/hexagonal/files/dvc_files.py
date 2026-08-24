@@ -4,8 +4,6 @@ from dataclasses import dataclass, field
 from os.path import join
 from pathlib import Path
 
-from dvc.api import DVCFileSystem
-
 from hexagonal.files import CONFIG, relative_path
 
 URL_PREFIX = "cache/files/md5"
@@ -36,6 +34,8 @@ class DVCFile:
 
 
 def get_dvc_files() -> dict[Path, DVCFile]:
+    from dvc.api import DVCFileSystem
+
     fs = DVCFileSystem(".")
     index = fs.repo.index
 

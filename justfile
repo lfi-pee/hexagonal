@@ -1,19 +1,15 @@
-release: repro push scaffold build_doc
+# Ces recettes ne sont qu'un raccourci : tout est accessible via `uv run hexagonal`.
 
-# Commandes DVC
 pull:
-  uv run dvc pull
-
-push:
-  uv run dvc push -r s3
-  uv run src/hexagonal/files/rewrite_s3_headers.py
+  uv run hexagonal pull
 
 repro:
-  uv run dvc repro --all-pipelines --recursive
+  uv run hexagonal repro
 
-# Crée les fichiers de documentation sources et productions
-scaffold:
-  uv run src/hexagonal/files/update_specs.py
+doc:
+  uv run hexagonal doc
 
-build_doc:
-  uv run src/hexagonal/documentation/build.py
+push:
+  uv run hexagonal push
+
+release: repro doc push
