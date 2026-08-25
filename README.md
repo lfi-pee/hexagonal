@@ -28,10 +28,19 @@ curl -OJ <URL du fichier copiée depuis productions.md>
 Deux outils à installer une seule fois. `uv` télécharge lui-même la bonne version de
 Python : vous n'avez pas besoin d'installer Python.
 
-**Linux / macOS**
+**macOS**
 
 ```bash
-sudo apt install git                                # ou: brew install git
+xcode-select --install                              # fournit git
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Homebrew n'est pas nécessaire : `xcode-select --install` suffit à obtenir git.
+
+**Linux**
+
+```bash
+sudo apt install git                                # ou dnf install git, pacman -S git
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 

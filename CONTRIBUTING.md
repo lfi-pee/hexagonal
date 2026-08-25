@@ -10,15 +10,37 @@ uv sync --extra pipeline --group dev
 uv run hexagonal pull --tout          # les sources brutes sont nécessaires, ~14 Go
 ```
 
+### Sous macOS
+
+Le téléchargement des données et les traitements en Python fonctionnent nativement.
+Deux binaires manquent pour rejouer l'ensemble des traitements :
+
+```bash
+brew install p7zip node     # 7z pour deux traitements, node pour mapshaper
+npm install -g mapshaper
+```
+
+**Attention au traitement `nettoyer-2020-municipales-1`.** macOS fournit la version BSD
+de `sed`, qui n'interprète pas l'échappement `\t` là où la version GNU y voit une
+tabulation. Ce traitement de [dvc.yaml](dvc.yaml) s'appuie dessus : sous macOS il
+n'échoue pas, mais **produit un résultat différent de celui obtenu sous Linux**. Ne le
+rejouez pas depuis macOS ; utilisez le conteneur de développement.
+
+Les scripts de [src/scripts/](src/scripts/) n'utilisent aucune fonctionnalité
+postérieure à bash 3.2 : ils tournent avec le bash livré par Apple.
+
 ### Sous Windows
 
 Le téléchargement des données fonctionne nativement. **En revanche, huit traitements sur
 quarante-cinq ne peuvent pas tourner sous Windows** : cinq appellent les scripts de
-[src/scripts/](src/scripts/), écrits en `bash`, deux dépendent du binaire `7z`, et un
-sixième appelle `mapshaper`.
+[src/scripts/](src/scripts/), écrits en `bash`, deux dépendent du binaire `7z`, et le
+dernier appelle directement `mapshaper`.
 
-Le plus simple est alors d'ouvrir le dépôt dans un conteneur de développement, qui
-fournit bash, node, `mapshaper` et `p7zip` déjà installés :
+### Conteneur de développement
+
+Sur les deux systèmes, le plus simple est d'ouvrir le dépôt dans un conteneur de
+développement : il fournit Linux, bash, node, `mapshaper`, `p7zip` et le `sed` GNU déjà
+installés, et les quarante-cinq traitements y tournent.
 
 - **GitHub Codespaces** : bouton « Code » → « Codespaces » → « Create codespace ». Tout
   se passe dans le navigateur, rien à installer sur la machine.
