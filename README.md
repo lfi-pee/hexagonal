@@ -80,14 +80,27 @@ Les téléchargements sont incrémentaux : un fichier déjà présent n'est jama
 uv sync --extra pipeline
 ```
 
+L'argument est le chemin du fichier dans `data`. L'exemple ci-dessous ouvre les adresses
+des conseils régionaux, mais **n'importe quel autre jeu de données s'ouvre de la même
+façon** :
+
 ```python
 from hexagonal.files.spec import get_polars_dataframe
 
+# Un exemple parmi d'autres : remplacez le chemin par celui du fichier voulu.
 df = get_polars_dataframe("data/02_clean/annuaire/conseils_regionaux.csv")
 ```
 
+Les fichiers sont rangés par étape de traitement — `data/01_raw/` pour les sources
+brutes, `data/02_clean/` pour les données nettoyées et `data/03_main/` pour les données
+prêtes à l'emploi (voir [Organisation du projet](#organisation-du-projet)). Pour trouver
+le chemin qui vous intéresse :
+
+- `uv run hexagonal list` en donne la liste complète, avec les tailles ;
+- [productions.md](productions.md) les décrit un par un.
+
 Les types de colonnes sont appliqués automatiquement à partir de la documentation du
-jeu de données.
+jeu de données. `get_pandas_dataframe` fonctionne de la même manière.
 
 ## 3. Je veux modifier les traitements de données
 
