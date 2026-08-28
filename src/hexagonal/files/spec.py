@@ -1,15 +1,18 @@
+from __future__ import annotations
+
 import datetime
 import tomllib
 from enum import StrEnum
 from operator import attrgetter
 from pathlib import Path
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from pydantic import BaseModel, ConfigDict, Field
 
-from hexagonal.files import ROOT_DIR, get_main_dir, DATA_DIR
-from hexagonal.files.dvc_files import DVCFile
-from hexagonal.utils.clean import VRAI
+from hexagonal.files import ROOT_DIR, get_main_dir
+
+if TYPE_CHECKING:
+    from hexagonal.files.dvc_files import DVCFile
 
 props_funcs = {
     "date": lambda d: d.strftime("%d/%m/%Y"),
@@ -85,6 +88,8 @@ class ProductionSpec(DatasetSpec):
     def as_pandas_dataframe(self, **kwargs):
         import pandas as pd
 
+        from hexagonal.utils.clean import VRAI
+
         pd_dtypes = {
             ColonneType.STR: pd.StringDtype(),
             ColonneType.CODE_COMMUNE: pd.StringDtype(),
@@ -125,6 +130,8 @@ class ProductionSpec(DatasetSpec):
 
     def as_polars_dataframe(self, **kwargs):
         import polars as pl
+
+        from hexagonal.utils.clean import VRAI
 
         PL_TYPES = {
             ColonneType.STR: pl.String,

@@ -7,13 +7,22 @@ authors = [
 ]
 readme = "README.md"
 requires-python = "==3.14.*"
+# Strict minimum pour télécharger et lister les données.
 dependencies = [
+    "click>=8.1.7",
+    "pyyaml>=6.0.2",
+]
+
+[project.scripts]
+hexagonal = "hexagonal.cli:main"
+
+[project.optional-dependencies]
+# Nécessaire uniquement pour rejouer les traitements (`hexagonal repro`).
+pipeline = [
     "dvc>=3.55.2",
-    "dvc-s3>=3.2.0",
     "glom>=24.11.0",
     "pandas>=2.2.2",
     "geopandas>=1.0.1",
-    "click>=8.1.7",
     "pyarrow>=20.0.0",
     "lxml>=6.0.0",
     "pyzstd>=0.16.2",
@@ -26,13 +35,19 @@ dependencies = [
     "py7zr>=0.22.0",
     "json-stream>=2.3.2",
     "openpyxl>=3.1.5",
-    "boto3>=1.42.19",
     "fastexcel>=0.19.0",
     "rapidfuzz>=3.14.5",
     "pypdf>=6.13.2",
     "reportlab>=4.5.1",
     "duckdb>=1.5.4",
     "splink>=4.0.16",
+    "marko>=2.2.3",
+]
+# Nécessaire uniquement pour publier les données (mainteneurs).
+maintainer = [
+    "hexagonal[pipeline]",
+    "boto3>=1.42.19",
+    "dvc-s3>=3.2.0",
 ]
 
 [dependency-groups]
@@ -44,13 +59,16 @@ dev = [
     "jupyterlab>=4.5.7",
     "altair[all]>=6.1.0",
     "great-tables>=0.21.0",
-    "marko>=2.2.3",
 ]
 
 [tool.hexagonal]
 s3_profile = "hexagonal"
 s3_root = "s3://hexagonal-106475418133-eu-west-3-an/"
 http_root = "https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com"
+
+# `uv run` n'installe que le strict minimum : un novice ne tire pas la stack complète.
+[tool.uv]
+default-groups = []
 
 [tool.pytest.ini_options]
 addopts = [

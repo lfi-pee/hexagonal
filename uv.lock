@@ -1312,8 +1312,13 @@ name = "hexagonal"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
-    { name = "boto3" },
     { name = "click" },
+    { name = "pyyaml" },
+]
+
+[package.optional-dependencies]
+maintainer = [
+    { name = "boto3" },
     { name = "duckdb" },
     { name = "dvc" },
     { name = "dvc-s3" },
@@ -1323,6 +1328,32 @@ dependencies = [
     { name = "jinja2" },
     { name = "json-stream" },
     { name = "lxml" },
+    { name = "marko" },
+    { name = "openpyxl" },
+    { name = "pandas" },
+    { name = "polars", extra = ["pyarrow"] },
+    { name = "py7zr" },
+    { name = "pyarrow" },
+    { name = "pydantic" },
+    { name = "pypdf" },
+    { name = "pyroaring" },
+    { name = "python-slugify", extra = ["unidecode"] },
+    { name = "pyzstd" },
+    { name = "rapidfuzz" },
+    { name = "reportlab" },
+    { name = "splink" },
+    { name = "tomli-w" },
+]
+pipeline = [
+    { name = "duckdb" },
+    { name = "dvc" },
+    { name = "fastexcel" },
+    { name = "geopandas" },
+    { name = "glom" },
+    { name = "jinja2" },
+    { name = "json-stream" },
+    { name = "lxml" },
+    { name = "marko" },
     { name = "openpyxl" },
     { name = "pandas" },
     { name = "polars", extra = ["pyarrow"] },
@@ -1345,7 +1376,6 @@ dev = [
     { name = "great-tables" },
     { name = "ipython" },
     { name = "jupyterlab" },
-    { name = "marko" },
     { name = "pyrefly" },
     { name = "pytest" },
     { name = "ruff" },
@@ -1353,32 +1383,36 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "boto3", specifier = ">=1.42.19" },
+    { name = "boto3", marker = "extra == 'maintainer'", specifier = ">=1.42.19" },
     { name = "click", specifier = ">=8.1.7" },
-    { name = "duckdb", specifier = ">=1.5.4" },
-    { name = "dvc", specifier = ">=3.55.2" },
-    { name = "dvc-s3", specifier = ">=3.2.0" },
-    { name = "fastexcel", specifier = ">=0.19.0" },
-    { name = "geopandas", specifier = ">=1.0.1" },
-    { name = "glom", specifier = ">=24.11.0" },
-    { name = "jinja2", specifier = ">=3.1.4" },
-    { name = "json-stream", specifier = ">=2.3.2" },
-    { name = "lxml", specifier = ">=6.0.0" },
-    { name = "openpyxl", specifier = ">=3.1.5" },
-    { name = "pandas", specifier = ">=2.2.2" },
-    { name = "polars", extras = ["pyarrow"], specifier = ">=1.38.3" },
-    { name = "py7zr", specifier = ">=0.22.0" },
-    { name = "pyarrow", specifier = ">=20.0.0" },
-    { name = "pydantic", specifier = ">=2.11.7" },
-    { name = "pypdf", specifier = ">=6.13.2" },
-    { name = "pyroaring", specifier = ">=1.0.4" },
-    { name = "python-slugify", extras = ["unidecode"], specifier = ">=8.0.4" },
-    { name = "pyzstd", specifier = ">=0.16.2" },
-    { name = "rapidfuzz", specifier = ">=3.14.5" },
-    { name = "reportlab", specifier = ">=4.5.1" },
-    { name = "splink", specifier = ">=4.0.16" },
-    { name = "tomli-w", specifier = ">=1.1.0" },
+    { name = "duckdb", marker = "extra == 'pipeline'", specifier = ">=1.5.4" },
+    { name = "dvc", marker = "extra == 'pipeline'", specifier = ">=3.55.2" },
+    { name = "dvc-s3", marker = "extra == 'maintainer'", specifier = ">=3.2.0" },
+    { name = "fastexcel", marker = "extra == 'pipeline'", specifier = ">=0.19.0" },
+    { name = "geopandas", marker = "extra == 'pipeline'", specifier = ">=1.0.1" },
+    { name = "glom", marker = "extra == 'pipeline'", specifier = ">=24.11.0" },
+    { name = "hexagonal", extras = ["pipeline"], marker = "extra == 'maintainer'" },
+    { name = "jinja2", marker = "extra == 'pipeline'", specifier = ">=3.1.4" },
+    { name = "json-stream", marker = "extra == 'pipeline'", specifier = ">=2.3.2" },
+    { name = "lxml", marker = "extra == 'pipeline'", specifier = ">=6.0.0" },
+    { name = "marko", marker = "extra == 'pipeline'", specifier = ">=2.2.3" },
+    { name = "openpyxl", marker = "extra == 'pipeline'", specifier = ">=3.1.5" },
+    { name = "pandas", marker = "extra == 'pipeline'", specifier = ">=2.2.2" },
+    { name = "polars", extras = ["pyarrow"], marker = "extra == 'pipeline'", specifier = ">=1.38.3" },
+    { name = "py7zr", marker = "extra == 'pipeline'", specifier = ">=0.22.0" },
+    { name = "pyarrow", marker = "extra == 'pipeline'", specifier = ">=20.0.0" },
+    { name = "pydantic", marker = "extra == 'pipeline'", specifier = ">=2.11.7" },
+    { name = "pypdf", marker = "extra == 'pipeline'", specifier = ">=6.13.2" },
+    { name = "pyroaring", marker = "extra == 'pipeline'", specifier = ">=1.0.4" },
+    { name = "python-slugify", extras = ["unidecode"], marker = "extra == 'pipeline'", specifier = ">=8.0.4" },
+    { name = "pyyaml", specifier = ">=6.0.2" },
+    { name = "pyzstd", marker = "extra == 'pipeline'", specifier = ">=0.16.2" },
+    { name = "rapidfuzz", marker = "extra == 'pipeline'", specifier = ">=3.14.5" },
+    { name = "reportlab", marker = "extra == 'pipeline'", specifier = ">=4.5.1" },
+    { name = "splink", marker = "extra == 'pipeline'", specifier = ">=4.0.16" },
+    { name = "tomli-w", marker = "extra == 'pipeline'", specifier = ">=1.1.0" },
 ]
+provides-extras = ["pipeline", "maintainer"]
 
 [package.metadata.requires-dev]
 dev = [
@@ -1386,7 +1420,6 @@ dev = [
     { name = "great-tables", specifier = ">=0.21.0" },
     { name = "ipython", specifier = ">=8.26.0" },
     { name = "jupyterlab", specifier = ">=4.5.7" },
-    { name = "marko", specifier = ">=2.2.3" },
     { name = "pyrefly", specifier = ">=0.56.0" },
     { name = "pytest", specifier = ">=8.3.4" },
     { name = "ruff", specifier = ">=0.8.4" },
@@ -2369,7 +2402,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess" },
+    { name = "ptyprocess", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
