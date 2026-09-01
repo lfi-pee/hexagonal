@@ -19,20 +19,25 @@ stages:
     outs:
       - ${raw}/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
 
+  # Quatre bureaux de Montbéliard (série 0E) sortent du ministère sans code de bureau :
+  # « Montbéliard;0 » au lieu de « Montbéliard;0E11 ». On rétablit le code, et RIEN
+  # d'autre — la substitution ajoutait un « ; » de tête, qui décalait tous les champs de
+  # la ligne d'un cran : « Code BV » recevait « Montbéliard », « Inscrits » recevait
+  # « 0E11 » (lu comme 0e11, donc 0) et « Exprimés » un pourcentage, donc NA. Ces
+  # 20 lignes sans exprimés faisaient ensuite échouer tout le scrutin en aval.
   nettoyer-2024-legislatives-1:
     cmd: >-
       sed '
-      14169s/Montbéliard\;0/\;Montbéliard\;0E11/ ;
-      14170s/Montbéliard\;0/\;Montbéliard\;0E21/ ;
-      14171s/Montbéliard\;0/\;Montbéliard\;0E31/ ;
-      14172s/Montbéliard\;0/\;Montbéliard\;0E41/ ; '
+      14169s/Montbéliard\;0/Montbéliard\;0E11/ ;
+      14170s/Montbéliard\;0/Montbéliard\;0E21/ ;
+      14171s/Montbéliard\;0/Montbéliard\;0E31/ ;
+      14172s/Montbéliard\;0/Montbéliard\;0E41/ ; '
       < ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv
       > ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
     deps:
       - ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv
     outs:
       - ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
-
 
   normaliser-format-elections:
     foreach: ${scrutins}
