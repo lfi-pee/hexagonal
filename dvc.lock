@@ -2740,3 +2740,26 @@ stages:
       hash: md5
       md5: 54face8f9e9e34c4b861b1b7179f5689
       size: 474099
+  cle_repartition_bv_iris:
+    cmd: PYTHONPATH=src python -m hexagonal.elections.cle_repartition_iris 
+      data/01_raw/insee/2022-reu-adresses.parquet 
+      data/01_raw/ign/iris-metropole.gpkg 
+      data/03_main/elections/cle_repartition_bv_iris.parquet
+    deps:
+    - path: data/01_raw/ign/iris-metropole.gpkg
+      hash: md5
+      md5: 86fc5b983d70c4ae8f510328f1631acf
+      size: 166952960
+    - path: data/01_raw/insee/2022-reu-adresses.parquet
+      hash: md5
+      md5: 6d2a0b2d3802af60c9ad798eea7d57ec
+      size: 490632192
+    - path: src/hexagonal/elections/cle_repartition_iris.py
+      hash: md5
+      md5: 56c1defef6f9f507f99981b9a6caf6fe
+      size: 2261
+    outs:
+    - path: data/03_main/elections/cle_repartition_bv_iris.parquet
+      hash: md5
+      md5: 9c40263b6435b9b30eff6efba1ab4941
+      size: 1680098
