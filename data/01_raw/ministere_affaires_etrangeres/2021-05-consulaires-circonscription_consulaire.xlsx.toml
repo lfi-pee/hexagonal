@@ -1,0 +1,9 @@
+nom = "Résultats des élections consulaires par circonscription consulaire"
+description = """
+Vu le faible volume de données et le format irrégulier des fichiers de résultats pour cette élection,
+[ce fichier a été traité à la main](#data/01_raw/lafranceinsoumise/2021-05-consulaires-circonscription_consulaire.parquet).
+
+Il est toutefois inclus ici à titre documentaire.
+"""
+mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+editeur = "Ministère des Affaires étrangères"

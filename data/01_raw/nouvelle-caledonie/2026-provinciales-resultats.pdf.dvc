@@ -1,0 +1,13 @@
+md5: dc1f28e8aa7aa833f74909e39e457689
+frozen: true
+deps:
+- checksum: '224847819504589508441505701900988427173'
+  size: 377443
+  hash: md5
+  path: 
+    https://www.nouvelle-caledonie.gouv.fr/contenu/telechargement/13500/112224/file/PROVINCIALES_2026_R%C3%A9sultats_COMPLETS.pdf
+outs:
+- md5: 0ae256b97eb0f9deb97fe678b8ca01dd
+  size: 377443
+  hash: md5
+  path: 2026-provinciales-resultats.pdf

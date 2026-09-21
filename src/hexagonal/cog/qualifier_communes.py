@@ -45,22 +45,9 @@ def run(chemin_communes, chemin_population, chemin_epci, chemin_communes_epci, d
 
     population = get_polars_dataframe(chemin_population)
 
-    population = population.select(
-        "code_commune", pl.col(population.columns[1]).alias("population_municipale")
-    )
-
-    # il faut calculer manuellement la population de Paris qui est séparée par arrondissement
-    population_paris = population.filter(pl.col("code_commune").str.starts_with("751"))[
-        "population_municipale"
-    ].sum()
-
-    population = pl.concat(
-        [
-            population,
-            pl.DataFrame(
-                {"code_commune": ["75056"], "population_municipale": [population_paris]}
-            ),
-        ]
+    population = population.filter(pl.col("type_commune") == "COM").select(
+        "code_commune",
+        "population_municipale",
     )
 
     communes = communes.join(population, how="left", on=["code_commune"]).sort(

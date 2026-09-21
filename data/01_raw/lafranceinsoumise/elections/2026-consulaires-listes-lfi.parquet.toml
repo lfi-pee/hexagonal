@@ -1,0 +1,6 @@
+nom = "Listes candidates soutenues par LFI lors des élections consulaires 2026"
+description = """
+Cette liste indique les listes que nous soutenions lors des élections consulaires de 2021.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"

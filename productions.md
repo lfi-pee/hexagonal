@@ -4,7 +4,9 @@
 
 - [Annuaire administratif](#annuaire-administratif)
   - [Annuaire administratif — Conseils départementaux](#data/02_clean/annuaire/conseils_departementaux.csv)
+  - [Adresse des conseils régionaux](#data/02_clean/annuaire/conseils_regionaux.csv)
   - [Liste des mairies](#data/02_clean/annuaire/mairies.csv)
+  - [Liste des préfectures de départements](#data/02_clean/annuaire/prefectures.csv)
 - [Assemblée nationale](#assemblee-nationale)
   - [Adresses électroniques des député·es](#data/02_clean/assemblee_nationale/adresses_electroniques.csv)
   - [Adresses postales des député·es](#data/02_clean/assemblee_nationale/adresses_postales.csv)
@@ -53,7 +55,9 @@
   - [Liste des codes postaux](#data/03_main/codes_postaux.csv)
   - [Liste des communes](#data/03_main/cog/communes.csv)
 - [Démographie](#demographie)
-  - [Population par commune de 1876 à 2023](#data/02_clean/population_municipale.csv)
+  - [Population de référence 2023](#data/02_clean/population/2023-population-reference.parquet)
+  - [Population par commune de 1876 à 2023](#data/02_clean/population/historique.csv)
+  - [Populations de référence 2026 incluant Mayotte, Nouvelle-Calédonie et Polynésie française](#data/03_main/population/2026-population_reference.parquet)
 - [Parrainages](#parrainages)
   - [Maires ayant parrainé un candidat à la présidentielle de 2022 encore en poste en 2026](#data/03_main/elections/2022-presidentielle-parrains-en-poste.csv)
 - [Répertoire national des élus](#repertoire-national-des-elus)
@@ -118,14 +122,12 @@
   - [Liste des candidats aux élections législatives de 2024](#data/03_main/elections/2022-legislatives-1-candidats.csv)
   - [Résultats du premier tour des élections législatives 2024 par bureau de vote, avec numéro de circonscription](#data/03_main/elections/2024-legislatives-1-bureau_de_vote.parquet)
   - [Résultats du deuxième tour des élections législatives 2024 par bureau de vote, avec numéro de circonscription](#data/03_main/elections/2024-legislatives-2-bureau_de_vote.parquet)
-  - [Matrices de reports entre premier et deuxième tour des élections législatives 2024](#data/03_main/elections/2024-legislatives-reports.parquet)
   - [Composition nominative des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion](#data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet)
   - [Composition des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion](#data/03_main/elections/2026-conseils-PLM-2-composition-listes.parquet)
   - [Liste des personnes élues lors des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026](#data/03_main/elections/2026-conseils-PLM-elus.parquet)
   - [Composition nominative des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes-nominative.parquet)
   - [Composition des listes de second tour des municipales 2026 après fusion](#data/03_main/elections/2026-municipales-2-composition-listes.parquet)
   - [Liste des personnes élues lors des municipales 2026](#data/03_main/elections/2026-municipales-elus.parquet)
-  - [Matrices de reports entre premier et deuxième tour des élections municipales 2026](#data/03_main/elections/2026-municipales-reports.parquet)
   - [Nombre de conseillers municipaux élus par commune et par année d&#39;élection depuis 2014](#data/03_main/elections/nombre_conseillers_municipaux.parquet)
 - [Élections](#elections)
   - [Liste qualifiée des candidats au second tour des législatives 2022](#data/03_main/elections/2022-legislatives-2-candidats.csv)
@@ -145,7 +147,7 @@
 | --------- | ------ |
 | Chemin interne | data/02_clean/annuaire/conseils_departementaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/47/21b4119b772840052a9299581efaaf |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/9f/02b6caa0fa648c29d2fd44fd668a2f |
 
 
 
@@ -287,6 +289,152 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Adresse des conseils régionaux
+<a name="data/02_clean/annuaire/conseils_regionaux.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/annuaire/conseils_regionaux.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/85/edc7096bb27e14e3fe9278ab7eaf76 |
+
+Liste extraite de l&#39;annuaire administratif.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>id</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_departement</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>siret</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>emails</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_numero_voie</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_complement1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_complement2</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_service_distribution</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_code_postal</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_pays</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_numero_voie</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_complement1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_complement2</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_service_distribution</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_code_postal</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_pays</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>telephone</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>coordonnees</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/annuaire/annuaire.tar.bz2">Base de données locales de l&#39;annuaire de l&#39;administration</a>
+        </li>
+    </ul>
+
 ### Liste des mairies
 <a name="data/02_clean/annuaire/mairies.csv"></a>
 
@@ -294,7 +442,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/annuaire/mairies.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/6e/33e04864b623f6f38b77717e36e01e |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/30/0fc3652c69858ddd41f6b87746df0e |
 
 Extraction au format CSV des mairies depuis l&#39;annuaire administratif.
 
@@ -460,6 +608,167 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Liste des préfectures de départements
+<a name="data/02_clean/annuaire/prefectures.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/annuaire/prefectures.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/45/da636e2df14486cda60d4be639e129 |
+
+Liste extraite de l&#39;annuaire administratif.
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>id</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_departement</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>siret</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>emails</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_numero_voie</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_complement1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_complement2</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_service_distribution</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_code_postal</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>physique_pays</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_numero_voie</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_complement1</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_complement2</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_service_distribution</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_code_postal</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>postale_pays</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>telephone</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>coordonnees</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_accessibilite</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>details_accessibilite</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>ouverture</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/annuaire/annuaire.tar.bz2">Base de données locales de l&#39;annuaire de l&#39;administration</a>
+        </li>
+    </ul>
+
 
 
 ## Assemblée nationale
@@ -472,7 +781,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/adresses_electroniques.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/8e/b43bac15d4605d76ae979b9511c452 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b9/2e0e5f21edc2ee01793b2fe009376b |
 
 
 
@@ -538,7 +847,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/adresses_postales.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/96/e7fd19220ec911e7ca95c3076473b0 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/c1/2803627617dafbf11e61522215e8c7 |
 
 
 
@@ -624,7 +933,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/affiliations.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/df/297e65c6c2603dbeb60aa32f56e54f |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/ec/c0fef595a4e095364d56e16f2c5ac5 |
 
 Ce fichier comporte une ligne pour chaque affiliation d&#39;un député à un groupe parlementaire, à partir de la
 XIème législature.
@@ -710,7 +1019,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/commissions.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/d5/5b7c14909f91da0626fa9d48ca9047 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/dd/8631c8411e69af9b112b1699abfe98 |
 
 
 
@@ -791,7 +1100,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/fiches.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f8/c96973b1fe1e86b6a1e754453003de |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/76/ad9a8b9c4ae1640880a49bb98463d0 |
 
 Données extraites des fiches « acteurs » de l&#39;open data de l&#39;Assemblée nationale. Chaque
 ligne correspond à une personne référencée par l&#39;Assemblée nationale. Parmi les
@@ -800,7 +1109,6 @@ personnes référencées, on trouve :
 - les député·es
 - leurs suppléant·es
 - d&#39;autres parlementaires
-
 
 
 ### Colonnes
@@ -969,7 +1277,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/assemblee_nationale/mandats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/9b/e3a05270199387972516388bb20ea2 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/a7/05d19c3f608b164948708243c035d6 |
 
 Ce fichier liste l&#39;ensemble des mandats de député·es depuis la 12ème législature.
 
@@ -1078,7 +1386,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/assemblee_nationale/deputes.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/9c/41067bb16e3e25ec2bd1cd5ade9d94 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/cc/b0f99e8118e42671d44ec56c95141a |
 
 
 
@@ -1287,7 +1595,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/assemblee_nationale/deputes_lfi.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/4c/fcd2f3f862284ec94065389550a088 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/54/70ba86539540b78a158a3a9a98d10a |
 
 Extrait du fichier des députés complets.
 
@@ -3086,9 +3394,15 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2023</a>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2023)</a>
+    <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
+        </li>
+    <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
         </li>
     </ul>
         </li>
@@ -3215,9 +3529,15 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2023</a>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2023)</a>
+    <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
+        </li>
+    <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
         </li>
     </ul>
         </li>
@@ -3244,12 +3564,89 @@ Cette production dépend des sources suivantes :
 ## Démographie
 <a name="demographie"></a>
 
-### Population par commune de 1876 à 2023
-<a name="data/02_clean/population_municipale.csv"></a>
+### Population de référence 2023
+<a name="data/02_clean/population/2023-population-reference.parquet"></a>
 
 | Propriété | Valeur |
 | --------- | ------ |
-| Chemin interne | data/02_clean/population_municipale.csv |
+| Chemin interne | data/02_clean/population/2023-population-reference.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/54/face8f9e9e34c4b861b1b7179f5689 |
+
+
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_comptee_a_part</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_commune_parent</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
+        </li>
+    <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+
+### Population par commune de 1876 à 2023
+<a name="data/02_clean/population/historique.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/population/historique.csv |
 | Format de fichier | text/csv |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/6d/4683916de6c5b5356810666bc91887 |
 
@@ -3263,8 +3660,8 @@ temps :
 municipale
 - entre 1962 et 1999, il s&#39;agit de la population sans doubles comptes
 - entre 1876 et 1954, il s&#39;agit de la population totale ; les populations d&#39;un groupe de
-  communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
-  communes.
+communes ne peuvent donc pas être sommées pour obtenir la population du groupe de
+communes.
 
 
 ### Colonnes
@@ -3481,6 +3878,98 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
+### Populations de référence 2026 incluant Mayotte, Nouvelle-Calédonie et Polynésie française
+<a name="data/03_main/population/2026-population_reference.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/03_main/population/2026-population_reference.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f8/4201852ebb406791891ff9955c3492 |
+
+Ce fichier compile les populations de référence pour toutes les communes de France. Il agrège :
+- le recensement de 2023 dans les limites des communes du 1er janvier 2025, incluant hexagone, Corse, départements et
+régions d&#39;outremer, Saint-Barthélemy, Saint-Martin, et Saint-Pierre-et-Miquelon.
+- le recensement de 2017 de Mayotte
+- le recensement de 2022 de la Polynésie française
+- le recensement de 2025 de la Nouvelle-Calédonie
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>type_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>nom_commune</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>code_commune_parent</code></td>
+    <td><code>str</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_municipale</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_comptee_a_part</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>population_totale</code></td>
+    <td><code>entier</code></td>
+    <td></td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
+        </li>
+    <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
+        </li>
+    </ul>
+        </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet">Populations de référence des communes de Mayotte issue du recensement de 2017</a>
+        </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet">Populations de référence des communes de Polynésie française issue du recensement de 2022</a>
+        </li>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet">Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025</a>
+        </li>
+    </ul>
+
 
 
 ## Parrainages
@@ -3590,9 +4079,15 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2023</a>
+    <li><a href="productions.md#data/02_clean/population/2023-population-reference.parquet">Population de référence 2023</a>
         <ul>
-    <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2023)</a>
+    <li><a href="sources.md#data/01_raw/insee/census/2023/population-reference.zip">Population de référence issue du recensement 2023</a>
+        </li>
+    <li><a href="productions.md#data/02_clean/cog/communes.csv">Liste des communes, arrondissements municipaux, communes déléguées et communes associées</a>
+        <ul>
+    <li><a href="sources.md#data/01_raw/insee/cog.zip">Code Officiel Géographique 2024</a>
+        </li>
+    </ul>
         </li>
     </ul>
         </li>
@@ -3719,7 +4214,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/rne/conseillers_csp.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/14/d0b7ed8f1186f06f19f424509b1234 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/2a/f41c0ab2fc8aa4472d089ef0444918 |
 
 
 
@@ -3809,7 +4304,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/rne/conseillers_departementaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/1a/4f72191e343a8609693df9b9a74e10 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/54/3e6fe527b2d3e86a5b1500e1a90e0c |
 
 
 
@@ -3894,7 +4389,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/rne/conseillers_municipaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/2c6a639c42b78e4538cce52cdbce35 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/26/bf72cb539ff692d9553575f9ef485f |
 
 
 
@@ -3989,7 +4484,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/rne/conseillers_regionaux.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/16/602ef7414ad1a604b798eedd1f1889 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b0/3291c179f997c20ce32eba48c501f6 |
 
 
 
@@ -5107,7 +5602,7 @@ Cette production dépend des sources suivantes :
 <ul>
     <li><a href="sources.md#data/01_raw/ministere_interieur/2020-senatoriales-departement.xlsx">Résultats des sénatoriales 2020 par département</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv">Nombre de sénateurs par département</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv">Nombre de sénateurs par département</a>
         </li>
     </ul>
 
@@ -6474,7 +6969,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2022-presidentielle-parrainages.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/c4/b7e16894b409e0c810750c4967afec |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/77/c544c4bf91940511917024b19ac43f |
 
 
 
@@ -9202,104 +9697,6 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
-### Matrices de reports entre premier et deuxième tour des élections législatives 2024
-<a name="data/03_main/elections/2024-legislatives-reports.parquet"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/03_main/elections/2024-legislatives-reports.parquet |
-| Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/86/405b06bbe5545b4ad18621a2202b53 |
-
-Ce fichier propose une estimation des matrices de report entre les deux tours des élections législatives.
-
-Les matrices de report sont fournies au niveau de la circonscription.
-
-
-### Colonnes
-
-<table>
-<thead>
-  <tr>
-    <th>id</th>
-    <th>type</th>
-    <th>description</th>
-  </tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>circonscription</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>element</code></td>
-    <td><code>flottant</code></td>
-    <td></td>
-  </tr>
-
-</tbody>
-</table>
-
-### Sources
-
-Cette production dépend des sources suivantes :
-
-<ul>
-    <li><a href="productions.md#data/03_main/elections/2024-legislatives-1-bureau_de_vote.parquet">Résultats du premier tour des élections législatives 2024 par bureau de vote, avec numéro de circonscription</a>
-        <ul>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet">Résultats du premier tour des élections législatives 2024 par bureau de vote</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv">Résultats du premier tour des élections législatives 2024 par bureau de vote</a>
-        </li>
-    </ul>
-        </li>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv">Correspondance entre bureaux de vote et circonscription pendant les élections législatives 2024</a>
-        <ul>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet">Résultats du premier tour des élections législatives 2024 par bureau de vote</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv">Résultats du premier tour des élections législatives 2024 par bureau de vote</a>
-        </li>
-    </ul>
-        </li>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-1-candidats.csv">Liste des candidats au premier tour des élections législatives 2024</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-legislatives-1-candidats.csv">Liste des candidats au premier tour des élections législatives 2024</a>
-        </li>
-    </ul>
-        </li>
-    </ul>
-        </li>
-    </ul>
-        </li>
-    <li><a href="productions.md#data/03_main/elections/2024-legislatives-2-bureau_de_vote.parquet">Résultats du deuxième tour des élections législatives 2024 par bureau de vote, avec numéro de circonscription</a>
-        <ul>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-2-bureau_de_vote.parquet">Résultats du deuxième tour des élections législatives 2024 par bureau de vote</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-legislatives-2-bureau_de_vote.csv">Résultats du deuxième tour des élections législatives 2024 par bureau de vote</a>
-        </li>
-    </ul>
-        </li>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv">Correspondance entre bureaux de vote et circonscription pendant les élections législatives 2024</a>
-        <ul>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet">Résultats du premier tour des élections législatives 2024 par bureau de vote</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv">Résultats du premier tour des élections législatives 2024 par bureau de vote</a>
-        </li>
-    </ul>
-        </li>
-    <li><a href="productions.md#data/02_clean/elections/2024-legislatives-1-candidats.csv">Liste des candidats au premier tour des élections législatives 2024</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2024-legislatives-1-candidats.csv">Liste des candidats au premier tour des élections législatives 2024</a>
-        </li>
-    </ul>
-        </li>
-    </ul>
-        </li>
-    </ul>
-        </li>
-    </ul>
-
 ### Composition nominative des listes de second tour des élections des conseils de secteurs de Paris, Lyon et Marseille en 2026 après fusion
 <a name="data/03_main/elections/2026-conseils-PLM-2-composition-listes-nominative.parquet"></a>
 
@@ -9939,62 +10336,6 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
 
-### Matrices de reports entre premier et deuxième tour des élections municipales 2026
-<a name="data/03_main/elections/2026-municipales-reports.parquet"></a>
-
-| Propriété | Valeur |
-| --------- | ------ |
-| Chemin interne | data/03_main/elections/2026-municipales-reports.parquet |
-| Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/c9/e6ef8f9b3a01dabcf69c06880185fe |
-
-
-
-
-### Colonnes
-
-<table>
-<thead>
-  <tr>
-    <th>id</th>
-    <th>type</th>
-    <th>description</th>
-  </tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>code_commune</code></td>
-    <td><code>str</code></td>
-    <td></td>
-  </tr>
-<tr>
-    <td><code>element</code></td>
-    <td><code>flottant</code></td>
-    <td></td>
-  </tr>
-
-</tbody>
-</table>
-
-### Sources
-
-Cette production dépend des sources suivantes :
-
-<ul>
-    <li><a href="productions.md#data/02_clean/elections/2026-municipales-1-bureau_de_vote.parquet">Résultats du 1er tour des élections municipales 2026 par bureau de vote</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-1-bureau_de_vote.csv">Résultats du 1er tour des élections municipales de 2026 par bureau de vote</a>
-        </li>
-    </ul>
-        </li>
-    <li><a href="productions.md#data/02_clean/elections/2026-municipales-2-bureau_de_vote.parquet">Résultats du deuxième tour des élections municipales 2026 par bureau de vote</a>
-        <ul>
-    <li><a href="sources.md#data/01_raw/ministere_interieur/2026-municipales-2-bureau_de_vote.csv">Résultats du deuxième tour des élections municipales 2026 par bureau de vote</a>
-        </li>
-    </ul>
-        </li>
-    </ul>
-
 ### Nombre de conseillers municipaux élus par commune et par année d&#39;élection depuis 2014
 <a name="data/03_main/elections/nombre_conseillers_municipaux.parquet"></a>
 
@@ -10052,17 +10393,17 @@ Cette production dépend des sources suivantes :
 Cette production dépend des sources suivantes :
 
 <ul>
-    <li><a href="productions.md#data/02_clean/population_municipale.csv">Population par commune de 1876 à 2023</a>
+    <li><a href="productions.md#data/02_clean/population/historique.csv">Population par commune de 1876 à 2023</a>
         <ul>
     <li><a href="sources.md#data/01_raw/insee/population_municipale.xlsx">Séries historiques de population par commune (1876 à 2023)</a>
         </li>
     </ul>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv">Nombre de conseillers municipaux par commune — depuis 2014</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv">Nombre de conseillers municipaux par commune — depuis 2014</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv">Nombre de membres du Conseil de Paris et des conseils municipaux de Lyon et de Marseille pour l&#39;élection 2026</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv">Nombre de membres du Conseil de Paris et des conseils municipaux de Lyon et de Marseille pour l&#39;élection 2026</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv">Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv">Nombre de conseillers de Paris et de conseillers municipaux de Lyon et Marseille élus par secteur avant 2026</a>
         </li>
     </ul>
 
@@ -10239,7 +10580,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2022-presidentielle-parrainages.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/3d/a5da55e31acfdee79c65cad5e427cc |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f8/754d354e377cb47d3f01aa43f81c14 |
 
 
 
@@ -10467,11 +10808,11 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
         </li>
     </ul>
 
@@ -10613,11 +10954,11 @@ Cette production dépend des sources suivantes :
         </li>
     </ul>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv">Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv">Nuançage LFI des candidatures aux législatives 2024</a>
         </li>
-    <li><a href="sources.md#data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
+    <li><a href="sources.md#data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv">Nuançage précis des candidats aux législatives 2024</a>
         </li>
     </ul>
 

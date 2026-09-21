@@ -1,0 +1,7 @@
+nom = "wallis-et-futuna-population_reference"
+description = """
+
+"""
+mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+info_url = "https://www.insee.fr/fr/statistiques/2121453"
+editeur = "INSEE"

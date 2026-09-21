@@ -1,0 +1,39 @@
+nom = "Populations de référence 2026 incluant Mayotte, Nouvelle-Calédonie et Polynésie française"
+description = """
+Ce fichier compile les populations de référence pour toutes les communes de France. Il agrège :
+- le recensement de 2023 dans les limites des communes du 1er janvier 2025, incluant hexagone, Corse, départements et
+  régions d'outremer, Saint-Barthélemy, Saint-Martin, et Saint-Pierre-et-Miquelon.
+- le recensement de 2017 de Mayotte
+- le recensement de 2022 de la Polynésie française
+- le recensement de 2025 de la Nouvelle-Calédonie
+"""
+mimetype = "application/vnd.apache.parquet"
+section = "Démographie"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.type_commune]
+type = "str"
+nullable = false
+
+[colonnes.nom_commune]
+type = "str"
+nullable = false
+
+[colonnes.code_commune_parent]
+type = "str"
+nullable = false
+
+[colonnes.population_municipale]
+type = "entier"
+nullable = false
+
+[colonnes.population_comptee_a_part]
+type = "entier"
+nullable = false
+
+[colonnes.population_totale]
+type = "entier"
+nullable = false

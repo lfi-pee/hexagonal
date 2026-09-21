@@ -1,0 +1,106 @@
+nom = "Liste des préfectures de départements"
+description = """
+Liste extraite de l'annuaire administratif.
+"""
+mimetype = "text/csv"
+section = "Annuaire administratif"
+
+[colonnes.id]
+type = "str"
+nullable = false
+
+[colonnes.code_departement]
+type = "str"
+nullable = false
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.siret]
+type = "str"
+nullable = false
+
+[colonnes.nom]
+type = "str"
+nullable = false
+
+[colonnes.emails]
+type = "str"
+nullable = false
+
+[colonnes.physique_numero_voie]
+type = "str"
+nullable = false
+
+[colonnes.physique_complement1]
+type = "str"
+nullable = false
+
+[colonnes.physique_complement2]
+type = "str"
+nullable = false
+
+[colonnes.physique_service_distribution]
+type = "str"
+nullable = false
+
+[colonnes.physique_code_postal]
+type = "str"
+nullable = false
+
+[colonnes.physique_commune]
+type = "str"
+nullable = false
+
+[colonnes.physique_pays]
+type = "str"
+nullable = false
+
+[colonnes.postale_numero_voie]
+type = "str"
+nullable = false
+
+[colonnes.postale_complement1]
+type = "str"
+nullable = false
+
+[colonnes.postale_complement2]
+type = "str"
+nullable = false
+
+[colonnes.postale_service_distribution]
+type = "str"
+nullable = false
+
+[colonnes.postale_code_postal]
+type = "str"
+nullable = false
+
+[colonnes.postale_commune]
+type = "str"
+nullable = false
+
+[colonnes.postale_pays]
+type = "str"
+nullable = false
+
+[colonnes.telephone]
+type = "str"
+nullable = false
+
+[colonnes.coordonnees]
+type = "str"
+nullable = false
+
+[colonnes.type_accessibilite]
+type = "str"
+nullable = false
+
+[colonnes.details_accessibilite]
+type = "str"
+nullable = false
+
+[colonnes.ouverture]
+type = "str"
+nullable = false

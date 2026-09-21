@@ -25,7 +25,7 @@ TYPE_CIRCONSCRIPTIONS = {
     "membre assemblée corse": "code_departement",
     "président Polynésie française": "code_departement",
     "président Nouvelle-Calédonie": "code_departement",
-    "président Martinique": "code_departement",
+    "président conseil exécutif Martinique": "code_departement",
     "conseiller Paris": "code_departement",
     "conseiller métropole Lyon": "code_csp",
     "maire arrondissement PLM": "code_commune",

@@ -1,31 +1,47 @@
 import sys
 
-import pandas as pd
+import polars as pl
+
+from hexagonal.files.spec import get_polars_dataframe
 
 
 def extraire_candidats(
     candidats, sensibilite_nfp, nuances_lfi24, nuances_lfi25, destination
 ):
-    candidats = pd.read_csv(candidats)
-    candidats["sortant"] = candidats["sortant"] == "OUI"
-    candidats["sortant_suppleant"] = candidats["sortant_suppleant"] == "OUI"
-    candidats["profession"] = candidats["profession"].str.slice(1, 3)
+    candidats = get_polars_dataframe(candidats).with_columns(
+        pl.col("profession").str.slice(1, 2)
+    )
 
-    sensibilite_nfp = pd.read_csv(sensibilite_nfp)[
-        ["circonscription", "numero_panneau", "sensibilite"]
-    ]
-    nuances_lfi24 = pd.read_csv(nuances_lfi24)[
-        ["circonscription", "numero_panneau", "nuance_lfi"]
-    ]
-    nuances_lfi25 = pd.read_csv(nuances_lfi25)[
-        ["circonscription", "numero_panneau", "alliance", "parti"]
-    ]
+    sensibilite_nfp = pl.read_csv(sensibilite_nfp).select(
+        "circonscription",
+        "numero_panneau",
+        "sensibilite",
+    )
 
-    candidats = candidats.merge(nuances_lfi24, how="left")
-    candidats = candidats.merge(sensibilite_nfp, how="left")
-    candidats = candidats.merge(nuances_lfi25, how="left")
+    nuances_lfi24 = pl.read_csv(nuances_lfi24).select(
+        "circonscription",
+        "numero_panneau",
+        "nuance_lfi",
+    )
+    nuances_lfi25 = pl.read_csv(nuances_lfi25).select(
+        "circonscription", "numero_panneau", "alliance", "parti"
+    )
 
-    candidats.to_csv(destination, index=False)
+    candidats = candidats.join(
+        nuances_lfi24, on=["circonscription", "numero_panneau"], how="left"
+    )
+    candidats = candidats.join(
+        sensibilite_nfp,
+        on=["circonscription", "numero_panneau"],
+        how="left",
+    )
+    candidats = candidats.join(
+        nuances_lfi25,
+        on=["circonscription", "numero_panneau"],
+        how="left",
+    )
+
+    candidats.write_csv(destination)
 
 
 def run():

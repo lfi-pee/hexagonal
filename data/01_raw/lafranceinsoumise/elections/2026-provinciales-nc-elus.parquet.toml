@@ -1,0 +1,8 @@
+nom = "Liste des personnes élues dans les assemblées de province et le Congrès de Nouvelle-Calédonie en 2026"
+description = """
+Traitement en partie automatisée (à l'aide de camelot-py) du
+[fichier PDF reprenant les résultats](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf) pour en extraire
+la liste des personnes élues.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"

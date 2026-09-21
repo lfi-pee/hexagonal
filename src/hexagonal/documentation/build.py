@@ -1,4 +1,7 @@
+import marko
+import marko.block
 from jinja2 import Environment, PackageLoader, select_autoescape
+from marko.md_renderer import MarkdownRenderer
 from slugify import slugify
 
 from hexagonal.files.dvc_files import get_dvc_files
@@ -27,6 +30,20 @@ def prepare_deps(deps, specs):
     return res
 
 
+md = marko.Markdown(renderer=MarkdownRenderer)
+
+
+def fix_titles(text):
+    ds = md.parse(text)
+
+    for c in ds.children:
+        match c:
+            case marko.block.Heading():
+                c.level += 3
+
+    return md.render(ds)
+
+
 def build(specs):
     env = Environment(
         loader=PackageLoader("hexagonal.documentation", "templates"),
@@ -52,7 +69,7 @@ def build(specs):
         source_dict = {
             "path": source.path,
             "nom": source.nom,
-            "description": source.description,
+            "description": fix_titles(source.description),
             "props": props,
         }
 
@@ -71,7 +88,7 @@ def build(specs):
         prod_dict = {
             "path": prod.path,
             "nom": prod.nom,
-            "description": prod.description,
+            "description": fix_titles(prod.description),
             "props": props,
             "deps": prepare_deps(file.deps, specs),
             "colonnes": prod.colonnes,

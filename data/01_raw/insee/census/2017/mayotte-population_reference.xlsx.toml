@@ -1,0 +1,7 @@
+nom = "Recensement de 2017 à Mayotte"
+description = """
+
+"""
+mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+info_url = "https://www.insee.fr/fr/statistiques/2120838"
+editeur = "INSEE"

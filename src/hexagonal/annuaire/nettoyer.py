@@ -14,7 +14,7 @@ def code_departement(code_commune):
 
 def extraire_telephone(telephones):
     return "\n".join(
-        f"{t['valeur']} ({t['description']}" if t["description"] else t["valeur"]
+        f"{t['valeur']} ({t['description']})" if t["description"] else t["valeur"]
         for t in telephones
     )
 
@@ -122,6 +122,8 @@ spec_mairies = (
 
 spec_conseils_departementaux = (contexte, base_spec)
 
+spec_conseils_regionaux = (contexte, base_spec)
+
 spec_prefectures = (
     contexte,
     {
@@ -134,6 +136,7 @@ spec_prefectures = (
 FICHIERS = [
     ("mairies", spec_mairies),
     ("conseils_departementaux", spec_conseils_departementaux),
+    ("conseils_regionaux", spec_conseils_regionaux),
     ("prefectures", spec_prefectures),
 ]
 

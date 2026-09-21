@@ -1,0 +1,15 @@
+{
+  "name": "hexagonal",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "lts" }
+  },
+  "onCreateCommand": "sudo apt-get update && sudo apt-get install -y p7zip-full && npm install -g mapshaper && curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "postCreateCommand": "$HOME/.local/bin/uv run hexagonal pull",
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-python.python", "charliermarsh.ruff", "ms-toolsai.jupyter"],
+      "settings": { "python.defaultInterpreterPath": ".venv/bin/python" }
+    }
+  }
+}

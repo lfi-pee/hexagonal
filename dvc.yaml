@@ -19,20 +19,25 @@ stages:
     outs:
       - ${raw}/ministere_interieur/2020-municipales-1-bureau_de_vote.csv
 
+  # Quatre bureaux de Montbéliard (série 0E) sortent du ministère sans code de bureau :
+  # « Montbéliard;0 » au lieu de « Montbéliard;0E11 ». On rétablit le code, et RIEN
+  # d'autre — la substitution ajoutait un « ; » de tête, qui décalait tous les champs de
+  # la ligne d'un cran : « Code BV » recevait « Montbéliard », « Inscrits » recevait
+  # « 0E11 » (lu comme 0e11, donc 0) et « Exprimés » un pourcentage, donc NA. Ces
+  # 20 lignes sans exprimés faisaient ensuite échouer tout le scrutin en aval.
   nettoyer-2024-legislatives-1:
     cmd: >-
       sed '
-      14169s/Montbéliard\;0/\;Montbéliard\;0E11/ ;
-      14170s/Montbéliard\;0/\;Montbéliard\;0E21/ ;
-      14171s/Montbéliard\;0/\;Montbéliard\;0E31/ ;
-      14172s/Montbéliard\;0/\;Montbéliard\;0E41/ ; '
+      14169s/Montbéliard\;0/Montbéliard\;0E11/ ;
+      14170s/Montbéliard\;0/Montbéliard\;0E21/ ;
+      14171s/Montbéliard\;0/Montbéliard\;0E31/ ;
+      14172s/Montbéliard\;0/Montbéliard\;0E41/ ; '
       < ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv
       > ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
     deps:
       - ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv
     outs:
       - ${raw}/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
-
 
   normaliser-format-elections:
     foreach: ${scrutins}
@@ -65,14 +70,14 @@ stages:
   normaliser-format-senatoriales-2020:
     deps:
       - ${raw}/ministere_interieur/2020-senatoriales-departement.xlsx
-      - ${raw}/lafranceinsoumise/2003-senateurs-par-departements.csv
+      - ${raw}/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       - ${src}/hexagonal/elections/senatoriales/nettoyer_2020.py
     outs:
       - ${clean}/elections/2020-senatoriales-departement.parquet
     cmd: >-
       ${python} hexagonal.elections.senatoriales.nettoyer_2020
       ${raw}/ministere_interieur/2020-senatoriales-departement.xlsx
-      ${raw}/lafranceinsoumise/2003-senateurs-par-departements.csv
+      ${raw}/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       ${clean}/elections/2020-senatoriales-departement.parquet
 
   candidats-nettoyer-legislatives-2022-2024:
@@ -248,15 +253,15 @@ stages:
       cmd: >-
         ${python} hexagonal.elections.candidatures.qualifier_legislatives2024
         ${clean}/elections/2024-legislatives-${item}-candidats.csv
-        ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
-        ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
-        ${raw}/lafranceinsoumise/2024-legislatives-candidats.csv
+        ${raw}/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+        ${raw}/lafranceinsoumise/elections/2024-legislatives-nuances.csv
+        ${raw}/lafranceinsoumise/elections/2024-legislatives-candidats.csv
         ${main}/elections/2024-legislatives-${item}-candidats.csv
       deps:
         - ${clean}/elections/2024-legislatives-${item}-candidats.csv
-        - ${raw}/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
-        - ${raw}/lafranceinsoumise/2024-legislatives-nuances.csv
-        - ${raw}/lafranceinsoumise/2024-legislatives-candidats.csv
+        - ${raw}/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+        - ${raw}/lafranceinsoumise/elections/2024-legislatives-nuances.csv
+        - ${raw}/lafranceinsoumise/elections/2024-legislatives-candidats.csv
         - ${src}/hexagonal/elections/candidatures/qualifier_legislatives2024.py
         - ${src}/hexagonal/codes.py
       outs:
@@ -501,6 +506,8 @@ stages:
     outs:
       - ${clean}/annuaire/mairies.csv
       - ${clean}/annuaire/conseils_departementaux.csv
+      - ${clean}/annuaire/conseils_regionaux.csv
+      - ${clean}/annuaire/prefectures.csv
     cmd: >-
       ${python} hexagonal.annuaire.nettoyer
       ${raw}/annuaire
@@ -566,21 +573,37 @@ stages:
       ${raw}/ign/admin_express/admin_express_cog.7z
       ${raw}/ign/admin_express/
 
-  population_nettoyer:
+  nettoyer_population_reference:
+    foreach:
+      - 2023
+    do:
+      deps:
+        - ${raw}/insee/census/${item}/population-reference.zip
+        - ${clean}/cog/communes.csv
+        - ${src}/hexagonal/population/nettoyer_population_reference.py
+      outs:
+        - ${clean}/population/${item}-population-reference.parquet
+      cmd:
+        ${python} hexagonal.population.nettoyer_population_reference
+        --archive ${raw}/insee/census/${item}/population-reference.zip
+        --cog-communes ${clean}/cog/communes.csv
+        --output ${clean}/population/${item}-population-reference.parquet
+
+  nettoyer_historique_population:
     deps:
       - ${raw}/insee/population_municipale.xlsx
-      - ${src}/hexagonal/population/nettoyer.py
+      - ${src}/hexagonal/population/nettoyer_historique.py
     outs:
-      - ${clean}/population_municipale.csv
+      - ${clean}/population/historique.csv
     cmd: >-
-      ${python} hexagonal.population.nettoyer
+      ${python} hexagonal.population.nettoyer_historique
       ${raw}/insee/population_municipale.xlsx
-      ${clean}/population_municipale.csv
+      ${clean}/population/historique.csv
 
   qualifier_communes:
     deps:
       - ${clean}/cog/communes.csv
-      - ${clean}/population_municipale.csv
+      - ${clean}/population/2023-population-reference.parquet
       - ${clean}/epci.csv
       - ${clean}/communes_epci.csv
       - ${src}/hexagonal/cog/qualifier_communes.py
@@ -589,7 +612,7 @@ stages:
     cmd: >-
       ${python} hexagonal.cog.qualifier_communes
       ${clean}/cog/communes.csv
-      ${clean}/population_municipale.csv
+      ${clean}/population/2023-population-reference.parquet
       ${clean}/epci.csv
       ${clean}/communes_epci.csv
       ${main}/cog/communes.csv
@@ -719,6 +742,19 @@ stages:
     cmd: >-
       7z e ${raw}/ign/iris-metropole.7z -so -r "iris.gpkg" > "${raw}/ign/iris-metropole.gpkg"
 
+  cle_repartition_bv_iris:
+    deps:
+      - ${raw}/insee/2022-reu-adresses.parquet
+      - ${raw}/ign/iris-metropole.gpkg
+      - ${src}/hexagonal/elections/cle_repartition_iris.py
+    outs:
+      - ${main}/elections/cle_repartition_bv_iris.parquet
+    cmd: >-
+      ${python} hexagonal.elections.cle_repartition_iris
+      ${raw}/insee/2022-reu-adresses.parquet
+      ${raw}/ign/iris-metropole.gpkg
+      ${main}/elections/cle_repartition_bv_iris.parquet
+
   extraire_filosofi_disponible:
     deps:
       - ${raw}/insee/filosofi-disponible.zip
@@ -743,17 +779,17 @@ stages:
 
   nb-conseillers-municipaux:
     deps:
-      - ${clean}/population_municipale.csv
-      - ${raw}/lafranceinsoumise/2014-nb-conseillers-municipaux.csv
-      - ${raw}/lafranceinsoumise/2026-conseillers-plm.csv
-      - ${raw}/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv
+      - ${clean}/population/historique.csv
+      - ${raw}/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
+      - ${raw}/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv
+      - ${raw}/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       - ${src}/hexagonal/elections/nombre_conseillers_municipaux.py
     outs:
       - ${main}/elections/nombre_conseillers_municipaux.parquet
     cmd: >-
       ${python} hexagonal.elections.nombre_conseillers_municipaux
-      --population ${clean}/population_municipale.csv
-      --nb-conseillers ${raw}/lafranceinsoumise/2014-nb-conseillers-municipaux.csv
-      --plm-2026 ${raw}/lafranceinsoumise/2026-conseillers-plm.csv
-      --plm-pre-2026 ${raw}/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv
+      --population ${clean}/population/historique.csv
+      --nb-conseillers ${raw}/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
+      --plm-2026 ${raw}/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv
+      --plm-pre-2026 ${raw}/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       --output ${main}/elections/nombre_conseillers_municipaux.parquet

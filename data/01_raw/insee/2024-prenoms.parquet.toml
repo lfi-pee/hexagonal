@@ -1,0 +1,10 @@
+nom = "Prénoms attribués aux enfants nés en France depuis 1900"
+description = """
+Le fichier des prénoms fournit des données sur les prénoms attribués aux enfants nés en France depuis 1900 aux niveaux
+national, régional et départemental. Pour le millésime disponible le plus récent, le classement des 10 prénoms masculins
+et féminins les plus donnés en France ainsi que des cartes présentant les prénoms masculins et féminins les plus donnés
+dans chaque région sont également proposés.
+"""
+mimetype = "application/vnd.apache.parquet"
+info_url = "https://www.insee.fr/fr/statistiques/8595130?sommaire=8595113"
+editeur = "INSEE"

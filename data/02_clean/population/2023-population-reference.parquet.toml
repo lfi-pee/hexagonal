@@ -1,0 +1,34 @@
+nom = "Population de référence 2023"
+description = """
+
+"""
+mimetype = "application/vnd.apache.parquet"
+section = "Démographie"
+
+[colonnes.code_commune]
+type = "str"
+nullable = false
+
+[colonnes.nom_commune]
+type = "str"
+nullable = false
+
+[colonnes.population_municipale]
+type = "entier"
+nullable = false
+
+[colonnes.population_comptee_a_part]
+type = "entier"
+nullable = true
+
+[colonnes.population_totale]
+type = "entier"
+nullable = true
+
+[colonnes.code_commune_parent]
+type = "str"
+nullable = true
+
+[colonnes.type_commune]
+type = "str"
+nullable = false

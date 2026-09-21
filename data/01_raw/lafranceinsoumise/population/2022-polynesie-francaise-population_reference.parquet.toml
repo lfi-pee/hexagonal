@@ -1,0 +1,7 @@
+nom = "Populations de référence des communes de Polynésie française issue du recensement de 2022"
+description = """
+Correspond au traitement à la main du
+[fichier de l'INSEE](#data/01_raw/insee/census/2022/polynesie-francaise-population-reference.xlsx).
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"

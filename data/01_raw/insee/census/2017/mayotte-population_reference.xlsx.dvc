@@ -1,0 +1,12 @@
+md5: e0668764ca14199cd7bec8f8a96bf9d3
+frozen: true
+deps:
+- checksum: '193565286552896535691800500348511324712'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/5392668/mayotte-RP2017-tableaux_pop_legale.xlsx
+outs:
+- md5: f2493a50ee7e50bbca19bd98c27f7d3f
+  size: 8241
+  hash: md5
+  path: mayotte-population_reference.xlsx

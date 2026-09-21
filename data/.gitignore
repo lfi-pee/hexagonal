@@ -20,3 +20,5 @@
 *.shp
 *.shx
 
+# documents
+*.pdf

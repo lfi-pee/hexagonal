@@ -1,0 +1,11 @@
+md5: da85e0a2a435b2ed1894672e741afc46
+frozen: true
+deps:
+- checksum: '13222353918149973001450491030113163098'
+  hash: md5
+  path: https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.zip
+outs:
+- md5: 7eb81f00338234d34de9bed2ec594e6c
+  size: 1032385
+  hash: md5
+  path: population-reference.zip

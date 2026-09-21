@@ -19,7 +19,7 @@ MANDATS = {
     "membre assemblée corse": "Membre de l'Assemblée de Corse",
     "président Polynésie française": "Présidente? de la Polynésie française",
     "président Nouvelle-Calédonie": "Présidente? du gouvernement de la Nouvelle-Calédonie",  # noqa: E501
-    "président Martinique": "Présidente? du Conseil exécutif de Martinique",
+    "président conseil exécutif Martinique": "Présidente? du Conseil exécutif de Martinique",
     "conseiller Paris": "Conseill(er|ère) de Paris",
     "conseiller métropole Lyon": "Conseill(er|ère) métropolitaine? de Lyon",
     "maire arrondissement PLM": "Maire d'arrondissement",

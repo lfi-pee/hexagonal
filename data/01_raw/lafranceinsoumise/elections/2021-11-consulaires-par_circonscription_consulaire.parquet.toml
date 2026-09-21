@@ -1,0 +1,11 @@
+nom = "Résultats des élections consulaires partielles de novembre 2021"
+description = """
+Résultats des élections consulaires partielles de novembre 2021 extraites et mises en forme depuis le
+[fichier excel mis en ligne par le ministère des Affaires étrangères](#data/01_raw/ministere_affaires_etrangeres/2021-11-consulaires-bureau_de_vote-participation.xlsx).
+
+Vu l'absence de régularité dans le format de ces fichiers, et le fait que le ministère des Affaires étrangères ne publie
+plus les résultats que sous forme de tableau PDF, il est plus simple de les nettoyer à la main et de les intégrer ainsi
+dans hexagonal.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"

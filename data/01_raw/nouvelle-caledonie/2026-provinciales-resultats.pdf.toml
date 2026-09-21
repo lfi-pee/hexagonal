@@ -1,0 +1,6 @@
+nom = "Résultats des élections provinciales 2026 en Nouvelle-Calédonie"
+description = """
+Les résultats détaillés ne sont pas disponibles sous un autre format que celui-ci. Une extraction à la main des données contenues 
+"""
+mimetype = "application/pdf"
+editeur = "Haut-commissariat de la République en Nouvelle-Calédonie"

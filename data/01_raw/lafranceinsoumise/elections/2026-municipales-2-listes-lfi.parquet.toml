@@ -1,0 +1,7 @@
+nom = "Liste des listes soutenues par la France insoumise au deuxième tour des municipales de 2026"
+description = """
+Il s'agit de la mise au propre d'une liste utilisée en interne pour le suivi des résultats du scrutin le soir du premier
+tour.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"

@@ -1,5 +1,6 @@
 from itertools import takewhile
 from operator import itemgetter
+from pathlib import Path
 
 import click
 import openpyxl
@@ -23,8 +24,14 @@ def entier(i):
 
 
 @click.command()
-@click.argument("source", type=click.Path(exists=True, dir_okay=False, readable=True))
-@click.argument("dest", type=click.Path(dir_okay=False, writable=True))
+@click.argument(
+    "source",
+    type=click.Path(exists=True, dir_okay=False, readable=True),
+)
+@click.argument(
+    "dest",
+    type=click.Path(dir_okay=False, writable=True, path_type=Path),
+)
 def run(source, dest):
     workbook = openpyxl.load_workbook(source, read_only=True, data_only=True)
     data_worksheet = workbook.worksheets[0]
@@ -37,10 +44,6 @@ def run(source, dest):
         i += 1
 
     colonnes_pop = [c for c in columns if c[:4] in ("PMUN", "PSDC", "PTOT")]
-
-    pop_municipale = [c[-4:] for c in columns if c.startswith("PMUN")]
-    pop_sans_double_compte = [c[-4:] for c in columns if c.startswith("PSDC")]
-    pop_totale = [c[-4:] for c in columns if c.startswith("PTOT")]
 
     spec = {"code_commune": "CODGEO"}
 
@@ -58,6 +61,7 @@ def run(source, dest):
     )
     rows = takewhile(itemgetter("CODGEO"), rows)
 
+    dest.parent.mkdir(exist_ok=True, parents=True)
     nettoyer_avec_spec(rows, dest, spec)
 
 

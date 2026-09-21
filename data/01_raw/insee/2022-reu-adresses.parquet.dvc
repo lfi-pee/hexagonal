@@ -1,0 +1,13 @@
+md5: 9433ff3f688faa9c2d9f4d038806bbd1
+frozen: true
+deps:
+- checksum: '"6499996e-1d3e7400"'
+  size: 490632192
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/8b5c75df-24ea-43ae-9f4c-6f5c633e942b
+outs:
+- md5: 6d2a0b2d3802af60c9ad798eea7d57ec
+  size: 490632192
+  hash: md5
+  path: 2022-reu-adresses.parquet

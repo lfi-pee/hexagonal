@@ -1,0 +1,24 @@
+vars:
+  - src: "../../../src"
+  - raw: "../../../data/01_raw"
+  - clean: "../../../data/02_clean"
+  - main: "../../../data/03_main"
+  - python: PYTHONPATH=../../../src python -m
+
+stages:
+  population_reference_france_entiere_2026:
+    deps:
+      - ${clean}/population/2023-population-reference.parquet
+      - ${raw}/lafranceinsoumise/population/2017-mayotte-population_reference.parquet
+      - ${raw}/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet
+      - ${raw}/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet
+      - ${src}/hexagonal/population/compiler_populations_references.py
+    outs:
+      - 2026-population_reference.parquet
+    cmd: >-
+      ${python} hexagonal.population.compiler_populations_references
+      --source ${clean}/population/2023-population-reference.parquet
+      --source ${raw}/lafranceinsoumise/population/2017-mayotte-population_reference.parquet
+      --source ${raw}/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet
+      --source ${raw}/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet
+      --output 2026-population_reference.parquet

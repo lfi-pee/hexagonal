@@ -1,0 +1,12 @@
+md5: 91e340ed42be52440d3d56ad7140872e
+frozen: true
+deps:
+- checksum: '231027260010742754703961298271790781869'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/7756942/wetf-RP2023-tableaux_pop_legale.xlsx
+outs:
+- md5: 0fa7c892fb402d34134e2a9582cc0280
+  size: 9860
+  hash: md5
+  path: wallis-et-futuna-population_reference.xlsx

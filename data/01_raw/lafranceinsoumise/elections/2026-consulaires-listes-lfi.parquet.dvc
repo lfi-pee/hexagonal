@@ -1,0 +1,5 @@
+outs:
+- md5: e26c5c46a2161cafaa6ed1939f86cefb
+  size: 3997
+  hash: md5
+  path: 2026-consulaires-listes-lfi.parquet

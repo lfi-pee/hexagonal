@@ -1,0 +1,42 @@
+schema: '2.0'
+stages:
+  population_reference_france_entiere_2026:
+    cmd: PYTHONPATH=../../../src python -m 
+      hexagonal.population.compiler_populations_references --source 
+      ../../../data/02_clean/population/2023-population-reference.parquet 
+      --source 
+      ../../../data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet
+      --source 
+      ../../../data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet
+      --source 
+      ../../../data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet
+      --output 2026-population_reference.parquet
+    deps:
+    - path: 
+        ../../../data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet
+      hash: md5
+      md5: b4c1f8f4321e7f201022b4935837b198
+      size: 2452
+    - path: 
+        ../../../data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet
+      hash: md5
+      md5: f2c58242782861bbb31921d1517b28c1
+      size: 2970
+    - path: 
+        ../../../data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet
+      hash: md5
+      md5: e7f2dd4ca76ce2b24a1d7c3550f522cc
+      size: 3389
+    - path: ../../../data/02_clean/population/2023-population-reference.parquet
+      hash: md5
+      md5: 54face8f9e9e34c4b861b1b7179f5689
+      size: 474099
+    - path: ../../../src/hexagonal/population/compiler_populations_references.py
+      hash: md5
+      md5: 71b04339958b1f7afef2ee5dda83be2f
+      size: 747
+    outs:
+    - path: 2026-population_reference.parquet
+      hash: md5
+      md5: f84201852ebb406791891ff9955c3492
+      size: 472950

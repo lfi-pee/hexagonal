@@ -614,8 +614,8 @@ stages:
     - path: 
         data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
       hash: md5
-      md5: 7b26fcfc26f8e4544ae5de3b409d24d0
-      size: 37476392
+      md5: b4fc41a7846a33a961a5d7db11ac7155
+      size: 37476388
     - path: src/hexagonal/codes.py
       hash: md5
       md5: 685eb26ffb0b3e29e0f76dfc5c6c4e15
@@ -627,8 +627,8 @@ stages:
     outs:
     - path: data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet
       hash: md5
-      md5: 226c788f8466ad6a6286d2117019da53
-      size: 2821058
+      md5: 9c2fc17f37b0f31e5f4a2ec1a04d9719
+      size: 2819795
   normaliser-format-elections@2024-legislatives-1-circonscription:
     cmd: PYTHONPATH=src python -m hexagonal.elections.resultats.format_2017 
       --source 
@@ -711,20 +711,23 @@ stages:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.candidatures.qualifier_legislatives2024 
       data/02_clean/elections/2024-legislatives-1-candidats.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv 
       data/03_main/elections/2024-legislatives-1-candidats.csv
     deps:
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv
       hash: md5
       md5: 091a6058b5ec9245608c7e81c41f8310
       size: 148939
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
       size: 17175
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv
       hash: md5
       md5: 24a9e931e2d43373ecddd42a2434eba6
       size: 125983
@@ -738,31 +741,34 @@ stages:
       size: 4776
     - path: src/hexagonal/elections/candidatures/qualifier_legislatives2024.py
       hash: md5
-      md5: 33c66850fb5149af476cc42825452cd0
-      size: 1051
+      md5: 8820854569d260efd7faf21059165dc8
+      size: 1215
     outs:
     - path: data/03_main/elections/2024-legislatives-1-candidats.csv
       hash: md5
-      md5: 28e06f0288f71fd922cc6b1e6b39c20e
-      size: 431894
+      md5: 181e288a431944dc4c1dffe9e3a0ca3d
+      size: 431339
   2024-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.candidatures.qualifier_legislatives2024 
       data/02_clean/elections/2024-legislatives-2-candidats.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv 
-      data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv 
+      data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv 
       data/03_main/elections/2024-legislatives-2-candidats.csv
     deps:
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-candidats.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv
       hash: md5
       md5: 091a6058b5ec9245608c7e81c41f8310
       size: 148939
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nfp-sensibilites.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv
       hash: md5
       md5: 51564d56f7bea8c6fc1abf14f540a073
       size: 17175
-    - path: data/01_raw/lafranceinsoumise/2024-legislatives-nuances.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv
       hash: md5
       md5: 24a9e931e2d43373ecddd42a2434eba6
       size: 125983
@@ -776,13 +782,13 @@ stages:
       size: 4776
     - path: src/hexagonal/elections/candidatures/qualifier_legislatives2024.py
       hash: md5
-      md5: 33c66850fb5149af476cc42825452cd0
-      size: 1051
+      md5: 8820854569d260efd7faf21059165dc8
+      size: 1215
     outs:
     - path: data/03_main/elections/2024-legislatives-2-candidats.csv
       hash: md5
-      md5: 521021b4f255c5bb6d76b07ebe8ae7b0
-      size: 116243
+      md5: a1c6afcd0d9214f778a5b10905f3121f
+      size: 115807
   correspondances_bureau_de_vote_circonscription@2024:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.legislatives.correspondances_circonscription 
@@ -792,8 +798,8 @@ stages:
     deps:
     - path: data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet
       hash: md5
-      md5: 226c788f8466ad6a6286d2117019da53
-      size: 2821058
+      md5: 9c2fc17f37b0f31e5f4a2ec1a04d9719
+      size: 2819795
     - path: data/02_clean/elections/2024-legislatives-1-candidats.csv
       hash: md5
       md5: c19c73368deb0156f8ba71e695dced78
@@ -811,8 +817,8 @@ stages:
     - path: 
         data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv
       hash: md5
-      md5: 35472cae5f437a67c9d770894e60edbc
-      size: 1194296
+      md5: 48cde5e006a2b6b739762b055fc58ab9
+      size: 1194364
   2022-legislatives-candidats@1:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.candidatures.qualifier_legislatives2022 
@@ -902,8 +908,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/mandats.py
       hash: md5
       md5: 080ce60ad199ae89e2c51cff2e0cec28
@@ -915,8 +921,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/mandats.csv
       hash: md5
-      md5: 9be3a05270199387972516388bb20ea2
-      size: 410594
+      md5: a705d19c3f608b164948708243c035d6
+      size: 415308
   assemblee_nationale_groupes:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.groupes 
       data/01_raw/assemblee-nationale.zip 
@@ -925,8 +931,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/groupes.py
       hash: md5
       md5: 5dce03318e91ffee684e96c68aad34d5
@@ -938,8 +944,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/affiliations.csv
       hash: md5
-      md5: df297e65c6c2603dbeb60aa32f56e54f
-      size: 354132
+      md5: ecc0fef595a4e095364d56e16f2c5ac5
+      size: 356315
     - path: data/02_clean/assemblee_nationale/groupes.csv
       hash: md5
       md5: 1c7e51b7ff9442a33fe8908f9c7c3ced
@@ -991,17 +997,25 @@ stages:
       size: 80251521
     - path: src/hexagonal/annuaire/nettoyer.py
       hash: md5
-      md5: acad32db952a103c4cb7b891a139354e
-      size: 4319
+      md5: 02f7de18744dd0796960a8205bd3052e
+      size: 4422
     outs:
     - path: data/02_clean/annuaire/conseils_departementaux.csv
       hash: md5
-      md5: 4721b4119b772840052a9299581efaaf
-      size: 29073
+      md5: 9f02b6caa0fa648c29d2fd44fd668a2f
+      size: 29074
+    - path: data/02_clean/annuaire/conseils_regionaux.csv
+      hash: md5
+      md5: 85edc7096bb27e14e3fe9278ab7eaf76
+      size: 4865
     - path: data/02_clean/annuaire/mairies.csv
       hash: md5
-      md5: 6e33e04864b623f6f38b77717e36e01e
-      size: 12271909
+      md5: 300fc3652c69858ddd41f6b87746df0e
+      size: 12272641
+    - path: data/02_clean/annuaire/prefectures.csv
+      hash: md5
+      md5: 45da636e2df14486cda60d4be639e129
+      size: 115735
   parrainages_nettoyer@2022:
     cmd: PYTHONPATH=src python -m hexagonal.parrainages.nettoyer 
       data/01_raw/conseil_constitutionnel/2022-presidentielle-parrainages.csv 
@@ -1014,13 +1028,13 @@ stages:
       size: 1171235
     - path: src/hexagonal/parrainages/nettoyer.py
       hash: md5
-      md5: 646ddc077349cf36dd418873e6886c3c
-      size: 2446
+      md5: 122785fbbe2166cc9bfebfa4038f4966
+      size: 2464
     outs:
     - path: data/02_clean/elections/2022-presidentielle-parrainages.csv
       hash: md5
-      md5: c4b7e16894b409e0c810750c4967afec
-      size: 1079529
+      md5: 77c544c4bf91940511917024b19ac43f
+      size: 1079547
   cog_nettoyer:
     cmd: PYTHONPATH=src python -m hexagonal.cog.extraire 
       data/01_raw/insee/cog.zip data/02_clean/cog
@@ -1094,17 +1108,17 @@ stages:
       size: 2615
     - path: data/02_clean/elections/2022-presidentielle-parrainages.csv
       hash: md5
-      md5: c4b7e16894b409e0c810750c4967afec
-      size: 1079529
+      md5: 77c544c4bf91940511917024b19ac43f
+      size: 1079547
     - path: src/hexagonal/parrainages/qualifier.py
       hash: md5
-      md5: 3c9c4bdf87170dbc477fbb62c15911ef
-      size: 6867
+      md5: dd20b3e477f5846019c7ce688fbac62f
+      size: 6885
     outs:
     - path: data/03_main/elections/2022-presidentielle-parrainages.csv
       hash: md5
-      md5: 3da5da55e31acfdee79c65cad5e427cc
-      size: 1034090
+      md5: f8754d354e377cb47d3f01aa43f81c14
+      size: 1034108
   rne_nettoyer@conseillers_arrondissement:
     cmd: PYTHONPATH=src python -m hexagonal.rne.extraire data/01_raw/rne/2026-05
       data/02_clean/rne conseillers_arrondissement
@@ -1717,8 +1731,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/commissions.py
       hash: md5
       md5: 1669c3a9cad9aeac440b0e43de6ea7e8
@@ -1730,8 +1744,8 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/commissions.csv
       hash: md5
-      md5: d55b7c14909f91da0626fa9d48ca9047
-      size: 1867210
+      md5: dd8631c8411e69af9b112b1699abfe98
+      size: 2108586
   assemblee_nationale_fiches:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.fiches 
       data/01_raw/assemblee-nationale.zip 
@@ -1741,8 +1755,8 @@ stages:
     deps:
     - path: data/01_raw/assemblee-nationale.zip
       hash: md5
-      md5: 20a8cc3e6f177ff2bdb72eb784e81c9c
-      size: 13408180
+      md5: 3a13b9eb2ae09c588f7cc718e4daf2f2
+      size: 13574220
     - path: src/hexagonal/assemblee_nationale/fiches.py
       hash: md5
       md5: b69dac40710b6d7ef90d91723b76382b
@@ -1754,40 +1768,40 @@ stages:
     outs:
     - path: data/02_clean/assemblee_nationale/adresses_electroniques.csv
       hash: md5
-      md5: 8eb43bac15d4605d76ae979b9511c452
-      size: 424791
+      md5: b92e0e5f21edc2ee01793b2fe009376b
+      size: 427488
     - path: data/02_clean/assemblee_nationale/adresses_postales.csv
       hash: md5
-      md5: 96e7fd19220ec911e7ca95c3076473b0
-      size: 304627
+      md5: c12803627617dafbf11e61522215e8c7
+      size: 307859
     - path: data/02_clean/assemblee_nationale/fiches.csv
       hash: md5
-      md5: f8c96973b1fe1e86b6a1e754453003de
-      size: 254351
+      md5: 76ad9a8b9c4ae1640880a49bb98463d0
+      size: 256292
   assemblee_nationale_deputes:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.deputes 
       data/02_clean/assemblee_nationale data/03_main/assemblee_nationale
     deps:
     - path: data/02_clean/assemblee_nationale/adresses_electroniques.csv
       hash: md5
-      md5: 8eb43bac15d4605d76ae979b9511c452
-      size: 424791
+      md5: b92e0e5f21edc2ee01793b2fe009376b
+      size: 427488
     - path: data/02_clean/assemblee_nationale/affiliations.csv
       hash: md5
-      md5: df297e65c6c2603dbeb60aa32f56e54f
-      size: 354132
+      md5: ecc0fef595a4e095364d56e16f2c5ac5
+      size: 356315
     - path: data/02_clean/assemblee_nationale/commissions.csv
       hash: md5
-      md5: d55b7c14909f91da0626fa9d48ca9047
-      size: 1867210
+      md5: dd8631c8411e69af9b112b1699abfe98
+      size: 2108586
     - path: data/02_clean/assemblee_nationale/fiches.csv
       hash: md5
-      md5: f8c96973b1fe1e86b6a1e754453003de
-      size: 254351
+      md5: 76ad9a8b9c4ae1640880a49bb98463d0
+      size: 256292
     - path: data/02_clean/assemblee_nationale/mandats.csv
       hash: md5
-      md5: 9be3a05270199387972516388bb20ea2
-      size: 410594
+      md5: a705d19c3f608b164948708243c035d6
+      size: 415308
     - path: src/hexagonal/assemblee_nationale/deputes.py
       hash: md5
       md5: 4048586ff950126ac0622be50d1fe1e7
@@ -1795,12 +1809,12 @@ stages:
     outs:
     - path: data/03_main/assemblee_nationale/deputes.csv
       hash: md5
-      md5: 9c41067bb16e3e25ec2bd1cd5ade9d94
-      size: 160803
+      md5: ccb0f99e8118e42671d44ec56c95141a
+      size: 160972
     - path: data/03_main/assemblee_nationale/deputes_lfi.csv
       hash: md5
-      md5: 4cfcd2f3f862284ec94065389550a088
-      size: 20170
+      md5: 5470ba86539540b78a158a3a9a98d10a
+      size: 20187
   extraire_codes_postaux:
     cmd: PYTHONPATH=src python -m hexagonal.codes_postaux.extraire 
       data/01_raw/la_poste/base_officielle_codes_postaux.csv 
@@ -1874,7 +1888,8 @@ stages:
       size: 2244049
   qualifier_communes:
     cmd: PYTHONPATH=src python -m hexagonal.cog.qualifier_communes 
-      data/02_clean/cog/communes.csv data/02_clean/population_municipale.csv 
+      data/02_clean/cog/communes.csv 
+      data/02_clean/population/2023-population-reference.parquet 
       data/02_clean/epci.csv data/02_clean/communes_epci.csv 
       data/03_main/cog/communes.csv
     deps:
@@ -1890,14 +1905,14 @@ stages:
       hash: md5
       md5: 938e91264654279008c17238ba9d4c64
       size: 82523
-    - path: data/02_clean/population_municipale.csv
+    - path: data/02_clean/population/2023-population-reference.parquet
       hash: md5
-      md5: 6d4683916de6c5b5356810666bc91887
-      size: 5648044
+      md5: 54face8f9e9e34c4b861b1b7179f5689
+      size: 474099
     - path: src/hexagonal/cog/qualifier_communes.py
       hash: md5
-      md5: 1f5e83b92ab1db2995ea555d241bea37
-      size: 2688
+      md5: a4e816368ffdf07fa1e0c9706ce922b8
+      size: 2261
     outs:
     - path: data/03_main/cog/communes.csv
       hash: md5
@@ -2497,27 +2512,30 @@ stages:
   nb-conseillers-municipaux:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.nombre_conseillers_municipaux --population 
-      data/02_clean/population_municipale.csv --nb-conseillers 
-      data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv 
-      --plm-2026 data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv 
+      data/02_clean/population/historique.csv --nb-conseillers 
+      data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
+      --plm-2026 
+      data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv 
       --plm-pre-2026 
-      data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv 
+      data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       --output data/03_main/elections/nombre_conseillers_municipaux.parquet
     deps:
-    - path: data/01_raw/lafranceinsoumise/2014-nb-conseillers-municipaux.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv
       hash: md5
       md5: b89885f27aca03b75606427c3a2a99a6
       size: 199
-    - path: data/01_raw/lafranceinsoumise/2026-conseillers-plm.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/code_electoral/2026-conseillers-plm.csv
       hash: md5
       md5: f19f112b76794a931762598332814dbf
       size: 95
     - path: 
-        data/01_raw/lafranceinsoumise/pre-2026-conseillers-municipaux-plm.csv
+        data/01_raw/lafranceinsoumise/code_electoral/pre-2026-conseillers-municipaux-plm.csv
       hash: md5
       md5: f3b5e042f2ffb2685719cabab7516c47
       size: 1323
-    - path: data/02_clean/population_municipale.csv
+    - path: data/02_clean/population/historique.csv
       hash: md5
       md5: 6d4683916de6c5b5356810666bc91887
       size: 5648044
@@ -2533,10 +2551,11 @@ stages:
   normaliser-format-senatoriales-2020:
     cmd: PYTHONPATH=src python -m hexagonal.elections.senatoriales.nettoyer_2020
       data/01_raw/ministere_interieur/2020-senatoriales-departement.xlsx 
-      data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv 
+      data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       data/02_clean/elections/2020-senatoriales-departement.parquet
     deps:
-    - path: data/01_raw/lafranceinsoumise/2003-senateurs-par-departements.csv
+    - path: 
+        data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv
       hash: md5
       md5: 8c895fe131736d7a64f979d157271977
       size: 577
@@ -2546,7 +2565,7 @@ stages:
       size: 51531
     - path: src/hexagonal/elections/senatoriales/nettoyer_2020.py
       hash: md5
-      md5: a1e6d26ad4d31180a67cb9eb3da4c09f
+      md5: da36d0200ae1ce229cff108d0dec3bf0
       size: 5439
     outs:
     - path: data/02_clean/elections/2020-senatoriales-departement.parquet
@@ -2597,8 +2616,8 @@ stages:
       size: 3724507
     - path: data/03_main/elections/2022-presidentielle-parrainages.csv
       hash: md5
-      md5: 3da5da55e31acfdee79c65cad5e427cc
-      size: 1034090
+      md5: f8754d354e377cb47d3f01aa43f81c14
+      size: 1034108
     - path: src/hexagonal/parrainages/identifier.py
       hash: md5
       md5: 71526f46382ee8fb4f015b1cb1b326be
@@ -2618,13 +2637,13 @@ stages:
     deps:
     - path: data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet
       hash: md5
-      md5: 226c788f8466ad6a6286d2117019da53
-      size: 2821058
+      md5: 9c2fc17f37b0f31e5f4a2ec1a04d9719
+      size: 2819795
     - path: 
         data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv
       hash: md5
-      md5: 35472cae5f437a67c9d770894e60edbc
-      size: 1194296
+      md5: 48cde5e006a2b6b739762b055fc58ab9
+      size: 1194364
     - path: src/hexagonal/elections/legislatives/ajouter_circonscription.py
       hash: md5
       md5: af2a5d785f5c125be74eaeb473710e1c
@@ -2632,8 +2651,8 @@ stages:
     outs:
     - path: data/03_main/elections/2024-legislatives-1-bureau_de_vote.parquet
       hash: md5
-      md5: 4777982dec9f0f3e377ab8b4c8aabed0
-      size: 1923409
+      md5: aab360d2b9f41473360eb883d5421b18
+      size: 1957671
   ajouter_circonscription@2024-legislatives-2-bureau_de_vote:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.legislatives.ajouter_circonscription --resultats 
@@ -2649,8 +2668,8 @@ stages:
     - path: 
         data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv
       hash: md5
-      md5: 35472cae5f437a67c9d770894e60edbc
-      size: 1194296
+      md5: 48cde5e006a2b6b739762b055fc58ab9
+      size: 1194364
     - path: src/hexagonal/elections/legislatives/ajouter_circonscription.py
       hash: md5
       md5: af2a5d785f5c125be74eaeb473710e1c
@@ -2658,13 +2677,13 @@ stages:
     outs:
     - path: data/03_main/elections/2024-legislatives-2-bureau_de_vote.parquet
       hash: md5
-      md5: 8c536658e82faa16e25635ef5c653c2a
-      size: 1095062
+      md5: aa7747be45463edb79cb13125aeaa926
+      size: 1131461
   nettoyer-2024-legislatives-1:
-    cmd: sed ' 14169s/Montbéliard\;0/\;Montbéliard\;0E11/ ; 
-      14170s/Montbéliard\;0/\;Montbéliard\;0E21/ ; 
-      14171s/Montbéliard\;0/\;Montbéliard\;0E31/ ; 
-      14172s/Montbéliard\;0/\;Montbéliard\;0E41/ ; ' < 
+    cmd: sed ' 14169s/Montbéliard\;0/Montbéliard\;0E11/ ; 
+      14170s/Montbéliard\;0/Montbéliard\;0E21/ ; 
+      14171s/Montbéliard\;0/Montbéliard\;0E31/ ; 
+      14172s/Montbéliard\;0/Montbéliard\;0E41/ ; ' < 
       data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote_avant_correction.csv
       > data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
     deps:
@@ -2677,8 +2696,73 @@ stages:
     - path: 
         data/01_raw/ministere_interieur/2024-legislatives-1-bureau_de_vote.csv
       hash: md5
-      md5: 7b26fcfc26f8e4544ae5de3b409d24d0
-      size: 37476392
+      md5: b4fc41a7846a33a961a5d7db11ac7155
+      size: 37476388
+  nettoyer_historique_population:
+    cmd: PYTHONPATH=src python -m hexagonal.population.nettoyer_historique 
+      data/01_raw/insee/population_municipale.xlsx 
+      data/02_clean/population/historique.csv
+    deps:
+    - path: data/01_raw/insee/population_municipale.xlsx
+      hash: md5
+      md5: 7782fadc89c8d1b15780da0ab8b43e84
+      size: 7013152
+    - path: src/hexagonal/population/nettoyer_historique.py
+      hash: md5
+      md5: de8fdb5046ee4b7c748695fe5534b9bc
+      size: 1649
+    outs:
+    - path: data/02_clean/population/historique.csv
+      hash: md5
+      md5: 6d4683916de6c5b5356810666bc91887
+      size: 5648044
+  nettoyer_population_reference@2023:
+    cmd: PYTHONPATH=src python -m 
+      hexagonal.population.nettoyer_population_reference --archive 
+      data/01_raw/insee/census/2023/population-reference.zip --cog-communes 
+      data/02_clean/cog/communes.csv --output 
+      data/02_clean/population/2023-population-reference.parquet
+    deps:
+    - path: data/01_raw/insee/census/2023/population-reference.zip
+      hash: md5
+      md5: 7eb81f00338234d34de9bed2ec594e6c
+      size: 1032385
+    - path: data/02_clean/cog/communes.csv
+      hash: md5
+      md5: 5da5f7dacec0b0723fef714ddbd166b3
+      size: 1702444
+    - path: src/hexagonal/population/nettoyer_population_reference.py
+      hash: md5
+      md5: eedbdbb14980523c2bb103237c715425
+      size: 2913
+    outs:
+    - path: data/02_clean/population/2023-population-reference.parquet
+      hash: md5
+      md5: 54face8f9e9e34c4b861b1b7179f5689
+      size: 474099
+  cle_repartition_bv_iris:
+    cmd: PYTHONPATH=src python -m hexagonal.elections.cle_repartition_iris 
+      data/01_raw/insee/2022-reu-adresses.parquet 
+      data/01_raw/ign/iris-metropole.gpkg 
+      data/03_main/elections/cle_repartition_bv_iris.parquet
+    deps:
+    - path: data/01_raw/ign/iris-metropole.gpkg
+      hash: md5
+      md5: 86fc5b983d70c4ae8f510328f1631acf
+      size: 166952960
+    - path: data/01_raw/insee/2022-reu-adresses.parquet
+      hash: md5
+      md5: 6d2a0b2d3802af60c9ad798eea7d57ec
+      size: 490632192
+    - path: src/hexagonal/elections/cle_repartition_iris.py
+      hash: md5
+      md5: 56c1defef6f9f507f99981b9a6caf6fe
+      size: 2261
+    outs:
+    - path: data/03_main/elections/cle_repartition_bv_iris.parquet
+      hash: md5
+      md5: 9c40263b6435b9b30eff6efba1ab4941
+      size: 1680098
   extraire_filosofi_communes:
     cmd: PYTHONPATH=src python -m hexagonal.filosofi.extraire_commune 
       data/01_raw/insee/filosofi-communes.zip data/02_clean/filosofi/commune.csv

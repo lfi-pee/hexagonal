@@ -1,0 +1,5 @@
+outs:
+- md5: e7f2dd4ca76ce2b24a1d7c3550f522cc
+  size: 3389
+  hash: md5
+  path: 2025-nouvelle-caledonie-population_reference.parquet
