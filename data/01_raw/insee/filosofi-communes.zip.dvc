@@ -1,0 +1,12 @@
+md5: 965a41d2e3746db60892d580083f1614
+frozen: true
+deps:
+- checksum: '136036676457206157260304948382069371415'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/7756729/base-cc-filosofi-2021-geo2025_csv.zip
+outs:
+- md5: 284a647793d14035f15c75b1da1d832c
+  size: 5063469
+  hash: md5
+  path: filosofi-communes.zip
