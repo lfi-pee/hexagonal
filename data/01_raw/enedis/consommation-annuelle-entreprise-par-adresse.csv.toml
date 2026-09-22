@@ -1,0 +1,18 @@
+nom = "Enedis — Consommation d'électricité annuelle entreprise par adresse"
+description = """
+Données Enedis d'open data sur la consommation annuelle d'électricité,
+segment entreprise, agrégées par adresse pour les adresses comptant au moins
+un point de livraison professionnel > 36 kVA (BT et HTA).
+
+Chaque ligne est une adresse avec :
+- voie, code postal, commune, code INSEE
+- nombre de points de livraison entreprise
+- consommation annuelle totale (kWh) par année
+- code NAF de secteur (à partir de 2021)
+
+Utilisé comme feature négative dans l'identification de bâtiments résidentiels :
+la présence de consommation entreprise indique un usage tertiaire.
+"""
+mimetype = "text/csv"
+info_url = "https://data.enedis.fr/explore/dataset/consommation-annuelle-entreprise-par-adresse/"
+editeur = "Enedis"

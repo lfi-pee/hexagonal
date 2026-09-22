@@ -1,0 +1,17 @@
+nom = "Enedis — Consommation d'électricité annuelle résidentielle par adresse"
+description = """
+Données Enedis d'open data sur la consommation annuelle d'électricité,
+segment résidentiel, agrégées par adresse pour toutes les adresses comptant
+au moins 10 points de livraison résidentiels. Publiées annuellement.
+
+Chaque ligne est une adresse avec :
+- voie, code postal, commune, code INSEE
+- nombre de points de livraison résidentiels
+- consommation annuelle totale (kWh) par année
+
+Utilisé comme feature dans l'identification de résidences collectives à
+forte densité de logements.
+"""
+mimetype = "text/csv"
+info_url = "https://data.enedis.fr/explore/dataset/consommation-annuelle-residentielle-par-adresse/"
+editeur = "Enedis"

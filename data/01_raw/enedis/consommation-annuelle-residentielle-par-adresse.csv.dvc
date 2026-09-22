@@ -1,0 +1,5 @@
+outs:
+- md5: cfdfeecc81e56f733ca3e4f535f62bae
+  size: 10813089
+  hash: md5
+  path: consommation-annuelle-residentielle-par-adresse.csv
