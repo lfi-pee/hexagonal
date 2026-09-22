@@ -1,0 +1,5 @@
+outs:
+- md5: 896c400db27ca8a8a4349e3a9ed770d0
+  size: 7628201
+  hash: md5
+  path: lovac-communes.csv

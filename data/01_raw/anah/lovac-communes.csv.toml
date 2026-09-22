@@ -1,0 +1,16 @@
+nom = "LOVAC — Logements vacants du parc privé, agrégés par commune"
+description = """
+Fichier LOVAC (Logements Vacants) produit par l'ANAH à partir des fichiers
+fiscaux (taxe d'habitation sur les logements vacants) et croisé avec la source
+LOCOMVAC. Fournit par commune :
+- nombre de logements vacants du parc privé
+- durée de vacance (courte / longue)
+- taux de vacance rapporté au parc total
+- estimation du potentiel de remise en location
+
+Utilisé comme feature de contexte pour caractériser la tension du marché
+locatif à l'échelle communale.
+"""
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/datasets/logements-vacants-du-parc-prive-lovac-2016-2023"
+editeur = "ANAH"
