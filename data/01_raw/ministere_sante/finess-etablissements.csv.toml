@@ -1,0 +1,18 @@
+nom = "FINESS — Extraction du fichier des établissements"
+description = """
+Le Fichier National des Établissements Sanitaires et Sociaux (FINESS) recense
+tous les établissements et services sanitaires, médico-sociaux et sociaux de
+France, ainsi que les entités juridiques les gérant. Il est utilisé notamment
+pour identifier les EHPAD, résidences autonomie, CROUS/résidences étudiantes
+publiques, foyers et centres d'hébergement.
+
+Cette extraction contient un enregistrement par établissement, avec :
+- numéro FINESS (ET) et rattachement à une entité juridique (EJ)
+- raison sociale, adresse complète, code postal, code commune
+- catégorie d'établissement (code + libellé)
+- coordonnées géographiques (le cas échéant)
+- date d'ouverture, statut juridique
+"""
+mimetype = "text/csv"
+info_url = "https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements"
+editeur = "Ministère de la Santé"

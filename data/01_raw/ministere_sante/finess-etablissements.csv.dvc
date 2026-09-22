@@ -1,0 +1,5 @@
+outs:
+- md5: f7b831853974728181a943ed17a4b0dd
+  size: 244115300
+  hash: md5
+  path: finess-etablissements.csv
