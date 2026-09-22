@@ -1,0 +1,20 @@
+nom = "Quartiers prioritaires de la politique de la ville 2024"
+description = """
+Contours géographiques des Quartiers Prioritaires de la Politique de la Ville
+(QPV) tels que définis par le décret n°2023-1314 du 28 décembre 2023 et
+publiés par l'Agence Nationale de la Cohésion des Territoires (ANCT). Entrés
+en vigueur au 1ᵉʳ janvier 2024.
+
+Cette archive ZIP contient plusieurs GeoPackages, un par emprise :
+- France hexagonale — Lambert-93 (EPSG:2154)
+- Guyane — UTM 22N (EPSG:2972)
+- Guadeloupe — UTM 20N (EPSG:5490)
+- La Réunion — UTM 40S (EPSG:2975)
+- Mayotte — UTM 38S (EPSG:4471)
+- Polynésie française — WGS 84 (EPSG:4326)
+- France entière — WGS 84 (EPSG:4326)
+"""
+mimetype = "application/zip"
+info_url = "https://www.data.gouv.fr/datasets/quartiers-prioritaires-de-la-politique-de-la-ville-au-1er-janvier-2024"
+editeur = "ANCT"
+date = 2024-01-01
