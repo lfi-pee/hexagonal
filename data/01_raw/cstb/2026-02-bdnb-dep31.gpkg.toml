@@ -1,0 +1,21 @@
+nom = "Base de Données Nationale des Bâtiments (BDNB) — millésime 2026-02, département 31"
+description = """
+La BDNB compile pour chaque bâtiment français les caractéristiques issues du
+cadastre, du fichier des logements, des DPE, de la BDTOPO et de plusieurs autres
+sources. Chaque bâtiment est identifié par un `batiment_construction_id` stable
+entre millésimes.
+
+Ce fichier est l'extraction départementale Haute-Garonne (dep 31) du millésime
+2026-02-a, au format GeoPackage (SQLite spatial), en Lambert-93 (EPSG:2154).
+Il contient notamment :
+- géométrie du bâtiment (polygone au sol)
+- usage principal (résidentiel, tertiaire, mixte)
+- surface au sol, hauteur, nombre de niveaux
+- année de construction estimée
+- lien vers les DPE et DVF associés
+- adresses BAN rattachées
+"""
+mimetype = "application/geopackage+sqlite3"
+info_url = "https://bdnb.io/download/"
+editeur = "CSTB"
+date = 2026-02-01
