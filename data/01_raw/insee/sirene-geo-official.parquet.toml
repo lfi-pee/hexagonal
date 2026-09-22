@@ -1,0 +1,15 @@
+nom = "Base SIRENE des établissements — version géolocalisée officielle"
+description = """
+Extraction de la base SIRENE (Système Informatisé du Répertoire National des
+Entreprises et des Établissements) enrichie de la géolocalisation officielle
+publiée par l'INSEE. Un enregistrement par établissement (SIRET) avec :
+- SIREN, SIRET, dénomination
+- code APE / activité principale
+- adresse normalisée, code commune INSEE
+- coordonnées X/Y (Lambert-93) et longitude/latitude (WGS-84)
+- code IRIS et code QPV le cas échéant
+- effectif et tranche d'effectif
+"""
+mimetype = "application/vnd.apache.parquet"
+info_url = "https://www.data.gouv.fr/datasets/geolocalisation-des-etablissements-du-repertoire-sirene-pour-les-etudes-statistiques"
+editeur = "INSEE"

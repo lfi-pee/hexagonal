@@ -1,0 +1,5 @@
+outs:
+- md5: bb88da5d298b69b64c16bab464166a34
+  size: 809215388
+  hash: md5
+  path: sirene-geo-official.parquet

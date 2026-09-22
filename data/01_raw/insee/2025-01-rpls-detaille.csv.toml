@@ -1,0 +1,17 @@
+nom = "RPLS 2025 — données détaillées au logement"
+description = """
+Le Répertoire des Logements Locatifs des bailleurs Sociaux (RPLS) est établi
+au 1ᵉʳ janvier de chaque année à partir des déclarations des bailleurs sociaux.
+Chaque logement social ordinaire y est décrit individuellement.
+
+Ce fichier est le millésime 2025-01, diffusion détaillée logement-par-logement,
+géolocalisée en Lambert-93 (colonnes X, Y). Il contient :
+- catégorie de financement (PLAI, PLUS, PLS, autres)
+- surface, nombre de pièces, année de construction
+- statut d'occupation, vacance, rotation
+- localisation à l'adresse
+"""
+mimetype = "text/csv"
+info_url = "https://www.statistiques.developpement-durable.gouv.fr/repertoire-des-logements-locatifs-des-bailleurs-sociaux-rpls"
+editeur = "SDES — Ministère de la Transition écologique"
+date = 2025-01-01

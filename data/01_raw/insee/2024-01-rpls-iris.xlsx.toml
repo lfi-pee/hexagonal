@@ -1,0 +1,16 @@
+nom = "RPLS 2024 — données agrégées par IRIS"
+description = """
+Répertoire des Logements Locatifs des bailleurs Sociaux (RPLS) au 1ᵉʳ janvier
+2024, agrégé à la maille IRIS. Fournit par IRIS :
+- nombre total de logements sociaux
+- taux de rotation (`txRot`), taux de vacance (`txVac`)
+- distribution par catégorie de financement (PLAI, PLS, PLUS…)
+- ancienneté du parc
+
+Utilisé comme feature secondaire pour caractériser la présence de logements
+sociaux quand le RPLS détaillé n'est pas rattaché à une adresse identifiable.
+"""
+mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+info_url = "https://www.insee.fr/fr/statistiques/8736658"
+editeur = "INSEE"
+date = 2024-01-01

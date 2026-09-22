@@ -1,0 +1,21 @@
+nom = "FILOSOFI 2019 — données carroyées 200 m, département 31"
+description = """
+Fichier localisé social et fiscal (FILOSOFI) de l'INSEE, millésime 2019,
+diffusion à la maille carreau de 200 mètres de côté. Fournit à cette échelle
+fine des indicateurs de population, revenus, structure des ménages et parc
+de logements :
+- `ind`, `men` : nombre d'individus et de ménages
+- `men_pauv` : ménages sous le seuil de pauvreté
+- `ind_snv` : somme des niveaux de vie
+- distribution par tranche d'âge (`ind_0_3` à `ind_80p`)
+- distribution du parc (`log_av45`, `log_45_70`, `log_70_90`, `log_ap90`, `log_soc`)
+
+Ce fichier est l'extraction Haute-Garonne (dep 31) au format GeoPackage,
+Lambert-93 (EPSG:2154). Complémentaire du produit FILOSOFI à l'IRIS
+(revenus disponibles), il apporte une résolution géographique 10 à 50 fois
+plus fine.
+"""
+mimetype = "application/geopackage+sqlite3"
+info_url = "https://www.insee.fr/fr/statistiques/7655475"
+editeur = "INSEE"
+date = 2019-01-01
