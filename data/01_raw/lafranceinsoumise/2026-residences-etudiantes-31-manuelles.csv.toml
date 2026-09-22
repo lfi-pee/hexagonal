@@ -1,0 +1,15 @@
+nom = "Résidences étudiantes hors CROUS, département 31 — saisie manuelle 2026"
+description = """
+Liste manuelle, saisie et vérifiée par la France insoumise, des résidences
+étudiantes du département 31 (Haute-Garonne) non couvertes par les bases
+CROUS et ADELE.
+
+Concerne notamment les résidences des écoles d'ingénieurs et grandes écoles
+gérées hors CNOUS (ISAE, UPS Rangueil, Ancely, etc.). Format identique aux
+extractions CROUS (`crous-occitanie.csv`) pour permettre la concaténation :
+- identifiant local, intitulé, adresse
+- géolocalisation, région de rattachement
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"
+date = 2026-01-01
