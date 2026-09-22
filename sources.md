@@ -1,20 +1,37 @@
 # Données sources
 
 
+- [ANAH](#anah)
+  - [LOVAC — Logements vacants du parc privé, agrégés par commune](#data/01_raw/anah/lovac-communes.csv)
+- [ANCT](#anct)
+  - [Quartiers prioritaires de la politique de la ville 2024](#data/01_raw/anct/2024-qpv.zip)
 - [Assemblée nationale](#assemblee-nationale)
   - [Historique des députés](#data/01_raw/assemblee-nationale.zip)
+- [CNOUS](#cnous)
+  - [ADELE — Résidences étudiantes du département 31 (extraction)](#data/01_raw/cnous/adele-residences-31.csv)
+  - [CROUS Occitanie — Résidences universitaires](#data/01_raw/cnous/crous-occitanie.csv)
+- [CSTB](#cstb)
+  - [Base de Données Nationale des Bâtiments (BDNB) — millésime 2026-02, département 31](#data/01_raw/cstb/2026-02-bdnb-dep31.gpkg)
 - [Conseil constitutionnel](#conseil-constitutionnel)
   - [Liste des parrainages validés par le Conseil constitutionnel pour l&#39;élection de 2022](#data/01_raw/conseil_constitutionnel/2022-presidentielle-parrainages.csv)
+- [DGFIP](#dgfip)
+  - [Demandes de valeurs foncières — département 31, année 2024](#data/01_raw/dgfip/2024-dvf-dep31.csv.gz)
+- [Enedis](#enedis)
+  - [Enedis — Consommation d&#39;électricité annuelle entreprise par adresse](#data/01_raw/enedis/consommation-annuelle-entreprise-par-adresse.csv)
+  - [Enedis — Consommation d&#39;électricité annuelle résidentielle par adresse](#data/01_raw/enedis/consommation-annuelle-residentielle-par-adresse.csv)
 - [GeoNames](#geonames)
   - [cities1000](#data/01_raw/geonames/cities1000.zip)
 - [Haut-commissariat de la République en Nouvelle-Calédonie](#haut-commissariat-de-la-republique-en-nouvelle-caledonie)
   - [Résultats des élections provinciales 2026 en Nouvelle-Calédonie](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf)
 - [IGN](#ign)
+  - [BD TOPO® v3.3 — département 31, édition du 15 mars 2024](#data/01_raw/ign/bdtopo-3-3-dep31-2024-03-15.7z)
   - [Contours IRIS 2025 — France métropolitaine](#data/01_raw/ign/iris-metropole.7z)
 - [INSEE](#insee)
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
+  - [FILOSOFI 2019 — données carroyées 200 m, département 31](#data/01_raw/insee/2019-filosofi-carreaux-dep31.gpkg)
   - [La table des adresses normalisées et géolocalisées du REU 2022](#data/01_raw/insee/2022-reu-adresses.parquet)
   - [Répertoire électoral unique — table des bureaux de vote](#data/01_raw/insee/2022-reu-bureaux.parquet)
+  - [RPLS 2024 — données agrégées par IRIS](#data/01_raw/insee/2024-01-rpls-iris.xlsx)
   - [Prénoms attribués aux enfants nés en France depuis 1900](#data/01_raw/insee/2024-prenoms.parquet)
   - [Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)](#data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls)
   - [Recensement de la population 2006 — Couples, familles et ménages (Commune)](#data/01_raw/insee/census/2006/base-cc-couples-familles-menages-2006.xls)
@@ -197,9 +214,11 @@
   - [FILOSOFI 2021 — Revenu disponible par IRIS](#data/01_raw/insee/filosofi-disponible.zip)
   - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee/insee_circonscriptions_legislatives.zip)
   - [Séries historiques de population par commune (1876 à 2023)](#data/01_raw/insee/population_municipale.xlsx)
+  - [Base SIRENE des établissements — version géolocalisée officielle](#data/01_raw/insee/sirene-geo-official.parquet)
 - [LEGIS-2022](#legis-2022)
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
 - [La France insoumise](#la-france-insoumise)
+  - [Résidences étudiantes hors CROUS, département 31 — saisie manuelle 2026](#data/01_raw/lafranceinsoumise/2026-residences-etudiantes-31-manuelles.csv)
   - [Nombre de conseillers municipaux par commune — de 1996 à 2008](#data/01_raw/lafranceinsoumise/code_electoral/1996-nb-conseillers-municipaux.csv)
   - [Nombre de sénateurs par département](#data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv)
   - [Nombre de conseillers municipaux par commune — depuis 2014](#data/01_raw/lafranceinsoumise/code_electoral/2014-nb-conseillers-municipaux.csv)
@@ -319,6 +338,8 @@
   - [Répertoire national des élus — député·es — mai 2026](#data/01_raw/rne/2026-05/deputes.csv)
   - [Répertoire national des élus — député·es européen·nes — mai 2026](#data/01_raw/rne/2026-05/deputes_europeens.csv)
   - [Répertoire national des élus — sénateur·rices — mai 2026](#data/01_raw/rne/2026-05/senateurs.csv)
+- [Ministère de la Santé](#ministere-de-la-sante)
+  - [FINESS — Extraction du fichier des établissements](#data/01_raw/ministere_sante/finess-etablissements.csv)
 - [Ministère des Affaires étrangères](#ministere-des-affaires-etrangeres)
   - [Résultats des élections consulaires par circonscription consulaire](#data/01_raw/ministere_affaires_etrangeres/2021-05-consulaires-circonscription_consulaire.xlsx)
   - [Résultats des élections consulaires de 2026](#data/01_raw/ministere_affaires_etrangeres/2026-consulaires-circonscription_consulaire.pdf)
@@ -329,6 +350,68 @@
   - [Populated Places](#data/01_raw/natural_earth/ne_10m_populated_places.zip)
 - [Premier ministre](#premier-ministre)
   - [Base de données locales de l&#39;annuaire de l&#39;administration](#data/01_raw/annuaire/annuaire.tar.bz2)
+- [SDES — Ministère de la Transition écologique](#sdes-ministere-de-la-transition-ecologique)
+  - [RPLS 2025 — données détaillées au logement](#data/01_raw/insee/2025-01-rpls-detaille.csv)
+
+
+
+## ANAH
+<a name="anah"></a>
+
+### LOVAC — Logements vacants du parc privé, agrégés par commune
+<a name="data/01_raw/anah/lovac-communes.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/anah/lovac-communes.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/logements-vacants-du-parc-prive-lovac-2016-2023 |
+| Éditeur | ANAH |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/89/6c400db27ca8a8a4349e3a9ed770d0 |
+
+Fichier LOVAC (Logements Vacants) produit par l&#39;ANAH à partir des fichiers
+fiscaux (taxe d&#39;habitation sur les logements vacants) et croisé avec la source
+LOCOMVAC. Fournit par commune :
+- nombre de logements vacants du parc privé
+- durée de vacance (courte / longue)
+- taux de vacance rapporté au parc total
+- estimation du potentiel de remise en location
+
+Utilisé comme feature de contexte pour caractériser la tension du marché
+locatif à l&#39;échelle communale.
+
+
+
+
+## ANCT
+<a name="anct"></a>
+
+### Quartiers prioritaires de la politique de la ville 2024
+<a name="data/01_raw/anct/2024-qpv.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/anct/2024-qpv.zip |
+| Format de fichier | application/zip |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/quartiers-prioritaires-de-la-politique-de-la-ville-au-1er-janvier-2024 |
+| Éditeur | ANCT |
+| Date | 01/01/2024 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f3/f5a37dc9aa801a4c229624c997b850 |
+
+Contours géographiques des Quartiers Prioritaires de la Politique de la Ville
+(QPV) tels que définis par le décret n°2023-1314 du 28 décembre 2023 et
+publiés par l&#39;Agence Nationale de la Cohésion des Territoires (ANCT). Entrés
+en vigueur au 1ᵉʳ janvier 2024.
+
+Cette archive ZIP contient plusieurs GeoPackages, un par emprise :
+- France hexagonale — Lambert-93 (EPSG:2154)
+- Guyane — UTM 22N (EPSG:2972)
+- Guadeloupe — UTM 20N (EPSG:5490)
+- La Réunion — UTM 40S (EPSG:2975)
+- Mayotte — UTM 38S (EPSG:4471)
+- Polynésie française — WGS 84 (EPSG:4326)
+- France entière — WGS 84 (EPSG:4326)
+
 
 
 
@@ -357,6 +440,85 @@ ou entités internes à l&#39;assemblée nationale).
 
 
 
+## CNOUS
+<a name="cnous"></a>
+
+### ADELE — Résidences étudiantes du département 31 (extraction)
+<a name="data/01_raw/cnous/adele-residences-31.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/cnous/adele-residences-31.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.adele.org/ |
+| Éditeur | CNOUS |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/55/eeb9b672217c63a27ca83221637657 |
+
+Extraction ciblée sur le département 31 (Haute-Garonne) de la base ADELE
+(Annuaire des logements étudiants), listant les résidences étudiantes
+conventionnées ou privées référencées par le CNOUS.
+
+Chaque ligne est une résidence, avec identifiant, intitulé, adresse et
+coordonnées géographiques. Format compatible avec le fichier CROUS
+Occitanie (`crous-occitanie.csv`) pour permettre leur concaténation.
+
+### CROUS Occitanie — Résidences universitaires
+<a name="data/01_raw/cnous/crous-occitanie.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/cnous/crous-occitanie.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://logement.lescrous.fr/pages/tousLesLogements |
+| Éditeur | CNOUS |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/61/ab4930468801b373cfc0d2f43f87e9 |
+
+Liste des résidences universitaires du CROUS gérées en région Occitanie,
+extraite du portail national de logement étudiant du CNOUS. Fournit par
+résidence :
+- identifiant CNOUS, intitulé, adresse
+- coordonnées géographiques (`geocalisation`)
+- région administrative de rattachement
+
+Utilisé pour reclasser en habitat collectif (résidence étudiante) les
+adresses correspondantes lors du croisement avec le REU.
+
+
+
+
+## CSTB
+<a name="cstb"></a>
+
+### Base de Données Nationale des Bâtiments (BDNB) — millésime 2026-02, département 31
+<a name="data/01_raw/cstb/2026-02-bdnb-dep31.gpkg"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/cstb/2026-02-bdnb-dep31.gpkg |
+| Format de fichier | application/geopackage+sqlite3 |
+| URL d&#39;information | https://bdnb.io/download/ |
+| Éditeur | CSTB |
+| Date | 01/02/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/37/cfcc456c510b3a52d0084005fa4b0f |
+
+La BDNB compile pour chaque bâtiment français les caractéristiques issues du
+cadastre, du fichier des logements, des DPE, de la BDTOPO et de plusieurs autres
+sources. Chaque bâtiment est identifié par un `batiment_construction_id` stable
+entre millésimes.
+
+Ce fichier est l&#39;extraction départementale Haute-Garonne (dep 31) du millésime
+2026-02-a, au format GeoPackage (SQLite spatial), en Lambert-93 (EPSG:2154).
+Il contient notamment :
+- géométrie du bâtiment (polygone au sol)
+- usage principal (résidentiel, tertiaire, mixte)
+- surface au sol, hauteur, nombre de niveaux
+- année de construction estimée
+- lien vers les DPE et DVF associés
+- adresses BAN rattachées
+
+
+
+
 ## Conseil constitutionnel
 <a name="conseil-constitutionnel"></a>
 
@@ -375,6 +537,92 @@ ou entités internes à l&#39;assemblée nationale).
 Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et validés par le Conseil constitutionnel.
 
 ATTENTION : l&#39;ensemble des parrainages affichés pour un candidat ne préjuge pas de la validité de sa candidature. Seule la décision finale du Conseil constitutionnel fait foi.
+
+
+
+
+## DGFIP
+<a name="dgfip"></a>
+
+### Demandes de valeurs foncières — département 31, année 2024
+<a name="data/01_raw/dgfip/2024-dvf-dep31.csv.gz"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/dgfip/2024-dvf-dep31.csv.gz |
+| Format de fichier | application/gzip |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres-geolocalisees |
+| Éditeur | DGFIP |
+| Date | 31/12/2024 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b7/7b3375207195faca41990f87e65c97 |
+
+Extraction du fichier DVF (Demandes de Valeurs Foncières) publié par la DGFIP,
+filtré sur les mutations enregistrées en 2024 pour le département 31
+(Haute-Garonne).
+
+Chaque ligne représente une mutation à titre onéreux (vente, adjudication…)
+avec :
+- date de mutation, nature (vente, VEFA…)
+- valeur foncière déclarée
+- adresse et code commune INSEE de la parcelle
+- section, numéro de parcelle cadastrale
+- type de local (maison, appartement, dépendance, local industriel/commercial)
+- surface bâtie, nombre de pièces principales
+
+Le fichier est compressé en gzip.
+
+
+
+
+## Enedis
+<a name="enedis"></a>
+
+### Enedis — Consommation d&#39;électricité annuelle entreprise par adresse
+<a name="data/01_raw/enedis/consommation-annuelle-entreprise-par-adresse.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/enedis/consommation-annuelle-entreprise-par-adresse.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://data.enedis.fr/explore/dataset/consommation-annuelle-entreprise-par-adresse/ |
+| Éditeur | Enedis |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/d7/d118162812aa9c357812d9be12b762 |
+
+Données Enedis d&#39;open data sur la consommation annuelle d&#39;électricité,
+segment entreprise, agrégées par adresse pour les adresses comptant au moins
+un point de livraison professionnel &gt; 36 kVA (BT et HTA).
+
+Chaque ligne est une adresse avec :
+- voie, code postal, commune, code INSEE
+- nombre de points de livraison entreprise
+- consommation annuelle totale (kWh) par année
+- code NAF de secteur (à partir de 2021)
+
+Utilisé comme feature négative dans l&#39;identification de bâtiments résidentiels :
+la présence de consommation entreprise indique un usage tertiaire.
+
+### Enedis — Consommation d&#39;électricité annuelle résidentielle par adresse
+<a name="data/01_raw/enedis/consommation-annuelle-residentielle-par-adresse.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/enedis/consommation-annuelle-residentielle-par-adresse.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://data.enedis.fr/explore/dataset/consommation-annuelle-residentielle-par-adresse/ |
+| Éditeur | Enedis |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/cf/dfeecc81e56f733ca3e4f535f62bae |
+
+Données Enedis d&#39;open data sur la consommation annuelle d&#39;électricité,
+segment résidentiel, agrégées par adresse pour toutes les adresses comptant
+au moins 10 points de livraison résidentiels. Publiées annuellement.
+
+Chaque ligne est une adresse avec :
+- voie, code postal, commune, code INSEE
+- nombre de points de livraison résidentiels
+- consommation annuelle totale (kWh) par année
+
+Utilisé comme feature dans l&#39;identification de résidences collectives à
+forte densité de logements.
 
 
 
@@ -421,6 +669,28 @@ Les résultats détaillés ne sont pas disponibles sous un autre format que celu
 ## IGN
 <a name="ign"></a>
 
+### BD TOPO® v3.3 — département 31, édition du 15 mars 2024
+<a name="data/01_raw/ign/bdtopo-3-3-dep31-2024-03-15.7z"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ign/bdtopo-3-3-dep31-2024-03-15.7z |
+| Format de fichier | application/x-7z-compressed |
+| URL d&#39;information | https://geoservices.ign.fr/bdtopo |
+| Éditeur | IGN |
+| Date | 15/03/2024 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/90/92ea6ed881d7245bd3221cab49a864 |
+
+La BD TOPO® est la description vectorielle 3D des éléments du territoire français
+et de ses infrastructures, de précision métrique. Elle regroupe plus de trente
+classes d&#39;objets répartis en neuf thèmes (bâti, hydrographie, transport,
+occupation du sol, etc.), consultables comme un système d&#39;information
+géographique.
+
+Ce fichier est l&#39;extraction départementale Haute-Garonne (dep 31) au format
+shapefile Lambert-93, compressée en 7-Zip. Utilisée notamment pour ses
+attributs bâtiment : `USAGE1`, `NB_LOGTS`, `NB_ETAGES`, `HAUTEUR`.
+
 ### Contours IRIS 2025 — France métropolitaine
 <a name="data/01_raw/ign/iris-metropole.7z"></a>
 
@@ -461,6 +731,33 @@ collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
 
 Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
 géographique publié chaque année par l’INSEE.
+
+### FILOSOFI 2019 — données carroyées 200 m, département 31
+<a name="data/01_raw/insee/2019-filosofi-carreaux-dep31.gpkg"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2019-filosofi-carreaux-dep31.gpkg |
+| Format de fichier | application/geopackage+sqlite3 |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/7655475 |
+| Éditeur | INSEE |
+| Date | 01/01/2019 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/0f/a2d2c51225dc78ea70e66f0ae9498f |
+
+Fichier localisé social et fiscal (FILOSOFI) de l&#39;INSEE, millésime 2019,
+diffusion à la maille carreau de 200 mètres de côté. Fournit à cette échelle
+fine des indicateurs de population, revenus, structure des ménages et parc
+de logements :
+- `ind`, `men` : nombre d&#39;individus et de ménages
+- `men_pauv` : ménages sous le seuil de pauvreté
+- `ind_snv` : somme des niveaux de vie
+- distribution par tranche d&#39;âge (`ind_0_3` à `ind_80p`)
+- distribution du parc (`log_av45`, `log_45_70`, `log_70_90`, `log_ap90`, `log_soc`)
+
+Ce fichier est l&#39;extraction Haute-Garonne (dep 31) au format GeoPackage,
+Lambert-93 (EPSG:2154). Complémentaire du produit FILOSOFI à l&#39;IRIS
+(revenus disponibles), il apporte une résolution géographique 10 à 50 fois
+plus fine.
 
 ### La table des adresses normalisées et géolocalisées du REU 2022
 <a name="data/01_raw/insee/2022-reu-adresses.parquet"></a>
@@ -597,6 +894,28 @@ correspondant au bureau de vote
 correspondant au bureau de vote
   - Les adresses manquantes, en très faible proportion, correspondent à celles n’ayant pas pu être
 normalisées et géolocalisées avec une certitude suffisante par les référentiels d’adresses
+
+### RPLS 2024 — données agrégées par IRIS
+<a name="data/01_raw/insee/2024-01-rpls-iris.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2024-01-rpls-iris.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/8736658 |
+| Éditeur | INSEE |
+| Date | 01/01/2024 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f0/a346e7c7c8f2f3375cbd5c8715ca51 |
+
+Répertoire des Logements Locatifs des bailleurs Sociaux (RPLS) au 1ᵉʳ janvier
+2024, agrégé à la maille IRIS. Fournit par IRIS :
+- nombre total de logements sociaux
+- taux de rotation (`txRot`), taux de vacance (`txVac`)
+- distribution par catégorie de financement (PLAI, PLS, PLUS…)
+- ancienneté du parc
+
+Utilisé comme feature secondaire pour caractériser la présence de logements
+sociaux quand le RPLS détaillé n&#39;est pas rattaché à une adresse identifiable.
 
 ### Prénoms attribués aux enfants nés en France depuis 1900
 <a name="data/01_raw/insee/2024-prenoms.parquet"></a>
@@ -2889,6 +3208,27 @@ des contours simplifiés.
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/77/82fadc89c8d1b15780da0ab8b43e84 |
 
 
+### Base SIRENE des établissements — version géolocalisée officielle
+<a name="data/01_raw/insee/sirene-geo-official.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/sirene-geo-official.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/geolocalisation-des-etablissements-du-repertoire-sirene-pour-les-etudes-statistiques |
+| Éditeur | INSEE |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/bb/88da5d298b69b64c16bab464166a34 |
+
+Extraction de la base SIRENE (Système Informatisé du Répertoire National des
+Entreprises et des Établissements) enrichie de la géolocalisation officielle
+publiée par l&#39;INSEE. Un enregistrement par établissement (SIRET) avec :
+- SIREN, SIRET, dénomination
+- code APE / activité principale
+- adresse normalisée, code commune INSEE
+- coordonnées X/Y (Lambert-93) et longitude/latitude (WGS-84)
+- code IRIS et code QPV le cas échéant
+- effectif et tranche d&#39;effectif
+
 
 
 
@@ -2914,6 +3254,27 @@ Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique s
 
 ## La France insoumise
 <a name="la-france-insoumise"></a>
+
+### Résidences étudiantes hors CROUS, département 31 — saisie manuelle 2026
+<a name="data/01_raw/lafranceinsoumise/2026-residences-etudiantes-31-manuelles.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/2026-residences-etudiantes-31-manuelles.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| Date | 01/01/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/5267c568b9df80a30568faf07d8fa6 |
+
+Liste manuelle, saisie et vérifiée par la France insoumise, des résidences
+étudiantes du département 31 (Haute-Garonne) non couvertes par les bases
+CROUS et ADELE.
+
+Concerne notamment les résidences des écoles d&#39;ingénieurs et grandes écoles
+gérées hors CNOUS (ISAE, UPS Rangueil, Ancely, etc.). Format identique aux
+extractions CROUS (`crous-occitanie.csv`) pour permettre la concaténation :
+- identifiant local, intitulé, adresse
+- géolocalisation, région de rattachement
 
 ### Nombre de conseillers municipaux par commune — de 1996 à 2008
 <a name="data/01_raw/lafranceinsoumise/code_electoral/1996-nb-conseillers-municipaux.csv"></a>
@@ -4484,6 +4845,36 @@ Ce fichier comporte la liste des conseillers municipaux.
 
 
 
+## Ministère de la Santé
+<a name="ministere-de-la-sante"></a>
+
+### FINESS — Extraction du fichier des établissements
+<a name="data/01_raw/ministere_sante/finess-etablissements.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_sante/finess-etablissements.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/finess-extraction-du-fichier-des-etablissements |
+| Éditeur | Ministère de la Santé |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f7/b831853974728181a943ed17a4b0dd |
+
+Le Fichier National des Établissements Sanitaires et Sociaux (FINESS) recense
+tous les établissements et services sanitaires, médico-sociaux et sociaux de
+France, ainsi que les entités juridiques les gérant. Il est utilisé notamment
+pour identifier les EHPAD, résidences autonomie, CROUS/résidences étudiantes
+publiques, foyers et centres d&#39;hébergement.
+
+Cette extraction contient un enregistrement par établissement, avec :
+- numéro FINESS (ET) et rattachement à une entité juridique (EJ)
+- raison sociale, adresse complète, code postal, code commune
+- catégorie d&#39;établissement (code + libellé)
+- coordonnées géographiques (le cas échéant)
+- date d&#39;ouverture, statut juridique
+
+
+
+
 ## Ministère des Affaires étrangères
 <a name="ministere-des-affaires-etrangeres"></a>
 
@@ -4601,5 +4992,34 @@ coordonnées (adresses, téléphones, site internet, horaires d&#39;ouverture,
 coordonnées de géolocalisation). En complément, sont indexés plus de 36 000
 fichiers des communes (conformes au Code Officiel Géographique de l’INSEE),
 précisant la compétence géographique des guichets.
+
+
+
+
+## SDES — Ministère de la Transition écologique
+<a name="sdes-ministere-de-la-transition-ecologique"></a>
+
+### RPLS 2025 — données détaillées au logement
+<a name="data/01_raw/insee/2025-01-rpls-detaille.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2025-01-rpls-detaille.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.statistiques.developpement-durable.gouv.fr/repertoire-des-logements-locatifs-des-bailleurs-sociaux-rpls |
+| Éditeur | SDES — Ministère de la Transition écologique |
+| Date | 01/01/2025 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f4/d3e28a5c70c3ab494ce63aa204816e |
+
+Le Répertoire des Logements Locatifs des bailleurs Sociaux (RPLS) est établi
+au 1ᵉʳ janvier de chaque année à partir des déclarations des bailleurs sociaux.
+Chaque logement social ordinaire y est décrit individuellement.
+
+Ce fichier est le millésime 2025-01, diffusion détaillée logement-par-logement,
+géolocalisée en Lambert-93 (colonnes X, Y). Il contient :
+- catégorie de financement (PLAI, PLUS, PLS, autres)
+- surface, nombre de pièces, année de construction
+- statut d&#39;occupation, vacance, rotation
+- localisation à l&#39;adresse
 
 
