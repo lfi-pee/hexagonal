@@ -1,0 +1,21 @@
+nom = "Demandes de valeurs foncières — département 31, année 2024"
+description = """
+Extraction du fichier DVF (Demandes de Valeurs Foncières) publié par la DGFIP,
+filtré sur les mutations enregistrées en 2024 pour le département 31
+(Haute-Garonne).
+
+Chaque ligne représente une mutation à titre onéreux (vente, adjudication…)
+avec :
+- date de mutation, nature (vente, VEFA…)
+- valeur foncière déclarée
+- adresse et code commune INSEE de la parcelle
+- section, numéro de parcelle cadastrale
+- type de local (maison, appartement, dépendance, local industriel/commercial)
+- surface bâtie, nombre de pièces principales
+
+Le fichier est compressé en gzip.
+"""
+mimetype = "application/gzip"
+info_url = "https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres-geolocalisees"
+editeur = "DGFIP"
+date = 2024-12-31
