@@ -1,0 +1,16 @@
+nom = "BD TOPO® v3.3 — département 31, édition du 15 mars 2024"
+description = """
+La BD TOPO® est la description vectorielle 3D des éléments du territoire français
+et de ses infrastructures, de précision métrique. Elle regroupe plus de trente
+classes d'objets répartis en neuf thèmes (bâti, hydrographie, transport,
+occupation du sol, etc.), consultables comme un système d'information
+géographique.
+
+Ce fichier est l'extraction départementale Haute-Garonne (dep 31) au format
+shapefile Lambert-93, compressée en 7-Zip. Utilisée notamment pour ses
+attributs bâtiment : `USAGE1`, `NB_LOGTS`, `NB_ETAGES`, `HAUTEUR`.
+"""
+mimetype = "application/x-7z-compressed"
+info_url = "https://geoservices.ign.fr/bdtopo"
+editeur = "IGN"
+date = 2024-03-15
