@@ -1,0 +1,13 @@
+nom = "ADELE — Résidences étudiantes du département 31 (extraction)"
+description = """
+Extraction ciblée sur le département 31 (Haute-Garonne) de la base ADELE
+(Annuaire des logements étudiants), listant les résidences étudiantes
+conventionnées ou privées référencées par le CNOUS.
+
+Chaque ligne est une résidence, avec identifiant, intitulé, adresse et
+coordonnées géographiques. Format compatible avec le fichier CROUS
+Occitanie (`crous-occitanie.csv`) pour permettre leur concaténation.
+"""
+mimetype = "text/csv"
+info_url = "https://www.adele.org/"
+editeur = "CNOUS"

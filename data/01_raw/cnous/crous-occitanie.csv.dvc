@@ -1,0 +1,5 @@
+outs:
+- md5: 61ab4930468801b373cfc0d2f43f87e9
+  size: 129913
+  hash: md5
+  path: crous-occitanie.csv

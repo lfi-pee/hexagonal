@@ -1,0 +1,15 @@
+nom = "CROUS Occitanie — Résidences universitaires"
+description = """
+Liste des résidences universitaires du CROUS gérées en région Occitanie,
+extraite du portail national de logement étudiant du CNOUS. Fournit par
+résidence :
+- identifiant CNOUS, intitulé, adresse
+- coordonnées géographiques (`geocalisation`)
+- région administrative de rattachement
+
+Utilisé pour reclasser en habitat collectif (résidence étudiante) les
+adresses correspondantes lors du croisement avec le REU.
+"""
+mimetype = "text/csv"
+info_url = "https://logement.lescrous.fr/pages/tousLesLogements"
+editeur = "CNOUS"
