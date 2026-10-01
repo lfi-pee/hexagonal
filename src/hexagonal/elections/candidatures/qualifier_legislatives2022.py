@@ -1,4 +1,3 @@
-import re
 import sys
 
 import pandas as pd
@@ -64,13 +63,7 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
         ["circonscription", "numero_panneau"]
     )[["circonscription", "numero_panneau", "gagnant", "gagnant_premier_tour"]]
 
-    tour = re.search(r"2022-legislatives-(\d)-candidats.csv", candidats).group(1)
     candidats = get_pandas_dataframe(candidats)
-
-    if tour == "1":
-        # deux candidats de la 92-11 sont inversés dans le fichier du ministère, LÉVÊQUE
-        # et ROLLOT
-        candidats.loc[5407:5408, "numero_panneau"] = [9, 8]
 
     del candidats["departement"]
 
@@ -85,6 +78,21 @@ def extraire_candidats(candidats, nuances_lemonde, nuances_legis_2022, destinati
     )
     nuances_lemonde["numero_panneau"] = pd.to_numeric(nuances_lemonde["numero_panneau"])
     del nuances_lemonde["departement"]
+
+    # 92-11 : le fichier du Monde place bien LÉVÊQUE (REC) au panneau 8 et ROLLOT (DXG)
+    # au panneau 9, comme le ministère (candidatures et résultats), mais leurs nuances
+    # Le Monde sont restées inversées (« LO » pour LÉVÊQUE, « Rec. » pour ROLLOT).
+    inverses = (nuances_lemonde["circonscription"] == "92-11") & nuances_lemonde[
+        "numero_panneau"
+    ].isin([8, 9])
+    if (
+        nuances_lemonde.loc[inverses].set_index("numero_panneau")["nuance_lemonde"]
+        == pd.Series({8: "LO", 9: "Rec."})
+    ).all():
+        colonnes = ["nuance_lemonde", "parti_lemonde"]
+        nuances_lemonde.loc[inverses, colonnes] = nuances_lemonde.loc[
+            inverses, colonnes
+        ].to_numpy()[::-1]
 
     nuances_legis_2022 = pd.read_csv(
         nuances_legis_2022,

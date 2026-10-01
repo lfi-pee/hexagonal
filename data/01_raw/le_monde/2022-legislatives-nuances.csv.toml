@@ -2,7 +2,13 @@ nom = "Liste des candidats aux élections législatives 2022 et de leur nuance p
 description = """
 « Le Monde » a réétiqueté l’ensemble des candidats aux législatives afin d’obtenir des
 nuances politiques plus précises que celles du ministère de l’intérieur.
+
+Version finale du fichier (19 juin 2022) : nuances officielles du ministère, Génération·s
+distinguée, dissidences « EELV dis. » ; la version provisoire du 31 mai 2022 laissait 822
+candidat·es sans nuance Le Monde. En 92-11, les nuances Le Monde de LÉVÊQUE (Rec.) et de
+ROLLOT (LO) y sont restées inversées : le traitement les remet en place.
 """
+date = 2022-06-19
 mimetype = "text/csv"
 info_url = "https://www.lemonde.fr/les-decodeurs/article/2022/06/15/legislatives-2022-le-monde-met-a-disposition-la-liste-des-candidats-et-leur-nuance-politique-en-open-data_6130475_4355770.html"
 editeur = "Le Monde"

@@ -1,13 +1,13 @@
 frozen: true
 deps:
-- checksum: '"a1f8ad9352c14eeeb4ff8fd530747eab"'
-  size: 348542
+- checksum: '"5014b2478da055eae19592e64d72f1e6"'
+  size: 372790
   hash: md5
   path: 
-    https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv
+    https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022/legislatives/tour1/candidats_legislatives_lemonde.csv
 outs:
-- md5: a1f8ad9352c14eeeb4ff8fd530747eab
-  size: 348542
+- md5: 5014b2478da055eae19592e64d72f1e6
+  size: 372790
   hash: md5
   path: 2022-legislatives-nuances.csv
-md5: 0318d905f8078309c00823ebc5760bfa
+md5: a33d8981650277cc653a90415585e040

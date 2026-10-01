@@ -829,8 +829,8 @@ stages:
     deps:
     - path: data/01_raw/le_monde/2022-legislatives-nuances.csv
       hash: md5
-      md5: a1f8ad9352c14eeeb4ff8fd530747eab
-      size: 348542
+      md5: 5014b2478da055eae19592e64d72f1e6
+      size: 372790
     - path: data/01_raw/legis_2022/2022-legislatives-nuances.csv
       hash: md5
       md5: 40277717333ff3a1e20113d5fd249219
@@ -853,13 +853,13 @@ stages:
       size: 4776
     - path: src/hexagonal/elections/candidatures/qualifier_legislatives2022.py
       hash: md5
-      md5: 21b6ff5e703741229e702ca864a34e04
-      size: 4154
+      md5: b3ea897d3e559e0c1f77951893db495a
+      size: 4598
     outs:
     - path: data/03_main/elections/2022-legislatives-1-candidats.csv
       hash: md5
-      md5: 4e859150f179338bb2561fa9c457536c
-      size: 1061446
+      md5: fae708af28ab68862a672f9d5a006b6d
+      size: 1085483
   2022-legislatives-candidats@2:
     cmd: PYTHONPATH=src python -m 
       hexagonal.elections.candidatures.qualifier_legislatives2022 
@@ -870,8 +870,8 @@ stages:
     deps:
     - path: data/01_raw/le_monde/2022-legislatives-nuances.csv
       hash: md5
-      md5: a1f8ad9352c14eeeb4ff8fd530747eab
-      size: 348542
+      md5: 5014b2478da055eae19592e64d72f1e6
+      size: 372790
     - path: data/01_raw/legis_2022/2022-legislatives-nuances.csv
       hash: md5
       md5: 40277717333ff3a1e20113d5fd249219
@@ -894,13 +894,13 @@ stages:
       size: 4776
     - path: src/hexagonal/elections/candidatures/qualifier_legislatives2022.py
       hash: md5
-      md5: 21b6ff5e703741229e702ca864a34e04
-      size: 4154
+      md5: b3ea897d3e559e0c1f77951893db495a
+      size: 4598
     outs:
     - path: data/03_main/elections/2022-legislatives-2-candidats.csv
       hash: md5
-      md5: 61da5f8f3a6ef33c57111edc2cd601df
-      size: 203306
+      md5: 497e850fe82955e3119dfaeb4dc218ce
+      size: 205358
   assemblee_nationale_mandats:
     cmd: PYTHONPATH=src python -m hexagonal.assemblee_nationale.mandats 
       data/01_raw/assemblee-nationale.zip 
