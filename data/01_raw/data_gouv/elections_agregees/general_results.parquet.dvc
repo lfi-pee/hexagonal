@@ -1,0 +1,13 @@
+md5: 001790b6415a914832d3cb3c8d88388a
+frozen: true
+deps:
+- checksum: '"8532251f56c3f24ff71ba2f597a114c7-9"'
+  size: 70866179
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/ff16d511-10c0-405e-9b35-511723948fce
+outs:
+- md5: cf31cee2a7f3f47d94ff7f735388ad61
+  size: 70866179
+  hash: md5
+  path: general_results.parquet

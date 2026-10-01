@@ -1,0 +1,5 @@
+outs:
+- md5: e37efa4d92e2b3be6543fda5cc7fe90b
+  size: 1676628
+  hash: md5
+  path: bureaux_de_vote-coordonnees.parquet

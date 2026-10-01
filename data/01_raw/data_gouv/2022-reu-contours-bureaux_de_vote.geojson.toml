@@ -1,0 +1,10 @@
+nom = "Proposition de contours des bureaux de vote (REU du 1er juin 2022)"
+description = """
+Polygones des bureaux de vote de France, construits par Etalab à partir des adresses
+des électeurs du répertoire électoral unique (REU) au 1er juin 2022. Une géométrie par
+bureau (propriété `codeBureauVote`).
+"""
+mimetype = "application/geo+json"
+editeur = "Etalab"
+date = 2022-06-01
+info_url = "https://www.data.gouv.fr/datasets/proposition-de-contours-des-bureaux-de-vote"

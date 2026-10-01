@@ -1,0 +1,5 @@
+outs:
+- md5: 69e8a348d25a4cfc1a07de0509047fc6
+  size: 186487785
+  hash: md5
+  path: candidats_results.parquet

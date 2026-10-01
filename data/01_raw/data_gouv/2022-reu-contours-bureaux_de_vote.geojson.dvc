@@ -1,0 +1,13 @@
+md5: 462f580b06bdbe848fd6e91c959e2674
+frozen: true
+deps:
+- checksum: '"b3a79df5f691f45cefe5b49da3f66788-123"'
+  size: 644736630
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/f98165a7-7c37-4705-a181-bcfc943edc73
+outs:
+- md5: 1b22a314a9d4eb6b52a39b3407bec8eb
+  size: 644736630
+  hash: md5
+  path: 2022-reu-contours-bureaux_de_vote.geojson

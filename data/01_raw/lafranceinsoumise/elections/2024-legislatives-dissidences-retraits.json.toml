@@ -1,0 +1,7 @@
+nom = "Retraits de candidatures dissidentes aux législatives 2024"
+description = """
+Candidatures dissidentes de gauche aux législatives 2024 retirées avant le scrutin mais
+présentes dans les résultats officiels (voix résiduelles), chacune avec sa source.
+"""
+mimetype = "application/json"
+editeur = "La France insoumise"

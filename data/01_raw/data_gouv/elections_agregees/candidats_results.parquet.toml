@@ -1,0 +1,15 @@
+nom = "Données des élections agrégées — résultats par candidat et par bureau de vote (1999-2026)"
+description = """
+Voix de chaque candidat·e ou liste dans chaque bureau de vote, pour toutes les élections
+publiées par le ministère de l'Intérieur depuis 1999, dans un format unique (compilation de
+data.gouv.fr).
+
+Instantané du 14 avril 2026, et non import de l'URL de data.gouv.fr : la version publiée
+le 7 juillet 2026 sous la même URL a perdu le nom et le prénom des candidat·es de 194 894
+lignes du 1er tour des municipales 2026 (34 869 communes), toutes les autres colonnes étant
+identiques.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "data.gouv.fr"
+date = 2026-04-14
+info_url = "https://www.data.gouv.fr/datasets/donnees-des-elections-agregees"

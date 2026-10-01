@@ -1,0 +1,10 @@
+nom = "Assemblée nationale — députés en exercice, mandats et organes (AMO10, XVIIe législature)"
+description = """
+Un JSON par député·e en exercice, avec son mandat de député en cours (département,
+numéro de circonscription, cause du mandat) et ses organes en cours (groupe politique,
+parti de rattachement). État de l'Assemblée à la date du téléchargement.
+"""
+mimetype = "application/zip"
+editeur = "Assemblée nationale"
+date = 2026-10-01
+info_url = "https://data.assemblee-nationale.fr/acteurs/deputes-en-exercice"

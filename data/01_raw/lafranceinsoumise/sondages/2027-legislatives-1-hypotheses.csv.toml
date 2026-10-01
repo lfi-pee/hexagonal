@@ -1,0 +1,8 @@
+nom = "Intentions de vote aux prochaines législatives (hypothèse dissolution / 2027)"
+description = """
+Sondages nationaux de premier tour de législatives publiés depuis juin 2025 (Ifop,
+OpinionWay, Elabe, Cluster17, Toluna-Harris…), par hypothèse d'offre (sources en en-tête,
+commentaires `#`).
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

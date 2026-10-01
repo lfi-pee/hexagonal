@@ -1,0 +1,13 @@
+md5: 4cb8b417b121d2a1c061a8aa423f79ca
+frozen: true
+deps:
+- checksum: '"af12594e35d1fca484e6b95a601d98f6c11e81b4032517332fa657dc5e009d09"'
+  size: 1804732
+  hash: md5
+  path: 
+    https://raw.githubusercontent.com/nsppolls/nsppolls/52ed846e6e37e63b691bab3d5bb4d0a428786aa9/presidentielle.csv
+outs:
+- md5: 06dcc373565c3eaaf0b0ca6fd1f1773e
+  size: 1804732
+  hash: md5
+  path: 2022-presidentielle-sondages.csv

@@ -1,0 +1,10 @@
+nom = "Attribution à un bloc des candidatures régionalistes et divers des législatives 2024"
+description = """
+Pour les candidat·es aux législatives 2024 que le ministère nuance REG, DIV ou DSV et
+qui pèsent dans leur circonscription (outre-mer surtout), le bloc politique (gauche,
+centre-droit, extrême droite) auquel leurs voix sont attribuées, avec la preuve de chaque
+décision : groupe parlementaire rejoint, investiture de coalition, mandat antérieur, parti.
+Une ligne par candidat·e.
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

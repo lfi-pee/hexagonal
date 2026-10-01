@@ -1,0 +1,5 @@
+outs:
+- md5: d38e05526929daccbc5f4421183af84a
+  size: 143128
+  hash: md5
+  path: 2017-presidentielle-1-sondages.csv

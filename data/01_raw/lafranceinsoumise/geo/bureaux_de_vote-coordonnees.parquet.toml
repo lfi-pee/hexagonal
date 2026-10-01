@@ -1,0 +1,13 @@
+nom = "Coordonnées des bureaux de vote (2022)"
+description = """
+Un point par bureau de vote (72 795 bureaux, codes du REU de 2022 :
+`id_brut_miom` = code commune + code du bureau), latitude et longitude en WGS84. Par ordre
+de priorité : barycentre des adresses des électeurs du REU, centroïde du contour Etalab,
+puis géocodage de l'adresse du bureau (API Adresse, Nominatim). Aucun repli sur le centre
+d'une commune.
+
+Produit par la France insoumise (`src/geocode_bv.py` du dépôt elections_predictions) ; le
+géocodage interroge des API vivantes et ne se rejoue pas à l'identique.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"

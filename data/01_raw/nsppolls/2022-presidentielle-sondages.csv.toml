@@ -1,0 +1,11 @@
+nom = "NSPPolls — sondages de l'élection présidentielle 2022"
+description = """
+Intentions de vote des sondages publiés pour la présidentielle 2022 (premier et
+second tours), une ligne par candidat·e, hypothèse et sondage, avec institut,
+commanditaire, dates de terrain, échantillon et marges d'erreur. Dépôt collaboratif
+NSPPolls, état au commit 52ed846 (24 avril 2022).
+"""
+mimetype = "text/csv"
+editeur = "NSPPolls"
+date = 2022-04-24
+info_url = "https://github.com/nsppolls/nsppolls"

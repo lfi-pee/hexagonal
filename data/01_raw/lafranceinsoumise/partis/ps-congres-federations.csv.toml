@@ -1,0 +1,7 @@
+nom = "Résultats des congrès du Parti socialiste par fédération (2021, 2023, 2025)"
+description = """
+Part des exprimés de chaque texte d'orientation aux congrès du PS, par fédération
+départementale et au niveau national, avec la source de chaque chiffre (presse, PS).
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

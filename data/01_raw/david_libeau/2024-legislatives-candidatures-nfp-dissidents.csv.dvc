@@ -1,0 +1,13 @@
+md5: 2f40e2fae7f6070fcd1804ad3e8d6964
+frozen: true
+deps:
+- checksum: '"282b938939b79e4ea8944b2cefdc8a32"'
+  size: 15034
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/d2dbaa39-0b05-4d85-a292-dad7ec8bec4e
+outs:
+- md5: 282b938939b79e4ea8944b2cefdc8a32
+  size: 15034
+  hash: md5
+  path: 2024-legislatives-candidatures-nfp-dissidents.csv

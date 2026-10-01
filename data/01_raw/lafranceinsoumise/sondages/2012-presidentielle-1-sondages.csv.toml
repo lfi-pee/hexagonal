@@ -1,0 +1,9 @@
+nom = "Sondages du premier tour de la présidentielle 2012"
+description = """
+Une ligne par candidat·e et hypothèse : institut, date de fin de terrain, échantillon,
+hypothèse, candidat·e, parti, bloc (G, CD, ED…), intention de vote (%). Relevé de la page
+Wikipédia des sondages de la présidentielle 2012 (en-tête en commentaires `#`).
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"
+info_url = "https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2012"

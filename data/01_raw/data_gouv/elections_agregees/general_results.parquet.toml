@@ -1,0 +1,11 @@
+nom = "Données des élections agrégées — résultats généraux par bureau de vote (1999-2026)"
+description = """
+Inscrits, votants, abstentions, blancs, nuls et exprimés de chaque bureau de vote, pour
+toutes les élections publiées par le ministère de l'Intérieur depuis 1999 (présidentielles,
+législatives, européennes, régionales, départementales, cantonales, municipales), dans un
+format unique. Compilation de data.gouv.fr. Clé de jointure avec les résultats par candidat :
+`id_election` + `id_brut_miom`.
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "data.gouv.fr"
+info_url = "https://www.data.gouv.fr/datasets/donnees-des-elections-agregees"

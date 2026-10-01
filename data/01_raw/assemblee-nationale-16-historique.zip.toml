@@ -1,0 +1,10 @@
+nom = "Assemblée nationale — historique des acteurs, mandats et organes de la XVIe législature (AMO30)"
+description = """
+Tous les acteurs, tous leurs mandats datés et tous les organes de la XVIe législature
+(2022-2024), figés à la fin de la législature. Permet de reconstituer la composition de
+l'Assemblée à une date donnée.
+"""
+mimetype = "application/zip"
+editeur = "Assemblée nationale"
+date = 2024-06-28
+info_url = "https://data.assemblee-nationale.fr/historique"

@@ -1,0 +1,13 @@
+nom = "Coordonnées des localisations électorales (communes, cantons, circonscriptions…)"
+description = """
+Une latitude et une longitude (WGS84) pour chaque localisation qui apparaît dans les
+résultats électoraux depuis 1999 : communes (y compris les communes fusionnées depuis,
+d'après le découpage administratif d'Etalab), départements, régions, cantons,
+circonscriptions, postes consulaires, et le niveau national. Centroïdes des communes de
+geo.api.gouv.fr ; les niveaux supérieurs sont des moyennes pondérées par les inscrits.
+
+Produit par la France insoumise (`src/build_geo_mapping.py` du dépôt
+elections_predictions).
+"""
+mimetype = "application/vnd.apache.parquet"
+editeur = "La France insoumise"

@@ -1,0 +1,10 @@
+nom = "Sondages nationaux du premier tour des législatives 2002 et 2024 (tableaux de Wikipédia)"
+description = """
+Intentions de vote relevées dans les tableaux de sondages de Wikipédia, une ligne par
+sondage et candidat·e ou liste : tableau d'origine, élection, date de fin de terrain (année
+décimale), institut, candidat·e, valeur (%). Produit par le lecteur de tableaux de
+`src/load_polls.py` (dépôt elections_predictions, `export_wikipedia`) ; ne contient que les
+tableaux qui servent au modèle.
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

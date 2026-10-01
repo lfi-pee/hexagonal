@@ -1,0 +1,9 @@
+nom = "Candidatures de gauche hors union aux législatives 2024, étiquetées avec leur source"
+description = """
+Pour chaque circonscription où une candidature de gauche s'est présentée hors du
+Nouveau Front populaire, une ligne par candidat·e : appartenance (PS, écologiste…),
+soutien du PS local, et la source de presse qui l'établit (URL, date, citation,
+commentaire). Étiquetage réalisé par agents pour la France insoumise.
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

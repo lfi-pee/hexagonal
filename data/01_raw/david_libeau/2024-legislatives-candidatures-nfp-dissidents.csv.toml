@@ -1,0 +1,11 @@
+nom = "Candidatures du Nouveau Front populaire et dissidents aux législatives 2024"
+description = """
+Recensement collaboratif des candidatures investies par le Nouveau Front populaire
+et des candidatures dissidentes (dont les sortant·es LFI non réinvesti·es), publié par
+David Libeau sous licence CC0. Relevé du 16 juin 2024, avant la clôture des dépôts : non
+exhaustif et non mis à jour.
+"""
+mimetype = "text/csv"
+editeur = "David Libeau"
+date = 2024-06-16
+info_url = "https://www.data.gouv.fr/datasets/candidatures-nouveau-front-populaire-et-dissidents-legislatives-2024"

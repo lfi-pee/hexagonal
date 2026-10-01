@@ -1,0 +1,7 @@
+nom = "Intentions de vote aux prochaines législatives, gauche divisée par parti"
+description = """
+Les seules enquêtes de premier tour de législatives qui publient LFI, le PS, les
+Écologistes et le PCF séparément (sources en en-tête, commentaires `#`).
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"

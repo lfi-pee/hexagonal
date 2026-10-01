@@ -1,0 +1,8 @@
+nom = "Intentions de vote aux « prochaines législatives » publiées entre octobre 2022 et octobre 2023"
+description = """
+Sondages nationaux de premier tour de législatives publiés entre le 14 octobre 2022 et
+le 14 octobre 2023, en hypothèse d'union de la gauche et de gauche divisée par parti
+(sources et méthode en en-tête, commentaires `#`).
+"""
+mimetype = "text/csv"
+editeur = "La France insoumise"
