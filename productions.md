@@ -37,6 +37,7 @@
   - [Contours précis des circonscriptions législatives en 2024](#data/03_main/geodata/circonscriptions_legislatives.json)
   - [Contours précis des communes de France](#data/03_main/geodata/communes.json)
 - [Données socio-économiques](#donnees-socio-economiques)
+  - [FILOSOFI — Revenu disponible par commune 2021](#data/02_clean/filosofi/commune.csv)
   - [FILOSOFI — Revenu disponible 2021](#data/02_clean/filosofi/disponible.csv)
 - [Découpage administratif](#decoupage-administratif)
   - [Liste des associations codes postaux et codes communes](#data/02_clean/codes_postaux.csv)
@@ -2257,6 +2258,74 @@ Cette production dépend des sources suivantes :
 
 ## Données socio-économiques
 <a name="donnees-socio-economiques"></a>
+
+### FILOSOFI — Revenu disponible par commune 2021
+<a name="data/02_clean/filosofi/commune.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/02_clean/filosofi/commune.csv |
+| Format de fichier | text/csv |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/70/b6e31ac7ee8d1820926e5de1add2ad |
+
+Niveau de vie (revenu disponible par unité de consommation) et pauvreté par commune,
+extrait de la base communale FILOSOFI 2021. Une ligne par commune ; valeurs manquantes
+là où l&#39;INSEE ne diffuse pas (secret statistique).
+
+
+### Colonnes
+
+<table>
+<thead>
+  <tr>
+    <th>id</th>
+    <th>type</th>
+    <th>description</th>
+  </tr>
+</thead>
+<tbody>
+<tr>
+    <td><code>code_commune</code></td>
+    <td><code>code_commune</code></td>
+    <td></td>
+  </tr>
+<tr>
+    <td><code>revenu_median</code></td>
+    <td><code>flottant</code></td>
+    <td>Médiane du niveau de vie (revenu disponible par unité de consommation, en euros)</td>
+  </tr>
+<tr>
+    <td><code>taux_pauvrete</code></td>
+    <td><code>flottant</code></td>
+    <td>Taux de pauvreté au seuil de 60 % du niveau de vie médian (%)</td>
+  </tr>
+<tr>
+    <td><code>decile1</code></td>
+    <td><code>flottant</code></td>
+    <td>1ᵉʳ décile du niveau de vie (en euros)</td>
+  </tr>
+<tr>
+    <td><code>decile9</code></td>
+    <td><code>flottant</code></td>
+    <td>9ᵉ décile du niveau de vie (en euros)</td>
+  </tr>
+<tr>
+    <td><code>rapport_interdecile_9_1</code></td>
+    <td><code>flottant</code></td>
+    <td>Rapport interdécile (D9/D1) du niveau de vie</td>
+  </tr>
+
+</tbody>
+</table>
+
+### Sources
+
+Cette production dépend des sources suivantes :
+
+<ul>
+    <li><a href="sources.md#data/01_raw/insee/filosofi-communes.zip">FILOSOFI 2021 — Revenu disponible par commune</a>
+        </li>
+    </ul>
 
 ### FILOSOFI — Revenu disponible 2021
 <a name="data/02_clean/filosofi/disponible.csv"></a>
@@ -7414,7 +7483,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-legislatives-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/22/6c788f8466ad6a6286d2117019da53 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/9c/2fc17f37b0f31e5f4a2ec1a04d9719 |
 
 
 
@@ -7994,7 +8063,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/02_clean/elections/2024-legislatives-correspondances-bureau_de_vote-circonscription.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/35/472cae5f437a67c9d770894e60edbc |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/48/cde5e006a2b6b739762b055fc58ab9 |
 
 
 
@@ -9309,7 +9378,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2022-legislatives-1-candidats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/4e/859150f179338bb2561fa9c457536c |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/fa/e708af28ab68862a672f9d5a006b6d |
 
 
 
@@ -9470,7 +9539,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2024-legislatives-1-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/47/77982dec9f0f3e377ab8b4c8aabed0 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/aa/b360d2b9f41473360eb883d5421b18 |
 
 Cette version du fichier ajoute la colonne `circonscription`, absente des résultats publiée par le Ministère de
 l&#39;Intérieur au niveau du bureau de vote.
@@ -9587,7 +9656,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2024-legislatives-2-bureau_de_vote.parquet |
 | Format de fichier | application/vnd.apache.parquet |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/8c/536658e82faa16e25635ef5c653c2a |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/aa/7747be45463edb79cb13125aeaa926 |
 
 Cette version du fichier ajoute la colonne `circonscription`, absente des résultats publiée par le Ministère de
 l&#39;Intérieur au niveau du bureau de vote.
@@ -10419,7 +10488,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2022-legislatives-2-candidats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/61/da5f8f3a6ef33c57111edc2cd601df |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/49/7e850fe82955e3119dfaeb4dc218ce |
 
 
 
@@ -10677,7 +10746,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2024-legislatives-1-candidats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/28/e06f0288f71fd922cc6b1e6b39c20e |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/18/1e288a431944dc4c1dffe9e3a0ca3d |
 
 
 
@@ -10823,7 +10892,7 @@ Cette production dépend des sources suivantes :
 | --------- | ------ |
 | Chemin interne | data/03_main/elections/2024-legislatives-2-candidats.csv |
 | Format de fichier | text/csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/52/1021b4f255c5bb6d76b07ebe8ae7b0 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/c6afcd0d9214f778a5b10905f3121f |
 
 
 

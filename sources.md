@@ -2,9 +2,15 @@
 
 
 - [Assemblée nationale](#assemblee-nationale)
+  - [Assemblée nationale — historique des acteurs, mandats et organes de la XVIe législature (AMO30)](#data/01_raw/assemblee-nationale-16-historique.zip)
+  - [Assemblée nationale — députés en exercice, mandats et organes (AMO10, XVIIe législature)](#data/01_raw/assemblee-nationale-deputes-actifs.zip)
   - [Historique des députés](#data/01_raw/assemblee-nationale.zip)
 - [Conseil constitutionnel](#conseil-constitutionnel)
   - [Liste des parrainages validés par le Conseil constitutionnel pour l&#39;élection de 2022](#data/01_raw/conseil_constitutionnel/2022-presidentielle-parrainages.csv)
+- [David Libeau](#david-libeau)
+  - [Candidatures du Nouveau Front populaire et dissidents aux législatives 2024](#data/01_raw/david_libeau/2024-legislatives-candidatures-nfp-dissidents.csv)
+- [Etalab](#etalab)
+  - [Proposition de contours des bureaux de vote (REU du 1er juin 2022)](#data/01_raw/data_gouv/2022-reu-contours-bureaux_de_vote.geojson)
 - [GeoNames](#geonames)
   - [cities1000](#data/01_raw/geonames/cities1000.zip)
 - [Haut-commissariat de la République en Nouvelle-Calédonie](#haut-commissariat-de-la-republique-en-nouvelle-caledonie)
@@ -194,6 +200,7 @@
   - [Recensement de 2025 en Nouvelle-Calédonie](#data/01_raw/insee/census/2025/nouvelle-caledonie-population-reference.xlsx)
   - [Code Officiel Géographique 2024](#data/01_raw/insee/cog.zip)
   - [Liste des EPCI à fiscalité propre](#data/01_raw/insee/epci_fp.zip)
+  - [FILOSOFI 2021 — Revenu disponible par commune](#data/01_raw/insee/filosofi-communes.zip)
   - [FILOSOFI 2021 — Revenu disponible par IRIS](#data/01_raw/insee/filosofi-disponible.zip)
   - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee/insee_circonscriptions_legislatives.zip)
   - [Séries historiques de population par commune (1876 à 2023)](#data/01_raw/insee/population_municipale.xlsx)
@@ -214,7 +221,10 @@
   - [Résultats des élections consulaires partielles de novembre 2021](#data/01_raw/lafranceinsoumise/elections/2021-11-consulaires-par_circonscription_consulaire.parquet)
   - [Répartition des circonscriptions entre les différentes composantes de la NUPES (élections législatives 2022)](#data/01_raw/lafranceinsoumise/elections/2022-legislatives-nupes-sensibilites.csv)
   - [Listes déposées pour l&#39;élection européenne 2024 en France](#data/01_raw/lafranceinsoumise/elections/2024-europeenne-listes.csv)
+  - [Attribution à un bloc des candidatures régionalistes et divers des législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-attribution-regionalistes.csv)
   - [Nuançage précis des candidats aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv)
+  - [Retraits de candidatures dissidentes aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-dissidences-retraits.json)
+  - [Candidatures de gauche hors union aux législatives 2024, étiquetées avec leur source](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-gauche-hors-union.csv)
   - [Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv)
   - [Nuançage LFI des candidatures aux législatives 2024](#data/01_raw/lafranceinsoumise/elections/2024-legislatives-nuances.csv)
   - [Listes candidates soutenues par LFI lors des élections consulaires 2026](#data/01_raw/lafranceinsoumise/elections/2026-consulaires-listes-lfi.parquet)
@@ -223,9 +233,20 @@
   - [Liste des listes soutenues par la France insoumise au deuxième tour des municipales de 2026](#data/01_raw/lafranceinsoumise/elections/2026-municipales-2-listes-lfi.parquet)
   - [Résultats des élections provinciales en Nouvelle-Calédonie en 2026](#data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-commune.parquet)
   - [Liste des personnes élues dans les assemblées de province et le Congrès de Nouvelle-Calédonie en 2026](#data/01_raw/lafranceinsoumise/elections/2026-provinciales-nc-elus.parquet)
+  - [Coordonnées des bureaux de vote (2022)](#data/01_raw/lafranceinsoumise/geo/bureaux_de_vote-coordonnees.parquet)
+  - [Coordonnées des localisations électorales (communes, cantons, circonscriptions…)](#data/01_raw/lafranceinsoumise/geo/localisations-coordonnees.parquet)
+  - [Résultats des congrès du Parti socialiste par fédération (2021, 2023, 2025)](#data/01_raw/lafranceinsoumise/partis/ps-congres-federations.csv)
   - [Populations de référence des communes de Mayotte issue du recensement de 2017](#data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet)
   - [Populations de référence des communes de Polynésie française issue du recensement de 2022](#data/01_raw/lafranceinsoumise/population/2022-polynesie-francaise-population_reference.parquet)
   - [Populations de référence des communes de Nouvelle-Calédonie issue du recensement de 2025](#data/01_raw/lafranceinsoumise/population/2025-nouvelle-caledonie-population_reference.parquet)
+  - [Sondages nationaux du premier tour des présidentielles 2002 à 2022 (tableaux de Wikipédia)](#data/01_raw/lafranceinsoumise/sondages/2002-2022-presidentielle-1-sondages-wikipedia.csv)
+  - [Sondages nationaux du premier tour des législatives 2002 et 2024 (tableaux de Wikipédia)](#data/01_raw/lafranceinsoumise/sondages/2002-2024-legislatives-1-sondages-wikipedia.csv)
+  - [Sondages du premier tour de la présidentielle 2012](#data/01_raw/lafranceinsoumise/sondages/2012-presidentielle-1-sondages.csv)
+  - [Sondages du premier tour de la présidentielle 2017](#data/01_raw/lafranceinsoumise/sondages/2017-presidentielle-1-sondages.csv)
+  - [Intentions de vote aux « prochaines législatives » publiées entre octobre 2022 et octobre 2023](#data/01_raw/lafranceinsoumise/sondages/2024-legislatives-1-sondages-2023-10-14.csv)
+  - [Intentions de vote aux prochaines législatives (hypothèse dissolution / 2027)](#data/01_raw/lafranceinsoumise/sondages/2027-legislatives-1-hypotheses.csv)
+  - [Intentions de vote aux prochaines législatives, gauche divisée par parti](#data/01_raw/lafranceinsoumise/sondages/2027-legislatives-1-partis-gauche.csv)
+  - [Sondages du premier tour de la présidentielle 2027](#data/01_raw/lafranceinsoumise/sondages/2027-presidentielle-1-sondages.csv)
 - [La Poste](#la-poste)
   - [Base officielle des codes postaux](#data/01_raw/la_poste/base_officielle_codes_postaux.csv)
 - [Le Monde](#le-monde)
@@ -324,16 +345,55 @@
   - [Résultats des élections consulaires de 2026](#data/01_raw/ministere_affaires_etrangeres/2026-consulaires-circonscription_consulaire.pdf)
 - [Ministère des affaires étrangères](#ministere-des-affaires-etrangeres)
   - [2021-11-consulaires-circonscription_consulaire](#data/01_raw/ministere_affaires_etrangeres/2021-11-consulaires-circonscription_consulaire.xlsx)
+- [NSPPolls](#nsppolls)
+  - [NSPPolls — sondages de l&#39;élection présidentielle 2022](#data/01_raw/nsppolls/2022-presidentielle-sondages.csv)
 - [Natural Earth](#natural-earth)
   - [Admin 0 — Pays](#data/01_raw/natural_earth/ne_10m_admin_0_countries.zip)
   - [Populated Places](#data/01_raw/natural_earth/ne_10m_populated_places.zip)
 - [Premier ministre](#premier-ministre)
   - [Base de données locales de l&#39;annuaire de l&#39;administration](#data/01_raw/annuaire/annuaire.tar.bz2)
+- [data.gouv.fr](#data-gouv-fr)
+  - [Données des élections agrégées — résultats par candidat et par bureau de vote (1999-2026)](#data/01_raw/data_gouv/elections_agregees/candidats_results.parquet)
+  - [Données des élections agrégées — résultats généraux par bureau de vote (1999-2026)](#data/01_raw/data_gouv/elections_agregees/general_results.parquet)
 
 
 
 ## Assemblée nationale
 <a name="assemblee-nationale"></a>
+
+### Assemblée nationale — historique des acteurs, mandats et organes de la XVIe législature (AMO30)
+<a name="data/01_raw/assemblee-nationale-16-historique.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/assemblee-nationale-16-historique.zip |
+| Format de fichier | application/zip |
+| URL d&#39;information | https://data.assemblee-nationale.fr/historique |
+| Éditeur | Assemblée nationale |
+| Date | 28/06/2024 |
+| URL d&#39;origine | https://data.assemblee-nationale.fr/static/openData/repository/16/amo/tous_acteurs_mandats_organes_xi_legislature/AMO30_tous_acteurs_tous_mandats_tous_organes_historique.json.zip |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/3d/bcfc408e7078b8228910af2f1d6096 |
+
+Tous les acteurs, tous leurs mandats datés et tous les organes de la XVIe législature
+(2022-2024), figés à la fin de la législature. Permet de reconstituer la composition de
+l&#39;Assemblée à une date donnée.
+
+### Assemblée nationale — députés en exercice, mandats et organes (AMO10, XVIIe législature)
+<a name="data/01_raw/assemblee-nationale-deputes-actifs.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/assemblee-nationale-deputes-actifs.zip |
+| Format de fichier | application/zip |
+| URL d&#39;information | https://data.assemblee-nationale.fr/acteurs/deputes-en-exercice |
+| Éditeur | Assemblée nationale |
+| Date | 01/10/2026 |
+| URL d&#39;origine | https://data.assemblee-nationale.fr/static/openData/repository/17/amo/deputes_actifs_mandats_actifs_organes/AMO10_deputes_actifs_mandats_actifs_organes.json.zip |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/66/42062784a05d2b13daaefa1a8a19d1 |
+
+Un JSON par député·e en exercice, avec son mandat de député en cours (département,
+numéro de circonscription, cause du mandat) et ses organes en cours (groupe politique,
+parti de rattachement). État de l&#39;Assemblée à la date du téléchargement.
 
 ### Historique des députés
 <a name="data/01_raw/assemblee-nationale.zip"></a>
@@ -375,6 +435,53 @@ ou entités internes à l&#39;assemblée nationale).
 Le tableau ci-dessous récapitule l’ensemble des parrainages signés par des élus habilités à soutenir un candidat et validés par le Conseil constitutionnel.
 
 ATTENTION : l&#39;ensemble des parrainages affichés pour un candidat ne préjuge pas de la validité de sa candidature. Seule la décision finale du Conseil constitutionnel fait foi.
+
+
+
+
+## David Libeau
+<a name="david-libeau"></a>
+
+### Candidatures du Nouveau Front populaire et dissidents aux législatives 2024
+<a name="data/01_raw/david_libeau/2024-legislatives-candidatures-nfp-dissidents.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/david_libeau/2024-legislatives-candidatures-nfp-dissidents.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/candidatures-nouveau-front-populaire-et-dissidents-legislatives-2024 |
+| Éditeur | David Libeau |
+| Date | 16/06/2024 |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/d2dbaa39-0b05-4d85-a292-dad7ec8bec4e |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/28/2b938939b79e4ea8944b2cefdc8a32 |
+
+Recensement collaboratif des candidatures investies par le Nouveau Front populaire
+et des candidatures dissidentes (dont les sortant·es LFI non réinvesti·es), publié par
+David Libeau sous licence CC0. Relevé du 16 juin 2024, avant la clôture des dépôts : non
+exhaustif et non mis à jour.
+
+
+
+
+## Etalab
+<a name="etalab"></a>
+
+### Proposition de contours des bureaux de vote (REU du 1er juin 2022)
+<a name="data/01_raw/data_gouv/2022-reu-contours-bureaux_de_vote.geojson"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/data_gouv/2022-reu-contours-bureaux_de_vote.geojson |
+| Format de fichier | application/geo+json |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/proposition-de-contours-des-bureaux-de-vote |
+| Éditeur | Etalab |
+| Date | 01/06/2022 |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/f98165a7-7c37-4705-a181-bcfc943edc73 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/1b/22a314a9d4eb6b52a39b3407bec8eb |
+
+Polygones des bureaux de vote de France, construits par Etalab à partir des adresses
+des électeurs du répertoire électoral unique (REU) au 1er juin 2022. Une géométrie par
+bureau (propriété `codeBureauVote`).
 
 
 
@@ -2846,6 +2953,22 @@ rattachement (commune ou pays).
 
 
 
+### FILOSOFI 2021 — Revenu disponible par commune
+<a name="data/01_raw/insee/filosofi-communes.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/filosofi-communes.zip |
+| Format de fichier | application/zip |
+| Éditeur | INSEE |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/7756729/base-cc-filosofi-2021-geo2025_csv.zip |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/28/4a647793d14035f15c75b1da1d832c |
+
+Base communale FILOSOFI 2021 (revenu disponible / niveau de vie), géographie 2025.
+Couvre l&#39;ensemble des communes, au contraire du fichier IRIS limité aux communes
+d&#39;au moins 5000 habitants. Les indicateurs des plus petites communes sont parfois
+non diffusés (secret statistique).
+
 ### FILOSOFI 2021 — Revenu disponible par IRIS
 <a name="data/01_raw/insee/filosofi-disponible.zip"></a>
 
@@ -3128,6 +3251,22 @@ fichier.
 Ce site agrège des informations utiles pour caractériser les listes déposées pour les
 élections européennes 2024.
 
+### Attribution à un bloc des candidatures régionalistes et divers des législatives 2024
+<a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-attribution-regionalistes.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2024-legislatives-attribution-regionalistes.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/b0/6cfc642c4f23d0e89676c5c0b403ee |
+
+Pour les candidat·es aux législatives 2024 que le ministère nuance REG, DIV ou DSV et
+qui pèsent dans leur circonscription (outre-mer surtout), le bloc politique (gauche,
+centre-droit, extrême droite) auquel leurs voix sont attribuées, avec la preuve de chaque
+décision : groupe parlementaire rejoint, investiture de coalition, mandat antérieur, parti.
+Une ligne par candidat·e.
+
 ### Nuançage précis des candidats aux législatives 2024
 <a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-candidats.csv"></a>
 
@@ -3140,6 +3279,34 @@ Ce site agrège des informations utiles pour caractériser les listes déposées
 
 Un nuançage précis à deux niveaux (alliance et parti) réalisé par Elia Stebach pour
 la France insoumise en 2025.
+
+### Retraits de candidatures dissidentes aux législatives 2024
+<a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-dissidences-retraits.json"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2024-legislatives-dissidences-retraits.json |
+| Format de fichier | application/json |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/bb/adddd717c037523935d6e393dd7409 |
+
+Candidatures dissidentes de gauche aux législatives 2024 retirées avant le scrutin mais
+présentes dans les résultats officiels (voix résiduelles), chacune avec sa source.
+
+### Candidatures de gauche hors union aux législatives 2024, étiquetées avec leur source
+<a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-gauche-hors-union.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/elections/2024-legislatives-gauche-hors-union.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/66/813d28870f0c99b24c98ba80971f43 |
+
+Pour chaque circonscription où une candidature de gauche s&#39;est présentée hors du
+Nouveau Front populaire, une ligne par candidat·e : appartenance (PS, écologiste…),
+soutien du PS local, et la source de presse qui l&#39;établit (URL, date, citation,
+commentaire). Étiquetage réalisé par agents pour la France insoumise.
 
 ### Liste des candidats du Nouveau Front populaire et de leur sensibilité par circonscription législative
 <a name="data/01_raw/lafranceinsoumise/elections/2024-legislatives-nfp-sensibilites.csv"></a>
@@ -3251,6 +3418,57 @@ Traitement en partie automatisée (à l&#39;aide de camelot-py) du
 [fichier PDF reprenant les résultats](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf) pour en extraire
 la liste des personnes élues.
 
+### Coordonnées des bureaux de vote (2022)
+<a name="data/01_raw/lafranceinsoumise/geo/bureaux_de_vote-coordonnees.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/geo/bureaux_de_vote-coordonnees.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e3/7efa4d92e2b3be6543fda5cc7fe90b |
+
+Un point par bureau de vote (72 795 bureaux, codes du REU de 2022 :
+`id_brut_miom` = code commune + code du bureau), latitude et longitude en WGS84. Par ordre
+de priorité : barycentre des adresses des électeurs du REU, centroïde du contour Etalab,
+puis géocodage de l&#39;adresse du bureau (API Adresse, Nominatim). Aucun repli sur le centre
+d&#39;une commune.
+
+Produit par la France insoumise (`src/geocode_bv.py` du dépôt elections_predictions) ; le
+géocodage interroge des API vivantes et ne se rejoue pas à l&#39;identique.
+
+### Coordonnées des localisations électorales (communes, cantons, circonscriptions…)
+<a name="data/01_raw/lafranceinsoumise/geo/localisations-coordonnees.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/geo/localisations-coordonnees.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/76/3ed4759a5e38a7b706620d0b78b9bf |
+
+Une latitude et une longitude (WGS84) pour chaque localisation qui apparaît dans les
+résultats électoraux depuis 1999 : communes (y compris les communes fusionnées depuis,
+d&#39;après le découpage administratif d&#39;Etalab), départements, régions, cantons,
+circonscriptions, postes consulaires, et le niveau national. Centroïdes des communes de
+geo.api.gouv.fr ; les niveaux supérieurs sont des moyennes pondérées par les inscrits.
+
+Produit par la France insoumise (`src/build_geo_mapping.py` du dépôt
+elections_predictions).
+
+### Résultats des congrès du Parti socialiste par fédération (2021, 2023, 2025)
+<a name="data/01_raw/lafranceinsoumise/partis/ps-congres-federations.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/partis/ps-congres-federations.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/5f/315cbf469da8be238277deccdc0a41 |
+
+Part des exprimés de chaque texte d&#39;orientation aux congrès du PS, par fédération
+départementale et au niveau national, avec la source de chaque chiffre (presse, PS).
+
 ### Populations de référence des communes de Mayotte issue du recensement de 2017
 <a name="data/01_raw/lafranceinsoumise/population/2017-mayotte-population_reference.parquet"></a>
 
@@ -3290,6 +3508,125 @@ Correspond au traitement à la main du
 Correspond au traitement à la main du
 [fichier de l&#39;INSEE](#data/01_raw/insee/census/2025/nouvelle-caledonie-population-reference.xlsx).
 
+### Sondages nationaux du premier tour des présidentielles 2002 à 2022 (tableaux de Wikipédia)
+<a name="data/01_raw/lafranceinsoumise/sondages/2002-2022-presidentielle-1-sondages-wikipedia.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2002-2022-presidentielle-1-sondages-wikipedia.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/8a/fc1db87f9c2aaff9c962d9d2f3210a |
+
+Intentions de vote relevées dans les tableaux de sondages de Wikipédia, une ligne par
+sondage et candidat·e : tableau d&#39;origine, élection, date de fin de terrain (année
+décimale), institut, candidat·e, valeur (%). Produit par le lecteur de tableaux de
+`src/load_polls.py` (dépôt elections_predictions, `export_wikipedia`) ; ne contient que les
+tableaux qui servent au modèle.
+
+### Sondages nationaux du premier tour des législatives 2002 et 2024 (tableaux de Wikipédia)
+<a name="data/01_raw/lafranceinsoumise/sondages/2002-2024-legislatives-1-sondages-wikipedia.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2002-2024-legislatives-1-sondages-wikipedia.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/77/7326056e81c82611e32566742af6d3 |
+
+Intentions de vote relevées dans les tableaux de sondages de Wikipédia, une ligne par
+sondage et candidat·e ou liste : tableau d&#39;origine, élection, date de fin de terrain (année
+décimale), institut, candidat·e, valeur (%). Produit par le lecteur de tableaux de
+`src/load_polls.py` (dépôt elections_predictions, `export_wikipedia`) ; ne contient que les
+tableaux qui servent au modèle.
+
+### Sondages du premier tour de la présidentielle 2012
+<a name="data/01_raw/lafranceinsoumise/sondages/2012-presidentielle-1-sondages.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2012-presidentielle-1-sondages.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2012 |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/37/f165ed2f6124e0f662269b8ee61dac |
+
+Une ligne par candidat·e et hypothèse : institut, date de fin de terrain, échantillon,
+hypothèse, candidat·e, parti, bloc (G, CD, ED…), intention de vote (%). Relevé de la page
+Wikipédia des sondages de la présidentielle 2012 (en-tête en commentaires `#`).
+
+### Sondages du premier tour de la présidentielle 2017
+<a name="data/01_raw/lafranceinsoumise/sondages/2017-presidentielle-1-sondages.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2017-presidentielle-1-sondages.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2017 |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/d3/8e05526929daccbc5f4421183af84a |
+
+Une ligne par candidat·e et hypothèse : institut, date de fin de terrain, échantillon,
+hypothèse, candidat·e, parti, bloc (G, CD, ED…), intention de vote (%). Relevé de la page
+Wikipédia des sondages de la présidentielle 2017 (en-tête en commentaires `#`).
+
+### Intentions de vote aux « prochaines législatives » publiées entre octobre 2022 et octobre 2023
+<a name="data/01_raw/lafranceinsoumise/sondages/2024-legislatives-1-sondages-2023-10-14.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2024-legislatives-1-sondages-2023-10-14.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/37/70116acb843b19e0f4c6316eb9ff4f |
+
+Sondages nationaux de premier tour de législatives publiés entre le 14 octobre 2022 et
+le 14 octobre 2023, en hypothèse d&#39;union de la gauche et de gauche divisée par parti
+(sources et méthode en en-tête, commentaires `#`).
+
+### Intentions de vote aux prochaines législatives (hypothèse dissolution / 2027)
+<a name="data/01_raw/lafranceinsoumise/sondages/2027-legislatives-1-hypotheses.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2027-legislatives-1-hypotheses.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/bc/865c3af410f8c46f91328aa9216ce7 |
+
+Sondages nationaux de premier tour de législatives publiés depuis juin 2025 (Ifop,
+OpinionWay, Elabe, Cluster17, Toluna-Harris…), par hypothèse d&#39;offre (sources en en-tête,
+commentaires `#`).
+
+### Intentions de vote aux prochaines législatives, gauche divisée par parti
+<a name="data/01_raw/lafranceinsoumise/sondages/2027-legislatives-1-partis-gauche.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2027-legislatives-1-partis-gauche.csv |
+| Format de fichier | text/csv |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/27/2959726d83bf72fe76bb6c69d26194 |
+
+Les seules enquêtes de premier tour de législatives qui publient LFI, le PS, les
+Écologistes et le PCF séparément (sources en en-tête, commentaires `#`).
+
+### Sondages du premier tour de la présidentielle 2027
+<a name="data/01_raw/lafranceinsoumise/sondages/2027-presidentielle-1-sondages.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/sondages/2027-presidentielle-1-sondages.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://fr.wikipedia.org/wiki/Liste_de_sondages_sur_l%27%C3%A9lection_pr%C3%A9sidentielle_fran%C3%A7aise_de_2027 |
+| Éditeur | La France insoumise |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/1c/2ed137632ee9f3c2bac8031b725d27 |
+
+Une ligne par candidat·e et hypothèse : institut, date de fin de terrain, échantillon,
+hypothèse, candidat·e, parti, bloc (G, CD, ED…), intention de vote (%). Relevé de la page
+Wikipédia des sondages de la présidentielle 2027 (date du relevé en en-tête, commentaires
+`#`), mis à jour au fil des publications.
+
 
 
 
@@ -3326,11 +3663,17 @@ des COM, ainsi que de MONACO.
 | Format de fichier | text/csv |
 | URL d&#39;information | https://www.lemonde.fr/les-decodeurs/article/2022/06/15/legislatives-2022-le-monde-met-a-disposition-la-liste-des-candidats-et-leur-nuance-politique-en-open-data_6130475_4355770.html |
 | Éditeur | Le Monde |
-| URL d&#39;origine | https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022_snippets/legislatives/tour1/candidats_legislatives_lemonde.csv |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/a1/f8ad9352c14eeeb4ff8fd530747eab |
+| Date | 19/06/2022 |
+| URL d&#39;origine | https://assets-decodeurs.lemonde.fr/decodeurs/elections_2022/legislatives/tour1/candidats_legislatives_lemonde.csv |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/50/14b2478da055eae19592e64d72f1e6 |
 
 « Le Monde » a réétiqueté l’ensemble des candidats aux législatives afin d’obtenir des
 nuances politiques plus précises que celles du ministère de l’intérieur.
+
+Version finale du fichier (19 juin 2022) : nuances officielles du ministère, Génération·s
+distinguée, dissidences « EELV dis. » ; la version provisoire du 31 mai 2022 laissait 822
+candidat·es sans nuance Le Monde. En 92-11, les nuances Le Monde de LÉVÊQUE (Rec.) et de
+ROLLOT (LO) y sont restées inversées : le traitement les remet en place.
 
 
 
@@ -4545,6 +4888,30 @@ Il est toutefois inclus ici à titre documentaire.
 
 
 
+## NSPPolls
+<a name="nsppolls"></a>
+
+### NSPPolls — sondages de l&#39;élection présidentielle 2022
+<a name="data/01_raw/nsppolls/2022-presidentielle-sondages.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/nsppolls/2022-presidentielle-sondages.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://github.com/nsppolls/nsppolls |
+| Éditeur | NSPPolls |
+| Date | 24/04/2022 |
+| URL d&#39;origine | https://raw.githubusercontent.com/nsppolls/nsppolls/52ed846e6e37e63b691bab3d5bb4d0a428786aa9/presidentielle.csv |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/06/dcc373565c3eaaf0b0ca6fd1f1773e |
+
+Intentions de vote des sondages publiés pour la présidentielle 2022 (premier et
+second tours), une ligne par candidat·e, hypothèse et sondage, avec institut,
+commanditaire, dates de terrain, échantillon et marges d&#39;erreur. Dépôt collaboratif
+NSPPolls, état au commit 52ed846 (24 avril 2022).
+
+
+
+
 ## Natural Earth
 <a name="natural-earth"></a>
 
@@ -4601,5 +4968,50 @@ coordonnées (adresses, téléphones, site internet, horaires d&#39;ouverture,
 coordonnées de géolocalisation). En complément, sont indexés plus de 36 000
 fichiers des communes (conformes au Code Officiel Géographique de l’INSEE),
 précisant la compétence géographique des guichets.
+
+
+
+
+## data.gouv.fr
+<a name="data-gouv-fr"></a>
+
+### Données des élections agrégées — résultats par candidat et par bureau de vote (1999-2026)
+<a name="data/01_raw/data_gouv/elections_agregees/candidats_results.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/data_gouv/elections_agregees/candidats_results.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/donnees-des-elections-agregees |
+| Éditeur | data.gouv.fr |
+| Date | 14/04/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/69/e8a348d25a4cfc1a07de0509047fc6 |
+
+Voix de chaque candidat·e ou liste dans chaque bureau de vote, pour toutes les élections
+publiées par le ministère de l&#39;Intérieur depuis 1999, dans un format unique (compilation de
+data.gouv.fr).
+
+Instantané du 14 avril 2026, et non import de l&#39;URL de data.gouv.fr : la version publiée
+le 7 juillet 2026 sous la même URL a perdu le nom et le prénom des candidat·es de 194 894
+lignes du 1er tour des municipales 2026 (34 869 communes), toutes les autres colonnes étant
+identiques.
+
+### Données des élections agrégées — résultats généraux par bureau de vote (1999-2026)
+<a name="data/01_raw/data_gouv/elections_agregees/general_results.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/data_gouv/elections_agregees/general_results.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/donnees-des-elections-agregees |
+| Éditeur | data.gouv.fr |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/ff16d511-10c0-405e-9b35-511723948fce |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/cf/31cee2a7f3f47d94ff7f735388ad61 |
+
+Inscrits, votants, abstentions, blancs, nuls et exprimés de chaque bureau de vote, pour
+toutes les élections publiées par le ministère de l&#39;Intérieur depuis 1999 (présidentielles,
+législatives, européennes, régionales, départementales, cantonales, municipales), dans un
+format unique. Compilation de data.gouv.fr. Clé de jointure avec les résultats par candidat :
+`id_election` + `id_brut_miom`.
 
 
