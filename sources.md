@@ -19,6 +19,7 @@
   - [Contours IRIS 2025 — France métropolitaine](#data/01_raw/ign/iris-metropole.7z)
 - [INSEE](#insee)
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
+  - [Portraits des circonscriptions législatives — indicateurs statistiques par circonscription](#data/01_raw/insee/2022-indicateurs-circonscriptions-legislatives.xlsx)
   - [La table des adresses normalisées et géolocalisées du REU 2022](#data/01_raw/insee/2022-reu-adresses.parquet)
   - [Répertoire électoral unique — table des bureaux de vote](#data/01_raw/insee/2022-reu-bureaux.parquet)
   - [Prénoms attribués aux enfants nés en France depuis 1900](#data/01_raw/insee/2024-prenoms.parquet)
@@ -568,6 +569,34 @@ collectivités d&#39;outre-mer (COM) ne sont pas couvertes par ce produit.
 
 Le produit ADMIN EXPRESS est décliné dans une édition « COG », appelé ADMIN EXPRESS COG, conforme au code officiel
 géographique publié chaque année par l’INSEE.
+
+### Portraits des circonscriptions législatives — indicateurs statistiques par circonscription
+<a name="data/01_raw/insee/2022-indicateurs-circonscriptions-legislatives.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2022-indicateurs-circonscriptions-legislatives.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/6436476?sommaire=6436478 |
+| Éditeur | INSEE |
+| Date | 02/05/2022 |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/6436476/indic-stat-circonscriptions-legislatives-2022.xlsx |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/37/52fe1c42d86161b61ed46a7741c743 |
+
+Une centaine d&#39;indicateurs économiques et sociodémographiques calculés par l&#39;Insee pour
+chacune des 566 circonscriptions législatives hors Français de l&#39;étranger (découpage de
+2010), plus une ligne de référence nationale (code 00000) : population, âges, activité et
+chômage, diplômes, catégories socioprofessionnelles, logement, ménages, mobilités, et
+niveau de vie (médiane, D1, D9, rapport interdécile D9/D1, taux de pauvreté au seuil de
+60 %). Feuille « indicateurs_circonscriptions » (en-têtes à la 8e ligne), dictionnaire
+dans « Liste des variables ».
+
+Recensement de la population 2018 (populations légales 2019) ; Filosofi 2019 pour les
+revenus, non déterminés (« nd ») à Mayotte et dans les collectivités d&#39;outre-mer. La
+référence nationale vaut France hors Mayotte pour le recensement et France métropolitaine
+pour la pauvreté. Codes circonscription sur cinq caractères : département sur deux et
+numéro sur trois en métropole (01001, 2A002), département sur trois et numéro sur deux
+outre-mer (97101).
 
 ### La table des adresses normalisées et géolocalisées du REU 2022
 <a name="data/01_raw/insee/2022-reu-adresses.parquet"></a>

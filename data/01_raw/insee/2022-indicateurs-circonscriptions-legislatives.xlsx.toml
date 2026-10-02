@@ -1,0 +1,21 @@
+nom = "Portraits des circonscriptions législatives — indicateurs statistiques par circonscription"
+description = """
+Une centaine d'indicateurs économiques et sociodémographiques calculés par l'Insee pour
+chacune des 566 circonscriptions législatives hors Français de l'étranger (découpage de
+2010), plus une ligne de référence nationale (code 00000) : population, âges, activité et
+chômage, diplômes, catégories socioprofessionnelles, logement, ménages, mobilités, et
+niveau de vie (médiane, D1, D9, rapport interdécile D9/D1, taux de pauvreté au seuil de
+60 %). Feuille « indicateurs_circonscriptions » (en-têtes à la 8e ligne), dictionnaire
+dans « Liste des variables ».
+
+Recensement de la population 2018 (populations légales 2019) ; Filosofi 2019 pour les
+revenus, non déterminés (« nd ») à Mayotte et dans les collectivités d'outre-mer. La
+référence nationale vaut France hors Mayotte pour le recensement et France métropolitaine
+pour la pauvreté. Codes circonscription sur cinq caractères : département sur deux et
+numéro sur trois en métropole (01001, 2A002), département sur trois et numéro sur deux
+outre-mer (97101).
+"""
+date = 2022-05-02
+mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+info_url = "https://www.insee.fr/fr/statistiques/6436476?sommaire=6436478"
+editeur = "INSEE"

@@ -1,0 +1,12 @@
+md5: 5fb05eff31181e11ff6876841ab33551
+frozen: true
+deps:
+- checksum: '178302632449194648265267556927468550742'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/6436476/indic-stat-circonscriptions-legislatives-2022.xlsx
+outs:
+- md5: 3752fe1c42d86161b61ed46a7741c743
+  size: 353287
+  hash: md5
+  path: 2022-indicateurs-circonscriptions-legislatives.xlsx
