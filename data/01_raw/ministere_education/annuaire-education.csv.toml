@@ -1,0 +1,12 @@
+nom = "Annuaire de l'éducation"
+description = """
+Établissements scolaires du premier et du second degré (environ 68 600 en
+France), avec adresse et coordonnées.
+
+Utilisé par le projet inscriptibles-adresses pour exclure les bâtiments
+scolaires non résidentiels.
+"""
+mimetype = "text/csv"
+info_url = "https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/"
+editeur = "Ministère de l'Éducation nationale"
+date = 2026-10-22
