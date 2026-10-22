@@ -24,15 +24,19 @@
 - [Haut-commissariat de la République en Nouvelle-Calédonie](#haut-commissariat-de-la-republique-en-nouvelle-caledonie)
   - [Résultats des élections provinciales 2026 en Nouvelle-Calédonie](#data/01_raw/nouvelle-caledonie/2026-provinciales-resultats.pdf)
 - [IGN](#ign)
+  - [Contours IRIS 2024 — département 31](#data/01_raw/ign/2024-iris-contours-dep31.geojson)
   - [BD TOPO® v3.3 — département 31, édition du 15 mars 2024](#data/01_raw/ign/bdtopo-3-3-dep31-2024-03-15.7z)
   - [Contours IRIS 2025 — France métropolitaine](#data/01_raw/ign/iris-metropole.7z)
+  - [RNB — Référentiel national des bâtiments, département 31](#data/01_raw/ign/rnb-dep31.csv.zip)
 - [INSEE](#insee)
   - [Admin Express COG édition 2024 France entière](#data/01_raw/ign/admin_express/admin_express_cog.7z)
   - [FILOSOFI 2019 — données carroyées 200 m, département 31](#data/01_raw/insee/2019-filosofi-carreaux-dep31.gpkg)
   - [La table des adresses normalisées et géolocalisées du REU 2022](#data/01_raw/insee/2022-reu-adresses.parquet)
   - [Répertoire électoral unique — table des bureaux de vote](#data/01_raw/insee/2022-reu-bureaux.parquet)
   - [RPLS 2024 — données agrégées par IRIS](#data/01_raw/insee/2024-01-rpls-iris.xlsx)
+  - [Insee Première n° 1986 — Données sur la non-inscription électorale](#data/01_raw/insee/2024-03-insee-premiere-1986.xlsx)
   - [Prénoms attribués aux enfants nés en France depuis 1900](#data/01_raw/insee/2024-prenoms.parquet)
+  - [Séries historiques de population communale 1876-2023](#data/01_raw/insee/base-pop-historiques-1876-2023.xlsx)
   - [Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)](#data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls)
   - [Recensement de la population 2006 — Couples, familles et ménages (Commune)](#data/01_raw/insee/census/2006/base-cc-couples-familles-menages-2006.xls)
   - [Recensement de la population 2006 — Logement (Commune)](#data/01_raw/insee/census/2006/base-cc-logement-2006.xls)
@@ -209,11 +213,15 @@
   - [Population de référence issue du recensement 2023](#data/01_raw/insee/census/2023/population-reference.zip)
   - [wallis-et-futuna-population_reference](#data/01_raw/insee/census/2023/wallis-et-futuna-population_reference.xlsx)
   - [Recensement de 2025 en Nouvelle-Calédonie](#data/01_raw/insee/census/2025/nouvelle-caledonie-population-reference.xlsx)
+  - [Contours des communes de Haute-Garonne](#data/01_raw/insee/cog/communes-31.geojson)
   - [Code Officiel Géographique 2024](#data/01_raw/insee/cog.zip)
   - [Liste des EPCI à fiscalité propre](#data/01_raw/insee/epci_fp.zip)
   - [FILOSOFI 2021 — Revenu disponible par IRIS](#data/01_raw/insee/filosofi-disponible.zip)
   - [Circonscriptions législatives - Fond cartographique](#data/01_raw/insee/insee_circonscriptions_legislatives.zip)
   - [Séries historiques de population par commune (1876 à 2023)](#data/01_raw/insee/population_municipale.xlsx)
+  - [REU — Adresses des électeurs rattachées à leur bureau de vote](#data/01_raw/insee/reu/2023-06-table-adresses-reu.parquet)
+  - [REU — Table des bureaux de vote](#data/01_raw/insee/reu/2023-06-table-bv-reu.parquet)
+  - [REU — Nombre d&#39;inscrits sur les listes électorales par commune (s1046)](#data/01_raw/insee/reu/s1046-inscrits-par-commune.zip)
   - [Base SIRENE des établissements — version géolocalisée officielle](#data/01_raw/insee/sirene-geo-official.parquet)
 - [LEGIS-2022](#legis-2022)
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
@@ -255,6 +263,9 @@
   - [Secteurs des bureaux de vote parisiens en 2021](#data/01_raw/paris/2021-secteur-bureaux.json)
   - [Secteurs des bureaux de vote parisiens en 2022](#data/01_raw/paris/2022-secteur-bureaux.json)
   - [Secteurs des bureaux de vote parisiens en 2024](#data/01_raw/paris/2024-secteur-bureaux.json)
+- [Ministère de l&#39;Enseignement supérieur et de la Recherche](#ministere-de-l-enseignement-superieur-et-de-la-recherche)
+  - [Logements CROUS — France entière](#data/01_raw/ministere_enseignement_superieur/crous-logement-france.csv)
+  - [Patrimoine immobilier des opérateurs de l&#39;enseignement supérieur](#data/01_raw/ministere_enseignement_superieur/patrimoine-immobilier-esr.csv)
 - [Ministère de l&#39;Intérieur](#ministere-de-l-interieur)
   - [Résultats du référendum de 2005 par bureau de vote](#data/01_raw/ministere_interieur/2005-referendum-bureau_de_vote.csv)
   - [Résultats des deux tours de l&#39;élection présidentielle de 2012](#data/01_raw/ministere_interieur/2012-presidentielle-bureau_de_vote.csv)
@@ -338,6 +349,8 @@
   - [Répertoire national des élus — député·es — mai 2026](#data/01_raw/rne/2026-05/deputes.csv)
   - [Répertoire national des élus — député·es européen·nes — mai 2026](#data/01_raw/rne/2026-05/deputes_europeens.csv)
   - [Répertoire national des élus — sénateur·rices — mai 2026](#data/01_raw/rne/2026-05/senateurs.csv)
+- [Ministère de l&#39;Éducation nationale](#ministere-de-l-education-nationale)
+  - [Annuaire de l&#39;éducation](#data/01_raw/ministere_education/annuaire-education.csv)
 - [Ministère de la Santé](#ministere-de-la-sante)
   - [FINESS — Extraction du fichier des établissements](#data/01_raw/ministere_sante/finess-etablissements.csv)
 - [Ministère des Affaires étrangères](#ministere-des-affaires-etrangeres)
@@ -348,6 +361,8 @@
 - [Natural Earth](#natural-earth)
   - [Admin 0 — Pays](#data/01_raw/natural_earth/ne_10m_admin_0_countries.zip)
   - [Populated Places](#data/01_raw/natural_earth/ne_10m_populated_places.zip)
+- [OpenStreetMap](#openstreetmap)
+  - [OpenStreetMap — extraction Midi-Pyrénées](#data/01_raw/openstreetmap/midi-pyrenees.osm.pbf)
 - [Premier ministre](#premier-ministre)
   - [Base de données locales de l&#39;annuaire de l&#39;administration](#data/01_raw/annuaire/annuaire.tar.bz2)
 - [SDES — Ministère de la Transition écologique](#sdes-ministere-de-la-transition-ecologique)
@@ -669,6 +684,26 @@ Les résultats détaillés ne sont pas disponibles sous un autre format que celu
 ## IGN
 <a name="ign"></a>
 
+### Contours IRIS 2024 — département 31
+<a name="data/01_raw/ign/2024-iris-contours-dep31.geojson"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ign/2024-iris-contours-dep31.geojson |
+| Format de fichier | application/geo+json |
+| URL d&#39;information | https://public.opendatasoft.com/explore/dataset/georef-france-iris/ |
+| Éditeur | IGN |
+| Date | 01/01/2024 |
+| URL d&#39;origine | https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/georef-france-iris/exports/geojson?refine=dep_code%3A%2231%22&amp;refine=year%3A%222024%22 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/1d/0a910bf1d3637c500dd7a22cae2f28 |
+
+Contours des 849 IRIS des 586 communes de Haute-Garonne, millésime 2024,
+issus de la base IGN/INSEE via l&#39;agrégation georef-france-iris
+d&#39;Opendatasoft.
+
+Utilisé par le projet inscriptibles-adresses pour la jointure
+adresses → IRIS.
+
 ### BD TOPO® v3.3 — département 31, édition du 15 mars 2024
 <a name="data/01_raw/ign/bdtopo-3-3-dep31-2024-03-15.7z"></a>
 
@@ -705,6 +740,24 @@ attributs bâtiment : `USAGE1`, `NB_LOGTS`, `NB_ETAGES`, `HAUTEUR`.
 Coédition INSEE et IGN, Contours... IRIS® est un fond numérisé des îlots Iris définis
 par l&#39;INSEE pour les besoins des recensements sur l&#39;ensemble des communes de plus de
 10 000 habitants et la plupart des communes de 5 000 à 10 000 habitants.
+
+### RNB — Référentiel national des bâtiments, département 31
+<a name="data/01_raw/ign/rnb-dep31.csv.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ign/rnb-dep31.csv.zip |
+| Format de fichier | application/zip |
+| URL d&#39;information | https://rnb.beta.gouv.fr/ |
+| Éditeur | IGN |
+| Date | 22/10/2026 |
+| URL d&#39;origine | https://rnb-opendata.s3.fr-par.scw.cloud/files/RNB_31.csv.zip |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/3b/d0910800ef3e1ae33dd0df1225b4e6 |
+
+Export départemental du Référentiel national des bâtiments (RNB) pour la
+Haute-Garonne : environ 460 000 bâtiments, chacun avec son identifiant RNB,
+sa géométrie et ses liens vers les adresses (BAN) et les autres bases
+(BDNB, BD TOPO).
 
 
 
@@ -917,6 +970,25 @@ Répertoire des Logements Locatifs des bailleurs Sociaux (RPLS) au 1ᵉʳ janvie
 Utilisé comme feature secondaire pour caractériser la présence de logements
 sociaux quand le RPLS détaillé n&#39;est pas rattaché à une adresse identifiable.
 
+### Insee Première n° 1986 — Données sur la non-inscription électorale
+<a name="data/01_raw/insee/2024-03-insee-premiere-1986.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/2024-03-insee-premiere-1986.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/7766966 |
+| Éditeur | INSEE |
+| Date | 01/03/2024 |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/7766966/donnees_insee_premiere_n1986.xlsx |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/da/ccac225f149f0b1a47736863b5a516 |
+
+Données associées à l&#39;Insee Première n° 1986 (mars 2024) sur la
+non-inscription et la mal-inscription électorales, par âge et caractéristiques
+sociodémographiques.
+
+Utilisé par le projet inscriptibles-adresses comme barème de non-inscription.
+
 ### Prénoms attribués aux enfants nés en France depuis 1900
 <a name="data/01_raw/insee/2024-prenoms.parquet"></a>
 
@@ -933,6 +1005,25 @@ Le fichier des prénoms fournit des données sur les prénoms attribués aux enf
 national, régional et départemental. Pour le millésime disponible le plus récent, le classement des 10 prénoms masculins
 et féminins les plus donnés en France ainsi que des cartes présentant les prénoms masculins et féminins les plus donnés
 dans chaque région sont également proposés.
+
+### Séries historiques de population communale 1876-2023
+<a name="data/01_raw/insee/base-pop-historiques-1876-2023.xlsx"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/base-pop-historiques-1876-2023.xlsx |
+| Format de fichier | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet |
+| URL d&#39;information | https://www.insee.fr/fr/statistiques/3698339 |
+| Éditeur | INSEE |
+| Date | 01/01/2025 |
+| URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2023.xlsx |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/77/82fadc89c8d1b15780da0ab8b43e84 |
+
+Populations municipales des communes de 1876 à 2023, dans la géographie
+communale de 2025.
+
+Utilisé par le projet inscriptibles-adresses pour projeter la population
+communale de 2022 à 2026 (taux de croissance annuel moyen).
 
 ### Recensement de la population 2006 — Caractéristiques de l&#39;emploi (Commune)
 <a name="data/01_raw/insee/census/2006/base-cc-caract-emploi-2006.xls"></a>
@@ -3124,6 +3215,24 @@ Données sur le logement issues du recensement de la population au niveau infrac
 
 
 
+### Contours des communes de Haute-Garonne
+<a name="data/01_raw/insee/cog/communes-31.geojson"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/cog/communes-31.geojson |
+| Format de fichier | application/geo+json |
+| URL d&#39;information | https://www.insee.fr/fr/information/2560452 |
+| Éditeur | INSEE |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/30/ca78827cc18770b6924cd672dc665e |
+
+Contours des communes du département 31, propriétés `code` (code INSEE) et
+`nom`. Le fichier contient 589 communes : son découpage est antérieur aux
+fusions de communes qui ont ramené le département à 586 communes.
+
+Repris du projet carto, où il est documenté comme issu du COG publié sur
+data.gouv.fr ; millésime exact non tracé.
+
 ### Code Officiel Géographique 2024
 <a name="data/01_raw/insee/cog.zip"></a>
 
@@ -3207,6 +3316,63 @@ des contours simplifiés.
 | URL d&#39;origine | https://www.insee.fr/fr/statistiques/fichier/3698339/base-pop-historiques-1876-2023.xlsx |
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/77/82fadc89c8d1b15780da0ab8b43e84 |
 
+
+### REU — Adresses des électeurs rattachées à leur bureau de vote
+<a name="data/01_raw/insee/reu/2023-06-table-adresses-reu.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/reu/2023-06-table-adresses-reu.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs |
+| Éditeur | INSEE |
+| Date | 26/06/2023 |
+| URL d&#39;origine | https://static.data.gouv.fr/resources/bureaux-de-vote-et-adresses-de-leurs-electeurs/20230626-135723/table-adresses-reu.parquet |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/6d/2a0b2d3802af60c9ad798eea7d57ec |
+
+Table des adresses du Répertoire électoral unique (REU), géocodées et
+rattachées à leur bureau de vote, publiée par l&#39;INSEE en juin 2023. Une ligne
+par adresse : identifiant de l&#39;adresse, commune, code du bureau de vote et
+coordonnées. Ne contient aucune donnée nominative.
+
+Utilisé par le projet inscriptibles-adresses pour rattacher les adresses aux
+bureaux de vote.
+
+### REU — Table des bureaux de vote
+<a name="data/01_raw/insee/reu/2023-06-table-bv-reu.parquet"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/reu/2023-06-table-bv-reu.parquet |
+| Format de fichier | application/vnd.apache.parquet |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs |
+| Éditeur | INSEE |
+| Date | 26/06/2023 |
+| URL d&#39;origine | https://static.data.gouv.fr/resources/bureaux-de-vote-et-adresses-de-leurs-electeurs/20230626-135809/table-bv-reu.parquet |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e0/b88f800ff0063873e67398d5b6d4c8 |
+
+Liste des bureaux de vote du Répertoire électoral unique (REU) publiée par
+l&#39;INSEE en juin 2023, complément de la table des adresses : code et libellé
+du bureau, commune et circonscription.
+
+### REU — Nombre d&#39;inscrits sur les listes électorales par commune (s1046)
+<a name="data/01_raw/insee/reu/s1046-inscrits-par-commune.zip"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/insee/reu/s1046-inscrits-par-commune.zip |
+| Format de fichier | application/zip |
+| URL d&#39;information | https://www.data.gouv.fr/api/1/datasets/r/7b15ad01-bc67-4bd4-b9b7-8c6fd051ffa9 |
+| Éditeur | INSEE |
+| Date | 22/10/2026 |
+| URL d&#39;origine | https://www.data.gouv.fr/api/1/datasets/r/7b15ad01-bc67-4bd4-b9b7-8c6fd051ffa9 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/3c/635f24e0d5e1b05543560e987b77ed |
+
+Statistiques du Répertoire électoral unique : nombre d&#39;inscrits par commune
+pour les scrutins de 2020 à 2026.
+
+Utilisé par le projet inscriptibles-adresses uniquement comme validation
+externe des totaux d&#39;inscrits, jamais comme variable explicative.
 
 ### Base SIRENE des établissements — version géolocalisée officielle
 <a name="data/01_raw/insee/sirene-geo-official.parquet"></a>
@@ -3763,6 +3929,48 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/0a/9c91c663f3b0fbe3d93e28eee2f816 |
 
 
+
+
+
+
+## Ministère de l&#39;Enseignement supérieur et de la Recherche
+<a name="ministere-de-l-enseignement-superieur-et-de-la-recherche"></a>
+
+### Logements CROUS — France entière
+<a name="data/01_raw/ministere_enseignement_superieur/crous-logement-france.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_enseignement_superieur/crous-logement-france.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr_crous_logement_france_entiere/ |
+| Éditeur | Ministère de l&#39;Enseignement supérieur et de la Recherche |
+| Date | 22/10/2026 |
+| URL d&#39;origine | https://mesr.opendatasoft.com/api/explore/v2.1/catalog/datasets/fr_crous_logement_france_entiere/exports/csv?limit=-1&amp;timezone=UTC&amp;use_labels=false&amp;epsg=4326 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f5/4a8b1dde52b60c074d37f131bf3709 |
+
+Résidences gérées par les CROUS sur toute la France (environ 830
+résidences), avec adresse, coordonnées et descriptif ; la capacité est
+mentionnée dans le texte libre `infos`.
+
+### Patrimoine immobilier des opérateurs de l&#39;enseignement supérieur
+<a name="data/01_raw/ministere_enseignement_superieur/patrimoine-immobilier-esr.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_enseignement_superieur/patrimoine-immobilier-esr.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-patrimoine-immobilier-des-operateurs-de-l-enseignement-superieur/ |
+| Éditeur | Ministère de l&#39;Enseignement supérieur et de la Recherche |
+| Date | 22/10/2026 |
+| URL d&#39;origine | https://data.enseignementsup-recherche.gouv.fr/api/explore/v2.1/catalog/datasets/fr-esr-patrimoine-immobilier-des-operateurs-de-l-enseignement-superieur/exports/csv?use_labels=true |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/da/1eca8d93d67bd6af449da8a89c5610 |
+
+Bâtiments des opérateurs de l&#39;enseignement supérieur et de la recherche
+(environ 64 700 bâtiments), avec leurs identifiants RNB.
+
+Utilisé par le projet inscriptibles-adresses pour exclure les bâtiments
+universitaires non résidentiels.
 
 
 
@@ -4845,6 +5053,31 @@ Ce fichier comporte la liste des conseillers municipaux.
 
 
 
+## Ministère de l&#39;Éducation nationale
+<a name="ministere-de-l-education-nationale"></a>
+
+### Annuaire de l&#39;éducation
+<a name="data/01_raw/ministere_education/annuaire-education.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/ministere_education/annuaire-education.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/ |
+| Éditeur | Ministère de l&#39;Éducation nationale |
+| Date | 22/10/2026 |
+| URL d&#39;origine | https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/fr-en-annuaire-education/exports/csv?limit=-1&amp;timezone=UTC&amp;use_labels=false&amp;epsg=4326 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/2c/95388190434132a3eed327038a8fc9 |
+
+Établissements scolaires du premier et du second degré (environ 68 600 en
+France), avec adresse et coordonnées.
+
+Utilisé par le projet inscriptibles-adresses pour exclure les bâtiments
+scolaires non résidentiels.
+
+
+
+
 ## Ministère de la Santé
 <a name="ministere-de-la-sante"></a>
 
@@ -4968,6 +5201,32 @@ Natural Earth shows de facto boundaries by default according to who controls the
 | URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/53/3bb68748d7a414b50a816704772c77 |
 
 Point symbols with name attributes. Includes all admin-0 and many admin-1 capitals, major cities and towns, plus a sampling of smaller towns in sparsely inhabited regions. We favor regional significance over population census in determining our selection of places. Use the scale rankings to filter the number of towns that appear on your map.
+
+
+
+
+## OpenStreetMap
+<a name="openstreetmap"></a>
+
+### OpenStreetMap — extraction Midi-Pyrénées
+<a name="data/01_raw/openstreetmap/midi-pyrenees.osm.pbf"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/openstreetmap/midi-pyrenees.osm.pbf |
+| Format de fichier | application/octet-stream |
+| URL d&#39;information | https://download.geofabrik.de/europe/france/midi-pyrenees.html |
+| Éditeur | OpenStreetMap |
+| Date | 22/10/2026 |
+| URL d&#39;origine | https://download.geofabrik.de/europe/france/midi-pyrenees-latest.osm.pbf |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/7f/5328e380d4c1411df2d0df6a45b7d9 |
+
+Extraction OpenStreetMap de l&#39;ancienne région Midi-Pyrénées produite par
+Geofabrik, au format PBF. Données sous licence ODbL : toute réutilisation
+doit citer « © les contributeurs d&#39;OpenStreetMap ».
+
+Utilisé par le projet inscriptibles-adresses pour exclure les bâtiments non
+résidentiels (écoles, universités, santé, commerces).
 
 
 
