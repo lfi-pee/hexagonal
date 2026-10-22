@@ -1,0 +1,13 @@
+md5: 7ba59da4ce918d8fcdc2a11f7e47524b
+frozen: true
+deps:
+- checksum: '"6d2a0b2d3802af60c9ad798eea7d57ec"'
+  size: 490632192
+  hash: md5
+  path: 
+    https://static.data.gouv.fr/resources/bureaux-de-vote-et-adresses-de-leurs-electeurs/20230626-135723/table-adresses-reu.parquet
+outs:
+- md5: 6d2a0b2d3802af60c9ad798eea7d57ec
+  size: 490632192
+  hash: md5
+  path: 2023-06-table-adresses-reu.parquet

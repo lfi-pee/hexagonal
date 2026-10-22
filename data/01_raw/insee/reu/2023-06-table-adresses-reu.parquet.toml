@@ -1,0 +1,14 @@
+nom = "REU — Adresses des électeurs rattachées à leur bureau de vote"
+description = """
+Table des adresses du Répertoire électoral unique (REU), géocodées et
+rattachées à leur bureau de vote, publiée par l'INSEE en juin 2023. Une ligne
+par adresse : identifiant de l'adresse, commune, code du bureau de vote et
+coordonnées. Ne contient aucune donnée nominative.
+
+Utilisé par le projet inscriptibles-adresses pour rattacher les adresses aux
+bureaux de vote.
+"""
+mimetype = "application/vnd.apache.parquet"
+info_url = "https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs"
+editeur = "INSEE"
+date = 2023-06-26

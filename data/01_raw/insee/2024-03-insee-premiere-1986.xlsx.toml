@@ -1,0 +1,12 @@
+nom = "Insee Première n° 1986 — Données sur la non-inscription électorale"
+description = """
+Données associées à l'Insee Première n° 1986 (mars 2024) sur la
+non-inscription et la mal-inscription électorales, par âge et caractéristiques
+sociodémographiques.
+
+Utilisé par le projet inscriptibles-adresses comme barème de non-inscription.
+"""
+mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+info_url = "https://www.insee.fr/fr/statistiques/7766966"
+editeur = "INSEE"
+date = 2024-03-01

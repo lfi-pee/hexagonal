@@ -1,0 +1,10 @@
+nom = "REU — Table des bureaux de vote"
+description = """
+Liste des bureaux de vote du Répertoire électoral unique (REU) publiée par
+l'INSEE en juin 2023, complément de la table des adresses : code et libellé
+du bureau, commune et circonscription.
+"""
+mimetype = "application/vnd.apache.parquet"
+info_url = "https://www.data.gouv.fr/datasets/bureaux-de-vote-et-adresses-de-leurs-electeurs"
+editeur = "INSEE"
+date = 2023-06-26

@@ -1,0 +1,12 @@
+nom = "REU — Nombre d'inscrits sur les listes électorales par commune (s1046)"
+description = """
+Statistiques du Répertoire électoral unique : nombre d'inscrits par commune
+pour les scrutins de 2020 à 2026.
+
+Utilisé par le projet inscriptibles-adresses uniquement comme validation
+externe des totaux d'inscrits, jamais comme variable explicative.
+"""
+mimetype = "application/zip"
+info_url = "https://www.data.gouv.fr/api/1/datasets/r/7b15ad01-bc67-4bd4-b9b7-8c6fd051ffa9"
+editeur = "INSEE"
+date = 2026-10-22

@@ -1,0 +1,12 @@
+md5: 793b51c8c4022834c1c69667117108b3
+frozen: true
+deps:
+- checksum: '102068960530933356909888295392950346042'
+  hash: md5
+  path: 
+    https://www.insee.fr/fr/statistiques/fichier/7766966/donnees_insee_premiere_n1986.xlsx
+outs:
+- md5: daccac225f149f0b1a47736863b5a516
+  size: 36250
+  hash: md5
+  path: 2024-03-insee-premiere-1986.xlsx

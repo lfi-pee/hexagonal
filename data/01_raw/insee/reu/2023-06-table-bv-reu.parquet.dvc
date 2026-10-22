@@ -1,0 +1,13 @@
+md5: ea6d1f20a8720190e7f192df198f3e21
+frozen: true
+deps:
+- checksum: '"e0b88f800ff0063873e67398d5b6d4c8"'
+  size: 3477330
+  hash: md5
+  path: 
+    https://static.data.gouv.fr/resources/bureaux-de-vote-et-adresses-de-leurs-electeurs/20230626-135809/table-bv-reu.parquet
+outs:
+- md5: e0b88f800ff0063873e67398d5b6d4c8
+  size: 3477330
+  hash: md5
+  path: 2023-06-table-bv-reu.parquet

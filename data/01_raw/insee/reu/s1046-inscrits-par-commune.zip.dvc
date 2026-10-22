@@ -1,0 +1,13 @@
+md5: 0576cf9afe9f927465638706b347af59
+frozen: true
+deps:
+- checksum: '317574147012559886841427869476063506408'
+  size: 1701545
+  hash: md5
+  path: 
+    https://www.data.gouv.fr/api/1/datasets/r/7b15ad01-bc67-4bd4-b9b7-8c6fd051ffa9
+outs:
+- md5: 3c635f24e0d5e1b05543560e987b77ed
+  size: 1701545
+  hash: md5
+  path: s1046-inscrits-par-commune.zip

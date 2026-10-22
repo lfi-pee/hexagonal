@@ -1,0 +1,12 @@
+nom = "Contours des communes de Haute-Garonne"
+description = """
+Contours des communes du département 31, propriétés `code` (code INSEE) et
+`nom`. Le fichier contient 589 communes : son découpage est antérieur aux
+fusions de communes qui ont ramené le département à 586 communes.
+
+Repris du projet carto, où il est documenté comme issu du COG publié sur
+data.gouv.fr ; millésime exact non tracé.
+"""
+mimetype = "application/geo+json"
+info_url = "https://www.insee.fr/fr/information/2560452"
+editeur = "INSEE"

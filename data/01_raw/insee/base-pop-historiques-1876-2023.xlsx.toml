@@ -1,0 +1,12 @@
+nom = "Séries historiques de population communale 1876-2023"
+description = """
+Populations municipales des communes de 1876 à 2023, dans la géographie
+communale de 2025.
+
+Utilisé par le projet inscriptibles-adresses pour projeter la population
+communale de 2022 à 2026 (taux de croissance annuel moyen).
+"""
+mimetype = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+info_url = "https://www.insee.fr/fr/statistiques/3698339"
+editeur = "INSEE"
+date = 2025-01-01
