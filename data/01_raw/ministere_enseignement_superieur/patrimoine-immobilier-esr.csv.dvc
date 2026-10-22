@@ -1,0 +1,12 @@
+md5: d93115b3b003bb6a0fa27f0954d86b6d
+frozen: true
+deps:
+- checksum: '276278202692412413048309445354524008961'
+  hash: md5
+  path: 
+    https://data.enseignementsup-recherche.gouv.fr/api/explore/v2.1/catalog/datasets/fr-esr-patrimoine-immobilier-des-operateurs-de-l-enseignement-superieur/exports/csv?use_labels=true
+outs:
+- md5: da1eca8d93d67bd6af449da8a89c5610
+  size: 92749360
+  hash: md5
+  path: patrimoine-immobilier-esr.csv

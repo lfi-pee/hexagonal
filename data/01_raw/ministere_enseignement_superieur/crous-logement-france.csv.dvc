@@ -1,0 +1,12 @@
+md5: a68e7880f9d66bbc8177456262f217fe
+frozen: true
+deps:
+- checksum: '320125584530443100174742508447640137473'
+  hash: md5
+  path: 
+    https://mesr.opendatasoft.com/api/explore/v2.1/catalog/datasets/fr_crous_logement_france_entiere/exports/csv?limit=-1&timezone=UTC&use_labels=false&epsg=4326
+outs:
+- md5: f54a8b1dde52b60c074d37f131bf3709
+  size: 1457237
+  hash: md5
+  path: crous-logement-france.csv
