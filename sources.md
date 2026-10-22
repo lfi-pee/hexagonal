@@ -226,6 +226,7 @@
 - [LEGIS-2022](#legis-2022)
   - [Codage des nuances politiques des candidats aux élections législatives des 12 et 19 juin 2022](#data/01_raw/legis_2022/2022-legislatives-nuances.csv)
 - [La France insoumise](#la-france-insoumise)
+  - [Capacité des résidences CROUS — Occitanie (fusion LFI, octobre 2026)](#data/01_raw/lafranceinsoumise/2026-10-crous-capacite-occitanie.csv)
   - [Résidences étudiantes hors CROUS, département 31 — saisie manuelle 2026](#data/01_raw/lafranceinsoumise/2026-residences-etudiantes-31-manuelles.csv)
   - [Nombre de conseillers municipaux par commune — de 1996 à 2008](#data/01_raw/lafranceinsoumise/code_electoral/1996-nb-conseillers-municipaux.csv)
   - [Nombre de sénateurs par département](#data/01_raw/lafranceinsoumise/code_electoral/2003-senateurs-par-departements.csv)
@@ -3421,6 +3422,28 @@ Le projet LEGIS-2022 regroupe une trentaine de chercheurs en science politique s
 ## La France insoumise
 <a name="la-france-insoumise"></a>
 
+### Capacité des résidences CROUS — Occitanie (fusion LFI, octobre 2026)
+<a name="data/01_raw/lafranceinsoumise/2026-10-crous-capacite-occitanie.csv"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/lafranceinsoumise/2026-10-crous-capacite-occitanie.csv |
+| Format de fichier | text/csv |
+| URL d&#39;information | https://www.crous-toulouse.fr/se-loger/ |
+| Éditeur | La France insoumise |
+| Date | 03/10/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/e5/89a947f8cbe2c58359de0a6502ed7c |
+
+Nombre de logements par résidence universitaire du CROUS, obtenu en fusionnant
+la capacité publiée sur les pages des résidences du site crous-toulouse.fr
+(48 résidences, collecte du 3 octobre 2026) avec le jeu CROUS France entière
+du ministère de l&#39;Enseignement supérieur (823 résidences au total). Colonnes :
+slug, nom, adresse, nombre de logements, détail par type, URL de la page,
+date de collecte, erreur éventuelle.
+
+Aucun script ne permet de refaire la collecte à l&#39;identique, le site évoluant :
+ce fichier est la version utilisée par le projet inscriptibles-adresses (V4.1).
+
 ### Résidences étudiantes hors CROUS, département 31 — saisie manuelle 2026
 <a name="data/01_raw/lafranceinsoumise/2026-residences-etudiantes-31-manuelles.csv"></a>
 
@@ -3945,9 +3968,8 @@ nuances politiques plus précises que celles du ministère de l’intérieur.
 | Format de fichier | text/csv |
 | URL d&#39;information | https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr_crous_logement_france_entiere/ |
 | Éditeur | Ministère de l&#39;Enseignement supérieur et de la Recherche |
-| Date | 22/10/2026 |
-| URL d&#39;origine | https://mesr.opendatasoft.com/api/explore/v2.1/catalog/datasets/fr_crous_logement_france_entiere/exports/csv?limit=-1&amp;timezone=UTC&amp;use_labels=false&amp;epsg=4326 |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/f5/4a8b1dde52b60c074d37f131bf3709 |
+| Date | 03/10/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/84/f4a42c0b6f97ca4c6a684e49ab3f29 |
 
 Résidences gérées par les CROUS sur toute la France (environ 830
 résidences), avec adresse, coordonnées et descriptif ; la capacité est
@@ -3962,9 +3984,8 @@ mentionnée dans le texte libre `infos`.
 | Format de fichier | text/csv |
 | URL d&#39;information | https://data.enseignementsup-recherche.gouv.fr/explore/dataset/fr-esr-patrimoine-immobilier-des-operateurs-de-l-enseignement-superieur/ |
 | Éditeur | Ministère de l&#39;Enseignement supérieur et de la Recherche |
-| Date | 22/10/2026 |
-| URL d&#39;origine | https://data.enseignementsup-recherche.gouv.fr/api/explore/v2.1/catalog/datasets/fr-esr-patrimoine-immobilier-des-operateurs-de-l-enseignement-superieur/exports/csv?use_labels=true |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/da/1eca8d93d67bd6af449da8a89c5610 |
+| Date | 03/10/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/25/b402861a660a9193c101d206f53073 |
 
 Bâtiments des opérateurs de l&#39;enseignement supérieur et de la recherche
 (environ 64 700 bâtiments), avec leurs identifiants RNB.
@@ -5065,9 +5086,8 @@ Ce fichier comporte la liste des conseillers municipaux.
 | Format de fichier | text/csv |
 | URL d&#39;information | https://data.education.gouv.fr/explore/dataset/fr-en-annuaire-education/ |
 | Éditeur | Ministère de l&#39;Éducation nationale |
-| Date | 22/10/2026 |
-| URL d&#39;origine | https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/fr-en-annuaire-education/exports/csv?limit=-1&amp;timezone=UTC&amp;use_labels=false&amp;epsg=4326 |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/2c/95388190434132a3eed327038a8fc9 |
+| Date | 03/10/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/66/8503f9942b4c838933e9a5db05869f |
 
 Établissements scolaires du premier et du second degré (environ 68 600 en
 France), avec adresse et coordonnées.
@@ -5217,9 +5237,8 @@ Point symbols with name attributes. Includes all admin-0 and many admin-1 capita
 | Format de fichier | application/octet-stream |
 | URL d&#39;information | https://download.geofabrik.de/europe/france/midi-pyrenees.html |
 | Éditeur | OpenStreetMap |
-| Date | 22/10/2026 |
-| URL d&#39;origine | https://download.geofabrik.de/europe/france/midi-pyrenees-latest.osm.pbf |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/7f/5328e380d4c1411df2d0df6a45b7d9 |
+| Date | 03/10/2026 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/38/b161ee4466d118cbd9fbe01fa6b834 |
 
 Extraction OpenStreetMap de l&#39;ancienne région Midi-Pyrénées produite par
 Geofabrik, au format PBF. Données sous licence ODbL : toute réutilisation

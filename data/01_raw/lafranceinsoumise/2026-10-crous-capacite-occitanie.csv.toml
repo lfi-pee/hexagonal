@@ -1,0 +1,16 @@
+nom = "Capacité des résidences CROUS — Occitanie (fusion LFI, octobre 2026)"
+description = """
+Nombre de logements par résidence universitaire du CROUS, obtenu en fusionnant
+la capacité publiée sur les pages des résidences du site crous-toulouse.fr
+(48 résidences, collecte du 3 octobre 2026) avec le jeu CROUS France entière
+du ministère de l'Enseignement supérieur (823 résidences au total). Colonnes :
+slug, nom, adresse, nombre de logements, détail par type, URL de la page,
+date de collecte, erreur éventuelle.
+
+Aucun script ne permet de refaire la collecte à l'identique, le site évoluant :
+ce fichier est la version utilisée par le projet inscriptibles-adresses (V4.1).
+"""
+mimetype = "text/csv"
+info_url = "https://www.crous-toulouse.fr/se-loger/"
+editeur = "La France insoumise"
+date = 2026-10-03

@@ -1,12 +1,5 @@
-md5: 04ef84528c4bbcb76cd0d417684e1e21
-frozen: true
-deps:
-- checksum: '154978107291481943634997819180509919474'
-  hash: md5
-  path: 
-    https://data.education.gouv.fr/api/explore/v2.1/catalog/datasets/fr-en-annuaire-education/exports/csv?limit=-1&timezone=UTC&use_labels=false&epsg=4326
 outs:
-- md5: 2c95388190434132a3eed327038a8fc9
-  size: 40500464
+- md5: 668503f9942b4c838933e9a5db05869f
+  size: 40496505
   hash: md5
   path: annuaire-education.csv
