@@ -3453,7 +3453,7 @@ ce fichier est la version utilisée par le projet inscriptibles-adresses (V4.1).
 | Format de fichier | text/csv |
 | Éditeur | La France insoumise |
 | Date | 01/01/2026 |
-| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/c7/5267c568b9df80a30568faf07d8fa6 |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/97/55f7f9a9921d3ed41939b7aef84ba9 |
 
 Liste manuelle, saisie et vérifiée par la France insoumise, des résidences
 étudiantes du département 31 (Haute-Garonne) non couvertes par les bases
