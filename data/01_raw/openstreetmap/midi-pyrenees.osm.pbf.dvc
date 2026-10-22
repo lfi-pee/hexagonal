@@ -1,0 +1,12 @@
+md5: ecbd59140cebdab254014501b55851e6
+frozen: true
+deps:
+- checksum: '"15a67545-65e4e199179cb"'
+  size: 363230533
+  hash: md5
+  path: https://download.geofabrik.de/europe/france/midi-pyrenees-latest.osm.pbf
+outs:
+- md5: 7f5328e380d4c1411df2d0df6a45b7d9
+  size: 363230533
+  hash: md5
+  path: midi-pyrenees.osm.pbf

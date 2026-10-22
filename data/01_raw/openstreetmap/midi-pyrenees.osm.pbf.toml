@@ -1,0 +1,13 @@
+nom = "OpenStreetMap — extraction Midi-Pyrénées"
+description = """
+Extraction OpenStreetMap de l'ancienne région Midi-Pyrénées produite par
+Geofabrik, au format PBF. Données sous licence ODbL : toute réutilisation
+doit citer « © les contributeurs d'OpenStreetMap ».
+
+Utilisé par le projet inscriptibles-adresses pour exclure les bâtiments non
+résidentiels (écoles, universités, santé, commerces).
+"""
+mimetype = "application/octet-stream"
+info_url = "https://download.geofabrik.de/europe/france/midi-pyrenees.html"
+editeur = "OpenStreetMap"
+date = 2026-10-22
