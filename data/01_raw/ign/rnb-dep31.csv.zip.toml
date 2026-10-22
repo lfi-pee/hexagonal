@@ -1,0 +1,11 @@
+nom = "RNB — Référentiel national des bâtiments, département 31"
+description = """
+Export départemental du Référentiel national des bâtiments (RNB) pour la
+Haute-Garonne : environ 460 000 bâtiments, chacun avec son identifiant RNB,
+sa géométrie et ses liens vers les adresses (BAN) et les autres bases
+(BDNB, BD TOPO).
+"""
+mimetype = "application/zip"
+info_url = "https://rnb.beta.gouv.fr/"
+editeur = "IGN"
+date = 2026-10-22

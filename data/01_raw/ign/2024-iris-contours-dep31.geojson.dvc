@@ -1,0 +1,12 @@
+md5: 29b7222c022c2fe4d730baae5c444b25
+frozen: true
+deps:
+- checksum: '192870787946824815149989100829447730307'
+  hash: md5
+  path: 
+    https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/georef-france-iris/exports/geojson?refine=dep_code%3A%2231%22&refine=year%3A%222024%22
+outs:
+- md5: 1d0a910bf1d3637c500dd7a22cae2f28
+  size: 16117024
+  hash: md5
+  path: 2024-iris-contours-dep31.geojson

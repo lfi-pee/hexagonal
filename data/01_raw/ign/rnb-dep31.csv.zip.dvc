@@ -1,0 +1,12 @@
+md5: 2b93d4f2fd12e04989310493e4561072
+frozen: true
+deps:
+- checksum: '"9a7f1fa749e05096f70a8e732387b9c6-37"'
+  size: 190805957
+  hash: md5
+  path: https://rnb-opendata.s3.fr-par.scw.cloud/files/RNB_31.csv.zip
+outs:
+- md5: 3bd0910800ef3e1ae33dd0df1225b4e6
+  size: 190805957
+  hash: md5
+  path: rnb-dep31.csv.zip

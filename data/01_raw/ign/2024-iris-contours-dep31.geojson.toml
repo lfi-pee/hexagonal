@@ -1,0 +1,13 @@
+nom = "Contours IRIS 2024 — département 31"
+description = """
+Contours des 849 IRIS des 586 communes de Haute-Garonne, millésime 2024,
+issus de la base IGN/INSEE via l'agrégation georef-france-iris
+d'Opendatasoft.
+
+Utilisé par le projet inscriptibles-adresses pour la jointure
+adresses → IRIS.
+"""
+mimetype = "application/geo+json"
+info_url = "https://public.opendatasoft.com/explore/dataset/georef-france-iris/"
+editeur = "IGN"
+date = 2024-01-01
