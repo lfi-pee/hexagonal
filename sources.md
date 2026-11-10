@@ -19,6 +19,8 @@
 - [Enedis](#enedis)
   - [Enedis — Consommation d&#39;électricité annuelle entreprise par adresse](#data/01_raw/enedis/consommation-annuelle-entreprise-par-adresse.csv)
   - [Enedis — Consommation d&#39;électricité annuelle résidentielle par adresse](#data/01_raw/enedis/consommation-annuelle-residentielle-par-adresse.csv)
+- [Etalab](#etalab)
+  - [Contours des circonscriptions législatives (simplification p20)](#data/01_raw/etalab/2024-06-circonscriptions-legislatives-p20.geojson)
 - [GeoNames](#geonames)
   - [cities1000](#data/01_raw/geonames/cities1000.zip)
 - [Haut-commissariat de la République en Nouvelle-Calédonie](#haut-commissariat-de-la-republique-en-nouvelle-caledonie)
@@ -639,6 +641,34 @@ Chaque ligne est une adresse avec :
 
 Utilisé comme feature dans l&#39;identification de résidences collectives à
 forte densité de logements.
+
+
+
+
+## Etalab
+<a name="etalab"></a>
+
+### Contours des circonscriptions législatives (simplification p20)
+<a name="data/01_raw/etalab/2024-06-circonscriptions-legislatives-p20.geojson"></a>
+
+| Propriété | Valeur |
+| --------- | ------ |
+| Chemin interne | data/01_raw/etalab/2024-06-circonscriptions-legislatives-p20.geojson |
+| Format de fichier | application/geo+json |
+| URL d&#39;information | https://www.data.gouv.fr/datasets/contours-geographiques-des-circonscriptions-legislatives |
+| Éditeur | Etalab |
+| Date | 13/06/2024 |
+| URL d&#39;origine | https://static.data.gouv.fr/resources/contours-geographiques-des-circonscriptions-legislatives/20240613-191506/circonscriptions-legislatives-p20.geojson |
+| URL de téléchargement | https://hexagonal-106475418133-eu-west-3-an.s3.eu-west-3.amazonaws.com/cache/files/md5/8e/87976447f348aa7f788b9d7527755b |
+
+Contours des 559 circonscriptions législatives (découpage de 2010, utilisé aux
+législatives de 2012 à 2024), publiés par data.gouv.fr d&#39;après la liste des
+bureaux de vote par circonscription (ministère de l&#39;Intérieur) et les contours
+des bureaux de vote (INSEE). Version simplifiée par mapshaper au niveau p20, la
+plus précise du jeu. Ressource du 13 juin 2024.
+
+Utilisé par le projet inscriptibles-adresses pour rattacher chaque adresse de
+la liste des non-inscrits sûrs à sa circonscription.
 
 
 

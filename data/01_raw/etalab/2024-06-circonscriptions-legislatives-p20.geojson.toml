@@ -1,0 +1,15 @@
+nom = "Contours des circonscriptions législatives (simplification p20)"
+description = """
+Contours des 559 circonscriptions législatives (découpage de 2010, utilisé aux
+législatives de 2012 à 2024), publiés par data.gouv.fr d'après la liste des
+bureaux de vote par circonscription (ministère de l'Intérieur) et les contours
+des bureaux de vote (INSEE). Version simplifiée par mapshaper au niveau p20, la
+plus précise du jeu. Ressource du 13 juin 2024.
+
+Utilisé par le projet inscriptibles-adresses pour rattacher chaque adresse de
+la liste des non-inscrits sûrs à sa circonscription.
+"""
+mimetype = "application/geo+json"
+info_url = "https://www.data.gouv.fr/datasets/contours-geographiques-des-circonscriptions-legislatives"
+editeur = "Etalab"
+date = 2024-06-13

@@ -1,0 +1,13 @@
+md5: 10bdc5bcab2e18ba9b1209edd23c7bb6
+frozen: true
+deps:
+- checksum: '"8e87976447f348aa7f788b9d7527755b"'
+  size: 10170230
+  hash: md5
+  path: 
+    https://static.data.gouv.fr/resources/contours-geographiques-des-circonscriptions-legislatives/20240613-191506/circonscriptions-legislatives-p20.geojson
+outs:
+- md5: 8e87976447f348aa7f788b9d7527755b
+  size: 10170230
+  hash: md5
+  path: 2024-06-circonscriptions-legislatives-p20.geojson
